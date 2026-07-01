@@ -23,7 +23,6 @@
       --green-800: #123f31;
       --green-700: #15563f;
       --green-100: #edf7f2;
-      --gold: #a48146;
       --gray-900: #14161a;
       --gray-700: #4c535c;
       --gray-500: #767d86;
@@ -222,10 +221,15 @@
       overflow: visible;
     }
 
+    /* CUADRO IFCD VERTICAL */
     .feature .logo-zone {
-      min-height: 282px;
+      justify-self: center;
+      align-self: center;
+      width: min(100%, 420px);
+      aspect-ratio: 4 / 5;
+      min-height: unset;
       border-radius: 26px;
-      padding: 18px;
+      padding: 20px;
     }
 
     .logo-zone img {
@@ -240,7 +244,12 @@
 
     .feature .logo-zone img {
       max-width: 100%;
-      max-height: 260px;
+      max-height: 100%;
+    }
+
+    .logo-ifcd {
+      max-width: 88%;
+      max-height: 88%;
     }
 
     .logo-deltaf,
@@ -398,11 +407,8 @@
       }
 
       .feature .logo-zone {
-        min-height: 245px;
-      }
-
-      .feature .logo-zone img {
-        max-height: 225px;
+        width: min(100%, 360px);
+        aspect-ratio: 4 / 5;
       }
     }
 
@@ -452,11 +458,9 @@
       }
 
       .feature .logo-zone {
-        min-height: 230px;
-      }
-
-      .feature .logo-zone img {
-        max-height: 210px;
+        width: min(100%, 320px);
+        aspect-ratio: 4 / 5;
+        padding: 16px;
       }
 
       .logo-deltaf,
@@ -522,7 +526,7 @@
               <h2>
                 <span class="line">Instituto de Formación</span>
                 <span class="line">Clínica</span>
-                <span class="delta">Delta</span>
+                <span class="delta">DELTA</span>
               </h2>
               <p>
                 Formación continua, diplomados y programas académicos orientados a profesionales de la salud,
