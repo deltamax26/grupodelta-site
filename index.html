@@ -260,4 +260,1409 @@
       inset: 0;
       background:
         linear-gradient(90deg, rgba(6,26,19,0.94), rgba(6,26,19,0.72), rgba(6,26,19,0.35)),
-        linear-gradient(0deg, rgba(6,
+        linear-gradient(0deg, rgba(6,26,19,0.88), transparent 45%);
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 70px;
+      padding: 80px 0 120px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-300);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 2px;
+      background: var(--gold-400);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -2.8px;
+      max-width: 740px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-300);
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 19px;
+      max-width: 620px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-panel {
+      position: relative;
+      padding: 34px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.06));
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(145deg, rgba(240, 212, 139, 0.9), transparent, rgba(25,160,107,0.4));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .delta-emblem {
+      width: 210px;
+      height: 210px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(240,212,139,0.8), rgba(198,155,69,0.2) 34%, rgba(255,255,255,0.04) 64%),
+        rgba(255,255,255,0.08);
+      box-shadow:
+        inset 0 0 60px rgba(255,255,255,0.08),
+        0 24px 70px rgba(0,0,0,0.28);
+    }
+
+    .delta-emblem span {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 132px;
+      line-height: 1;
+      color: var(--gold-300);
+      text-shadow: 0 18px 35px rgba(0,0,0,0.45);
+    }
+
+    .hero-panel h2 {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      letter-spacing: 4px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .hero-panel .motto {
+      text-align: center;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 3px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .stats-wrap {
+      position: relative;
+      z-index: 5;
+      margin-top: -84px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--green-900), var(--green-700));
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .stat {
+      padding: 27px 24px;
+      color: white;
+      border-right: 1px solid rgba(255,255,255,0.13);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat small {
+      display: block;
+      color: var(--gold-300);
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 29px;
+      line-height: 1.1;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section.light {
+      background: white;
+    }
+
+    .section.dark {
+      color: white;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(198,155,69,0.18), transparent 26%),
+        radial-gradient(circle at 80% 80%, rgba(25,160,107,0.22), transparent 30%),
+        linear-gradient(135deg, var(--green-950), var(--blue-950));
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 52px;
+    }
+
+    .section-kicker {
+      color: var(--green-600);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+    }
+
+    .dark .section-kicker {
+      color: var(--gold-300);
+    }
+
+    .section-title {
+      font-size: clamp(31px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      color: var(--gray-500);
+      font-size: 17px;
+    }
+
+    .dark .section-subtitle {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .units-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .unit-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .unit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 70px rgba(6, 26, 19, 0.18);
+    }
+
+    .unit-media {
+      height: 170px;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.72), transparent 35%),
+        linear-gradient(135deg, rgba(8,32,74,0.08), rgba(20,120,79,0.08));
+    }
+
+    .unit-media.dark-bg {
+      background:
+        linear-gradient(135deg, rgba(6,26,19,0.72), rgba(8,32,74,0.86)),
+        radial-gradient(circle at 50% 20%, rgba(0,188,255,0.36), transparent 40%);
+    }
+
+    .unit-media.green-bg {
+      background:
+        linear-gradient(135deg, rgba(6,26,19,0.58), rgba(18,87,61,0.88)),
+        radial-gradient(circle at 40% 30%, rgba(174,235,123,0.42), transparent 38%);
+    }
+
+    .unit-media img {
+      max-height: 118px;
+      object-fit: contain;
+      margin: auto;
+      filter: drop-shadow(0 12px 22px rgba(0,0,0,0.12));
+    }
+
+    .unit-media.dark-bg img {
+      filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+    }
+
+    .unit-placeholder {
+      width: 112px;
+      height: 112px;
+      border-radius: 28px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 40px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--blue-800), var(--green-600));
+      box-shadow: 0 20px 40px rgba(8,32,74,0.26);
+    }
+
+    .unit-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .unit-tag {
+      color: var(--gold-500);
+      font-size: 11px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 8px;
+    }
+
+    .unit-body h3 {
+      font-size: 22px;
+      line-height: 1.14;
+      margin-bottom: 12px;
+      color: var(--green-900);
+    }
+
+    .unit-body p {
+      color: var(--gray-500);
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .unit-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: fit-content;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--green-800);
+      color: white;
+      font-size: 13px;
+      font-weight: 850;
+      transition: 0.25s ease;
+    }
+
+    .unit-link.blue {
+      background: var(--blue-800);
+    }
+
+    .unit-link:hover {
+      transform: translateX(3px);
+      background: var(--green-600);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .purpose-card {
+      padding: 42px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .purpose-card h2 {
+      font-size: clamp(31px, 4vw, 50px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .purpose-card p {
+      color: rgba(255,255,255,0.76);
+      font-size: 17px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .value {
+      padding: 24px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: 0.25s ease;
+    }
+
+    .value:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .value-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(240,212,139,0.14);
+      color: var(--gold-300);
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .value h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .value p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .about-card {
+      padding: 30px;
+      border-radius: 24px;
+      background: white;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-card);
+    }
+
+    .about-card span {
+      display: inline-grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      background: rgba(20, 120, 79, 0.09);
+      color: var(--green-700);
+      font-size: 24px;
+    }
+
+    .about-card h3 {
+      color: var(--green-900);
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .about-card p {
+      color: var(--gray-500);
+      font-size: 15px;
+    }
+
+    .structure {
+      padding: 38px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.92), rgba(255,255,255,0.74));
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-card);
+    }
+
+    .org {
+      display: grid;
+      gap: 22px;
+      text-align: center;
+    }
+
+    .org-main {
+      width: min(420px, 100%);
+      margin: 0 auto;
+      padding: 26px;
+      color: white;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--green-900), var(--green-600));
+      box-shadow: 0 20px 55px rgba(6,26,19,0.18);
+    }
+
+    .org-main strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .org-main span {
+      color: rgba(255,255,255,0.74);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+    }
+
+    .org-line {
+      width: 2px;
+      height: 34px;
+      background: var(--gold-500);
+      margin: 0 auto;
+    }
+
+    .org-units {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .org-unit {
+      padding: 18px;
+      border-radius: 18px;
+      background: white;
+      border: 1px solid var(--gray-200);
+      font-weight: 900;
+      color: var(--green-900);
+    }
+
+    .cta {
+      padding: 56px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(240,212,139,0.3), transparent 26%),
+        linear-gradient(135deg, var(--green-950), var(--blue-900));
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 26px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(240,212,139,0.24);
+      border-radius: 50%;
+    }
+
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.08;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.72);
+      max-width: 700px;
+      font-size: 17px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-box,
+    .contact-form {
+      padding: 34px;
+      border-radius: 26px;
+      background: white;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-box h3,
+    .contact-form h3 {
+      color: var(--green-900);
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+
+    .contact-box p {
+      color: var(--gray-500);
+      margin-bottom: 22px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--gray-700);
+      font-weight: 650;
+    }
+
+    .contact-item span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: rgba(20,120,79,0.09);
+      color: var(--green-700);
+      flex: 0 0 auto;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      color: var(--gray-700);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 14px 15px;
+      font: inherit;
+      outline: none;
+      background: #fbfcfb;
+      transition: 0.2s ease;
+    }
+
+    .field textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--green-600);
+      box-shadow: 0 0 0 4px rgba(25,160,107,0.12);
+      background: white;
+    }
+
+    footer {
+      background: var(--green-950);
+      color: white;
+      padding: 56px 0 26px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr 0.9fr;
+      gap: 36px;
+      margin-bottom: 38px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand .brand-mark {
+      width: 42px;
+      height: 42px;
+      font-size: 26px;
+    }
+
+    .footer h4 {
+      color: var(--gold-300);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .footer p,
+    .footer a {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    .footer a {
+      display: block;
+      margin-bottom: 9px;
+      transition: 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: white;
+      transform: translateX(2px);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.11);
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1040px) {
+      .nav-links,
+      .nav-actions .btn-primary {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 55px;
+      }
+
+      .hero-panel {
+        max-width: 540px;
+      }
+
+      .stats,
+      .units-grid,
+      .org-units {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .split,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        height: 70px;
+      }
+
+      .brand-text strong {
+        font-size: 16px;
+      }
+
+      .brand-text span {
+        font-size: 8px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        min-height: auto;
+        padding: 46px 0 130px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-panel {
+        padding: 24px;
+      }
+
+      .delta-emblem {
+        width: 150px;
+        height: 150px;
+      }
+
+      .delta-emblem span {
+        font-size: 96px;
+      }
+
+      .hero-panel h2 {
+        font-size: 27px;
+      }
+
+      .stats-wrap {
+        margin-top: -70px;
+      }
+
+      .stats,
+      .units-grid,
+      .values-grid,
+      .about-grid,
+      .org-units,
+      .footer-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.13);
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .purpose-card,
+      .structure,
+      .cta,
+      .contact-box,
+      .contact-form {
+        padding: 26px;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="brand" aria-label="Grupo Delta">
+          <div class="brand-mark">Δ</div>
+          <div class="brand-text">
+            <strong>GRUPO DELTA</strong>
+            <span>Science Chile</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#unidades">Unidades</a>
+          <a href="#proposito">Propósito</a>
+          <a href="#estructura">Estructura</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="#contacto">Contáctanos →</a>
+          <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#unidades">Unidades</a>
+        <a href="#proposito">Propósito</a>
+        <a href="#estructura">Estructura</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <div class="eyebrow">Grupo Delta Science Chile</div>
+
+          <h1>
+            Ciencia, salud y educación clínica para un <span>futuro mejor</span>
+          </h1>
+
+          <p>
+            Integramos formación profesional, salud digital, divulgación científica
+            y bienestar natural para desarrollar soluciones modernas, éticas y
+            orientadas a las personas.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#unidades">Conocer unidades →</a>
+            <a class="btn btn-ghost" href="#proposito">Ver propósito</a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="badge">● Educación clínica</div>
+            <div class="badge">● Salud digital</div>
+            <div class="badge">● Ciencia aplicada</div>
+            <div class="badge">● Bienestar natural</div>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="delta-emblem">
+            <span>Δ</span>
+          </div>
+
+          <h2>GRUPO DELTA</h2>
+          <div class="motto">Scientia • Integritas • Humanitas</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-wrap">
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat">
+            <small>Área</small>
+            <strong>Salud</strong>
+          </div>
+
+          <div class="stat">
+            <small>Área</small>
+            <strong>Educación</strong>
+          </div>
+
+          <div class="stat">
+            <small>Área</small>
+            <strong>Ciencia</strong>
+          </div>
+
+          <div class="stat">
+            <small>Área</small>
+            <strong>Bienestar</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="unidades">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Nuestras unidades</div>
+          <h2 class="section-title">Soluciones integrales para salud, educación y bienestar</h2>
+          <p class="section-subtitle">
+            Cada unidad de Grupo Delta cumple una función estratégica dentro de un ecosistema
+            orientado a la formación, la tecnología clínica, la investigación y el bienestar.
+          </p>
+        </div>
+
+        <div class="units-grid">
+          <article class="unit-card reveal">
+            <div class="unit-media">
+              <img src="assets/logo-ifcd.png" alt="Logo Instituto de Formación Clínica Delta" />
+            </div>
+            <div class="unit-body">
+              <div class="unit-tag">Formación clínica</div>
+              <h3>Instituto de Formación Clínica Delta</h3>
+              <p>
+                Programas académicos, diplomados y formación continua para profesionales
+                vinculados al área de la salud, con orientación clínica, ética y aplicada.
+              </p>
+              <a class="unit-link" href="#contacto">Conocer IFCD →</a>
+            </div>
+          </article>
+
+          <article class="unit-card reveal">
+            <div class="unit-media dark-bg">
+              <img src="assets/logo-deltaf.png" alt="Logo DeltaF" />
+            </div>
+            <div class="unit-body">
+              <div class="unit-tag">Salud digital</div>
+              <h3>DeltaF</h3>
+              <p>
+                Plataforma digital para gestión de solicitudes clínicas y emisión de órdenes
+                de exámenes, conectando profesionales, pacientes y procesos de validación.
+              </p>
+              <a class="unit-link blue" href="https://deltaf.site" target="_blank" rel="noopener">Ingresar a DeltaF →</a>
+            </div>
+          </article>
+
+          <article class="unit-card reveal">
+            <div class="unit-media dark-bg">
+              <div class="unit-placeholder">B</div>
+            </div>
+            <div class="unit-body">
+              <div class="unit-tag">Divulgación científica</div>
+              <h3>Biocien</h3>
+              <p>
+                Proyecto de divulgación, biblioteca clínica y educación científica enfocada
+                en medicina natural basada en evidencia y toma de decisiones informadas.
+              </p>
+              <a class="unit-link blue" href="#contacto">Explorar Biocien →</a>
+            </div>
+          </article>
+
+          <article class="unit-card reveal">
+            <div class="unit-media green-bg">
+              <img src="assets/logo-natulife.png" alt="Logo Natulife" />
+            </div>
+            <div class="unit-body">
+              <div class="unit-tag">Bienestar natural</div>
+              <h3>Natulife</h3>
+              <p>
+                Línea orientada a suplementación, bienestar y productos naturales,
+                con enfoque educativo, responsable y alineado con la salud integral.
+              </p>
+              <a class="unit-link" href="https://www.instagram.com/natulife.cl" target="_blank" rel="noopener">Ver Natulife →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="proposito">
+      <div class="container split">
+        <div class="purpose-card reveal">
+          <div class="eyebrow">Nuestro propósito</div>
+          <h2>Contribuir a una sociedad más sana, consciente y preparada.</h2>
+          <p>
+            Grupo Delta nace para integrar ciencia, educación, tecnología y bienestar
+            natural en un mismo ecosistema. Nuestro objetivo es generar soluciones que
+            ayuden a profesionales, instituciones y personas a tomar mejores decisiones
+            en salud.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value reveal">
+            <div class="value-icon">⚕</div>
+            <h3>Ciencia con propósito</h3>
+            <p>
+              Promovemos información y formación con base científica, lenguaje claro
+              y utilidad clínica.
+            </p>
+          </div>
+
+          <div class="value reveal">
+            <div class="value-icon">◇</div>
+            <h3>Integridad institucional</h3>
+            <p>
+              Trabajamos con responsabilidad, transparencia y respeto por las personas.
+            </p>
+          </div>
+
+          <div class="value reveal">
+            <div class="value-icon">✦</div>
+            <h3>Innovación aplicada</h3>
+            <p>
+              Desarrollamos soluciones digitales y educativas para facilitar procesos
+              clínicos y formativos.
+            </p>
+          </div>
+
+          <div class="value reveal">
+            <div class="value-icon">☘</div>
+            <h3>Enfoque integral</h3>
+            <p>
+              Integramos salud, educación y bienestar natural desde una mirada moderna
+              y responsable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Qué hacemos</div>
+          <h2 class="section-title">Un ecosistema conectado por una misma visión</h2>
+          <p class="section-subtitle">
+            Grupo Delta reúne proyectos complementarios para formar, informar,
+            conectar y desarrollar soluciones en salud y bienestar.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <span>🎓</span>
+            <h3>Formación profesional</h3>
+            <p>
+              Programas de capacitación y educación continua para profesionales del área
+              clínica y disciplinas vinculadas a la salud.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <span>💻</span>
+            <h3>Tecnología en salud</h3>
+            <p>
+              Plataformas digitales para optimizar procesos, mejorar trazabilidad y
+              facilitar servicios clínicos.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <span>🔬</span>
+            <h3>Divulgación científica</h3>
+            <p>
+              Contenido educativo, bibliotecas y recursos basados en evidencia para
+              profesionales y público general.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <span>🌿</span>
+            <h3>Bienestar natural</h3>
+            <p>
+              Desarrollo de líneas asociadas a suplementación, salud natural y hábitos
+              de vida saludables.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <span>🛡</span>
+            <h3>Ética y responsabilidad</h3>
+            <p>
+              Buscamos comunicar con claridad, sin promesas exageradas y con respeto
+              por los límites de cada disciplina.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <span>🌎</span>
+            <h3>Proyección institucional</h3>
+            <p>
+              Construimos una marca matriz preparada para crecer con nuevas unidades,
+              alianzas y proyectos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="estructura">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Estructura corporativa</div>
+          <h2 class="section-title">Grupo Delta como organización matriz</h2>
+          <p class="section-subtitle">
+            La marca principal ordena y da coherencia a las distintas unidades del ecosistema.
+          </p>
+        </div>
+
+        <div class="structure reveal">
+          <div class="org">
+            <div class="org-main">
+              <strong>GRUPO DELTA</strong>
+              <span>Science Chile</span>
+            </div>
+
+            <div class="org-line"></div>
+
+            <div class="org-units">
+              <div class="org-unit">IFCD</div>
+              <div class="org-unit">DeltaF</div>
+              <div class="org-unit">Biocien</div>
+              <div class="org-unit">Natulife</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <h2>Una plataforma institucional para crecer con orden y proyección.</h2>
+            <p>
+              Grupo Delta conecta proyectos de educación, tecnología clínica, ciencia y bienestar
+              bajo una identidad seria, moderna y escalable.
+            </p>
+          </div>
+
+          <a class="btn btn-primary" href="#contacto">Contactar →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="contacto">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Contacto</div>
+          <h2 class="section-title">Conversemos sobre Grupo Delta</h2>
+          <p class="section-subtitle">
+            Para alianzas, información institucional, unidades del grupo o consultas generales.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box reveal">
+            <h3>Información institucional</h3>
+            <p>
+              Grupo Delta Science Chile integra proyectos orientados a salud, educación,
+              divulgación científica y bienestar natural.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span>✉</span>
+                <div>
+                  <strong>Correo</strong><br />
+                  <a href="mailto:figueroabernalm@gmail.com">figueroabernalm@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span>⌖</span>
+                <div>
+                  <strong>Ubicación</strong><br />
+                  Chile
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span>Δ</span>
+                <div>
+                  <strong>Lema</strong><br />
+                  Scientia • Integritas • Humanitas
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" action="mailto:figueroabernalm@gmail.com" method="post" enctype="text/plain">
+            <h3>Enviar mensaje</h3>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="Nombre" type="text" placeholder="Tu nombre" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Correo</label>
+                <input id="email" name="Correo" type="email" placeholder="tu@email.com" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="asunto">Asunto</label>
+              <input id="asunto" name="Asunto" type="text" placeholder="Consulta institucional" />
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="Mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar mensaje →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="brand-mark">Δ</div>
+            <div class="brand-text">
+              <strong>GRUPO DELTA</strong>
+              <span>Science Chile</span>
+            </div>
+          </div>
+          <p>
+            Ciencia, salud, educación y bienestar integrados en un ecosistema institucional.
+          </p>
+        </div>
+
+        <div>
+          <h4>Enlaces</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#unidades">Unidades</a>
+          <a href="#proposito">Propósito</a>
+          <a href="#estructura">Estructura</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div>
+          <h4>Unidades</h4>
+          <a href="#unidades">IFCD</a>
+          <a href="https://deltaf.site" target="_blank" rel="noopener">DeltaF</a>
+          <a href="#unidades">Biocien</a>
+          <a href="https://www.instagram.com/natulife.cl" target="_blank" rel="noopener">Natulife</a>
+        </div>
+
+        <div>
+          <h4>Contacto</h4>
+          <a href="mailto:figueroabernalm@gmail.com">figueroabernalm@gmail.com</a>
+          <a href="https://grupodelta.cl">grupodelta.cl</a>
+          <p>Chile</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Grupo Delta Science Chile. Todos los derechos reservados.</div>
+        <div>Scientia • Integritas • Humanitas</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      menuBtn.textContent = mobileMenu.classList.contains("open") ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+  </script>
+</body>
+</html>
