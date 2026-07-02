@@ -361,6 +361,183 @@
       font-weight: 800;
     }
 
+
+    /* Carrusel principal de admisión */
+    .hero-carousel {
+      position: relative;
+      min-height: 520px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      background: var(--green-950);
+      isolation: isolate;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-items: center;
+      padding: 58px;
+      color: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(1.018);
+      transition: opacity 0.85s ease, transform 1.2s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(6, 32, 24, 0.94) 0%, rgba(6, 32, 24, 0.76) 44%, rgba(6, 32, 24, 0.38) 100%),
+        radial-gradient(circle at 86% 22%, rgba(185, 148, 89, 0.24), transparent 26%);
+      z-index: 1;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 38px 38px 58px 38px;
+      border: 7px solid rgba(185, 148, 89, 0.86);
+      border-right-color: transparent;
+      border-bottom-left-radius: 46px;
+      border-top-left-radius: 46px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .slide-1 {
+      background-image:
+        linear-gradient(90deg, rgba(6, 32, 24, .92), rgba(6, 32, 24, .45)),
+        url("img/slide-segunda-titulacion.jpg");
+    }
+
+    .slide-2 {
+      background-image:
+        linear-gradient(90deg, rgba(6, 32, 24, .92), rgba(6, 32, 24, .45)),
+        url("img/slide-ortomolecular.jpg");
+    }
+
+    .slide-3 {
+      background-image:
+        linear-gradient(90deg, rgba(6, 32, 24, .92), rgba(6, 32, 24, .45)),
+        url("img/slide-naturopatia.jpg");
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 3;
+      max-width: 640px;
+    }
+
+    .slide h1,
+    .slide h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+      text-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+    }
+
+    .slide h1 {
+      font-size: clamp(46px, 5.4vw, 78px);
+      margin-bottom: 20px;
+    }
+
+    .slide h2 {
+      font-size: clamp(42px, 5vw, 68px);
+      margin-bottom: 20px;
+    }
+
+    .slide .highlight {
+      display: block;
+      color: #d9bd7b;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82em;
+      margin-top: 4px;
+    }
+
+    .slide p {
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .slide-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      left: 58px;
+      bottom: 34px;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.24);
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .dot.active {
+      width: 34px;
+      background: var(--gold-500);
+      border-color: var(--gold-500);
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.13);
+      color: #fff;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      transition: .22s ease;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-1px);
+    }
+
+    .carousel-arrow.prev { left: 18px; }
+    .carousel-arrow.next { right: 18px; }
+
+
     .section {
       padding: 82px 0;
     }
@@ -812,8 +989,9 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-logo-panel {
-        min-height: 420px;
+      .hero-logo-panel,
+      .hero-carousel {
+        min-height: 430px;
       }
 
       .program-panel {
@@ -875,6 +1053,39 @@
 
       .hero h1 {
         font-size: 44px;
+      }
+
+      .hero-carousel {
+        min-height: 480px;
+      }
+
+      .slide {
+        padding: 34px 26px 78px;
+      }
+
+      .slide::after {
+        inset: 24px 20px 68px 20px;
+        border-width: 5px;
+        border-radius: 32px;
+        border-right-color: rgba(185, 148, 89, 0.86);
+      }
+
+      .slide h1,
+      .slide h2 {
+        font-size: 39px;
+      }
+
+      .slide p {
+        font-size: 15px;
+      }
+
+      .carousel-controls {
+        left: 28px;
+        bottom: 30px;
+      }
+
+      .carousel-arrow {
+        display: none;
       }
 
       .hero-text {
@@ -964,27 +1175,67 @@
           <img src="img/logo-ifcd.png" alt="Instituto de Formación Clínica Delta" />
         </aside>
 
-        <div class="hero-copy reveal">
-          <div class="kicker">Formación clínica aplicada</div>
-          <h1>
-            Instituto de Formación Clínica
-            <span class="delta">Delta</span>
-          </h1>
-          <p class="hero-text">
-            Formación continua, carreras profesionales privadas, diplomados y programas académicos para profesionales de la salud que buscan fortalecer su criterio clínico, actualizar sus competencias y desarrollar una práctica ordenada, ética y basada en fundamentos.
-          </p>
+        <section class="hero-carousel reveal" aria-label="Programas destacados">
+          <article class="slide slide-1 active">
+            <div class="slide-content">
+              <div class="kicker">Admisión abierta</div>
+              <h1>
+                Segunda Titulación
+                <span class="highlight">en 3 Semestres</span>
+              </h1>
+              <p>
+                Programa orientado a profesionales que buscan complementar su formación con una ruta académica clínica, aplicada y organizada.
+              </p>
+              <div class="slide-actions">
+                <a class="btn btn-primary" href="#contacto">Solicitar información</a>
+                <a class="btn btn-secondary" href="#programas">Ver programas</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#programas">Ver programas</a>
-            <a class="btn btn-secondary" href="#contacto">Contactar admisión</a>
-          </div>
+          <article class="slide slide-2">
+            <div class="slide-content">
+              <div class="kicker">Diplomado</div>
+              <h2>
+                Medicina
+                <span class="highlight">Ortomolecular</span>
+              </h2>
+              <p>
+                Formación para profundizar en fundamentos, evaluación, criterios de aplicación y análisis de evidencia en medicina ortomolecular.
+              </p>
+              <div class="slide-actions">
+                <a class="btn btn-primary" href="#contacto">Consultar admisión</a>
+                <a class="btn btn-secondary" href="#programas">Más información</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="mini-points">
-            <div class="pill">● Enfoque clínico</div>
-            <div class="pill">● Educación continua</div>
-            <div class="pill">● Investigación aplicada</div>
+          <article class="slide slide-3">
+            <div class="slide-content">
+              <div class="kicker">Carrera profesional privada</div>
+              <h2>
+                Naturopatía
+                <span class="highlight">8 Semestres</span>
+              </h2>
+              <p>
+                Carrera profesional privada con formación en fundamentos biomédicos, naturopatía clínica, evidencia, casos e integración profesional.
+              </p>
+              <div class="slide-actions">
+                <a class="btn btn-primary" href="#contacto">Postular / consultar</a>
+                <a class="btn btn-secondary" href="#programas">Ver alcance</a>
+              </div>
+            </div>
+          </article>
+
+          <button class="carousel-arrow prev" type="button" aria-label="Slide anterior">‹</button>
+          <button class="carousel-arrow next" type="button" aria-label="Slide siguiente">›</button>
+
+          <div class="carousel-controls" aria-label="Controles de carrusel">
+            <button class="dot active" type="button" aria-label="Ver slide 1"></button>
+            <button class="dot" type="button" aria-label="Ver slide 2"></button>
+            <button class="dot" type="button" aria-label="Ver slide 3"></button>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
@@ -1298,6 +1549,60 @@
     );
 
     revealElements.forEach((element) => revealObserver.observe(element));
+
+
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const dots = Array.from(document.querySelectorAll(".dot"));
+    const nextBtn = document.querySelector(".carousel-arrow.next");
+    const prevBtn = document.querySelector(".carousel-arrow.prev");
+    let currentSlide = 0;
+    let carouselTimer;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === currentSlide));
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === currentSlide));
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function startCarousel() {
+      carouselTimer = setInterval(nextSlide, 5200);
+    }
+
+    function resetCarousel() {
+      clearInterval(carouselTimer);
+      startCarousel();
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        showSlide(i);
+        resetCarousel();
+      });
+    });
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+        resetCarousel();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevSlide();
+        resetCarousel();
+      });
+    }
+
+    if (slides.length > 0) startCarousel();
   </script>
 </body>
 </html>
