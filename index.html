@@ -1,107 +1,361 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instituto de Formación Clínica Delta</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instituto de Formación Clínica Delta. Formación avanzada, diplomados y programas académicos para profesionales de la salud.">
+  <title>Instituto de Formación Clínica Delta</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="header">
-<div class="brand">
-<img src="img/logo-ifcd.png">
-<span>Instituto de Formación Clínica Delta</span>
-</div>
+<header class="site-header">
+  <div class="container header-inner">
 
-<nav>
-<a href="#instituto">Instituto</a>
-<a href="#programas">Programas</a>
-<a href="#investigacion">Investigación</a>
-<a href="#docencia">Docencia</a>
-<a href="#contacto">Contacto</a>
+    <a class="brand" href="#inicio" aria-label="Instituto de Formación Clínica Delta">
+      <img src="img/logo-ifcd.png" alt="Logo Instituto de Formación Clínica Delta">
+      <div class="brand-copy">
+        <strong>Instituto de Formación</strong>
+        <span>Clínica Delta</span>
+      </div>
+    </a>
 
-<div class="dropdown">
-<a>Grupo Delta ▾</a>
-<div class="dropdown-menu">
-<a>DeltaF</a>
-<a>BioCien</a>
-<a>Natulife.cl</a>
-</div>
-</div>
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
 
-<a class="admission">Admisión</a>
-</nav>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#instituto">Instituto</a>
+      <a href="#programas">Programas</a>
+      <a href="#investigacion">Investigación</a>
+      <a href="#docencia">Docencia</a>
+      <a href="#contacto">Contacto</a>
+
+      <div class="dropdown" id="groupDropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Grupo Delta
+          <span class="chevron">⌄</span>
+        </button>
+
+        <div class="dropdown-menu">
+          <a href="https://deltaf.site" target="_blank" rel="noopener">
+            <img src="img/logo-deltaf.PNG" alt="">
+            <span>DeltaF</span>
+          </a>
+
+          <a href="biocien.html">
+            <img src="img/logo-biocien.JPG" alt="">
+            <span>BioCien</span>
+          </a>
+
+          <a href="https://natulife.cl" target="_blank" rel="noopener">
+            <img src="img/logo-natulife.PNG" alt="">
+            <span>Natulife.cl</span>
+          </a>
+        </div>
+      </div>
+
+      <a class="admission-btn" href="#contacto">Admisión</a>
+    </nav>
+
+  </div>
 </header>
 
 
-<section class="hero">
-<div class="hero-text">
-<span>SCIENTIA · INTEGRITAS · HUMANITAS</span>
-<h1>Excelencia académica para profesionales de la salud</h1>
-<p>
-Formación avanzada, diplomados y programas académicos con enfoque clínico,
-científico y humano.
-</p>
-<a class="button">Conoce nuestros programas →</a>
-</div>
+<main>
 
-<div class="hero-image">
-<img src="img/slide-segunda-titulacion.PNG">
-</div>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
 
+      <div class="hero-copy">
+        <p class="eyebrow">Scientia · Integritas · Humanitas</p>
 
-<section id="instituto" class="institution">
-<h2>Instituto de Formación Clínica Delta</h2>
-<p>
-Una propuesta académica orientada a la formación continua de profesionales
-de la salud, integrando ciencia, práctica clínica e innovación.
-</p>
-</section>
+        <h1>Excelencia académica para profesionales de la salud</h1>
 
+        <div class="gold-line" aria-hidden="true"></div>
 
-<section id="programas">
-<h2>Áreas de Formación</h2>
-<div class="cards">
-<div><img src="img/slide-carrera.PNG"><h3>Programas Académicos</h3></div>
-<div><img src="img/slide-ortomolecular.PNG"><h3>Cursos y Diplomados</h3></div>
-<div><img src="img/slide-segunda-titulacion.PNG"><h3>Segunda Titulación</h3></div>
-</div>
-</section>
+        <p class="hero-description">
+          Formación avanzada, diplomados y programas académicos con enfoque
+          clínico, científico y humanista.
+        </p>
 
+        <div class="hero-actions">
+          <a class="contact-button whatsapp"
+             href="https://wa.me/56959787604?text=Hola%20Instituto%20Delta%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20programas."
+             target="_blank" rel="noopener">
+            <span class="button-icon">✆</span>
+            <span>
+              <small>Escríbenos por WhatsApp</small>
+              <strong>+56 9 5978 7604</strong>
+            </span>
+          </a>
 
-<section id="docencia" class="participate">
-<h2>Forma parte de Delta</h2>
-<div class="two-columns">
-<div>
-<h3>Estudia en Delta</h3>
-<p>Accede a formación certificada para potenciar tu desarrollo profesional.</p>
-</div>
-<div>
-<h3>Enseña en Delta</h3>
-<p>Únete como docente, relator o colaborador académico.</p>
-</div>
-</div>
-</section>
+          <a class="contact-button email"
+             href="mailto:contacto@grupodelta.cl?subject=Consulta%20Instituto%20Delta">
+            <span class="button-icon">✉</span>
+            <span>
+              <small>Contáctanos por correo</small>
+              <strong>contacto@grupodelta.cl</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="img/slide-segunda-titulacion.PNG"
+             alt="Programa Segunda Titulación del Instituto de Formación Clínica Delta">
+      </div>
+
+    </div>
+  </section>
 
 
-<section>
-<h2>Grupo Delta Science Chile</h2>
-<div class="cards logos">
-<div><img src="img/logo-deltaf.PNG"><h3>DeltaF</h3></div>
-<div><img src="img/logo-biocien.JPG"><h3>BioCien</h3></div>
-<div><img src="img/logo-natulife.PNG"><h3>Natulife.cl</h3></div>
-</div>
-</section>
+  <!-- INSTITUTO + FORMA PARTE -->
+  <section class="content-zone" id="instituto">
+    <div class="container content-layout">
+
+      <div class="main-column">
+
+        <div class="section-heading">
+          <h2>Instituto de Formación Clínica Delta</h2>
+          <p>
+            Una propuesta académica orientada a la formación continua de
+            profesionales de la salud, integrando ciencia, práctica clínica e innovación.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <article class="value-item">
+            <div class="round-icon" aria-hidden="true">▤</div>
+            <h3>Formación de excelencia</h3>
+            <p>Programas diseñados con estándares académicos y clínicos de alto nivel.</p>
+          </article>
+
+          <article class="value-item">
+            <div class="round-icon" aria-hidden="true">⚗</div>
+            <h3>Enfoque científico</h3>
+            <p>Basados en evidencia científica y actualización constante de conocimientos.</p>
+          </article>
+
+          <article class="value-item">
+            <div class="round-icon" aria-hidden="true">♙</div>
+            <h3>Docentes expertos</h3>
+            <p>Profesionales reconocidos en el ámbito clínico, académico e investigador.</p>
+          </article>
+
+          <article class="value-item">
+            <div class="round-icon" aria-hidden="true">♡</div>
+            <h3>Impacto en la salud</h3>
+            <p>Formación orientada al bienestar de las personas y comunidades.</p>
+          </article>
+
+        </div>
 
 
-<footer id="contacto">
-<h3>Instituto de Formación Clínica Delta</h3>
-<p>Grupo Delta Science Chile</p>
-<p>Contacto: contacto@grupodelta.cl</p>
-<p>Scientia · Integritas · Humanitas</p>
+        <!-- ÁREAS DE FORMACIÓN -->
+        <section class="training" id="programas">
+          <div class="mini-title">
+            <span></span>
+            <h2>Áreas de Formación</h2>
+            <span></span>
+          </div>
+
+          <div class="program-grid">
+
+            <article class="program-card">
+              <div class="program-image">
+                <img src="img/slide-carrera.PNG" alt="Programas Académicos Delta">
+              </div>
+              <div class="program-body">
+                <h3>Programas Académicos</h3>
+                <p>Carreras y programas de formación profesional en el área de la salud.</p>
+                <a href="#contacto">Ver más →</a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <div class="program-image">
+                <img src="img/slide-ortomolecular.PNG" alt="Cursos y Diplomados Delta">
+              </div>
+              <div class="program-body">
+                <h3>Cursos y Diplomados</h3>
+                <p>Formación continua en temáticas clínicas, científicas y complementarias.</p>
+                <a href="#contacto">Ver más →</a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <div class="program-image">
+                <img src="img/slide-segunda-titulacion.PNG" alt="Segunda Titulación Delta">
+              </div>
+              <div class="program-body">
+                <h3>Segunda Titulación</h3>
+                <p>Programas para profesionales que buscan ampliar su campo laboral.</p>
+                <a href="#contacto">Ver más →</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+
+
+      <!-- SIDEBAR: FORMA PARTE DE DELTA -->
+      <aside class="join-panel" id="docencia">
+        <h2>Forma parte de Delta</h2>
+
+        <article class="join-card student">
+          <div class="join-top">
+            <div class="join-icon">◇</div>
+            <div>
+              <h3>Estudia en Delta</h3>
+              <p>Accede a formación certificada para potenciar tu desarrollo profesional.</p>
+            </div>
+          </div>
+
+          <a class="join-action whatsapp"
+             href="https://wa.me/56959787604?text=Hola%20Instituto%20Delta%2C%20quisiera%20informaci%C3%B3n%20para%20estudiar%20con%20ustedes."
+             target="_blank" rel="noopener">
+            <span>✆</span>
+            <span>
+              <small>Escríbenos por WhatsApp</small>
+              <strong>+56 9 5978 7604</strong>
+            </span>
+          </a>
+        </article>
+
+        <article class="join-card teacher">
+          <div class="join-top">
+            <div class="join-icon">♧</div>
+            <div>
+              <h3>Enseña en Delta</h3>
+              <p>Únete como docente, relator o colaborador académico.</p>
+            </div>
+          </div>
+
+          <a class="join-action teacher-action"
+             href="mailto:contacto@grupodelta.cl?subject=Postulaci%C3%B3n%20docente%20-%20Instituto%20Delta&body=Hola%2C%20quisiera%20postular%20como%20docente%20o%20relator%20del%20Instituto%20Delta.">
+            <span>✉</span>
+            <span>
+              <small>Envíanos un correo</small>
+              <strong>contacto@grupodelta.cl</strong>
+            </span>
+          </a>
+        </article>
+      </aside>
+
+    </div>
+  </section>
+
+
+  <!-- GRUPO DELTA -->
+  <section class="group-section" id="investigacion">
+    <div class="container">
+
+      <div class="mini-title group-title">
+        <span></span>
+        <h2>Grupo Delta Science Chile</h2>
+        <span></span>
+      </div>
+
+      <div class="group-grid">
+
+        <article class="group-card">
+          <div class="group-logo">
+            <img src="img/logo-deltaf.PNG" alt="DeltaF">
+          </div>
+          <div>
+            <h3>DeltaF</h3>
+            <p>Gestión clínica y soluciones digitales para instituciones de salud.</p>
+            <a href="https://deltaf.site" target="_blank" rel="noopener">Conocer más →</a>
+          </div>
+        </article>
+
+        <article class="group-card">
+          <div class="group-logo">
+            <img src="img/logo-biocien.JPG" alt="BioCien">
+          </div>
+          <div>
+            <h3>BioCien</h3>
+            <p>Ciencia, educación y divulgación para el desarrollo en salud.</p>
+            <a href="biocien.html">Conocer más →</a>
+          </div>
+        </article>
+
+        <article class="group-card">
+          <div class="group-logo">
+            <img src="img/logo-natulife.PNG" alt="Natulife.cl">
+          </div>
+          <div>
+            <h3>Natulife.cl</h3>
+            <p>Bienestar y productos naturales con una propuesta especializada.</p>
+            <a href="https://natulife.cl" target="_blank" rel="noopener">Conocer más →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer" id="contacto">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <img src="img/logo-ifcd.png" alt="Instituto Delta">
+      <div>
+        <strong>Instituto de Formación</strong>
+        <span>Clínica Delta</span>
+        <p>Scientia · Integritas · Humanitas</p>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Enlaces</h3>
+      <a href="#instituto">Instituto</a>
+      <a href="#programas">Programas</a>
+      <a href="#investigacion">Investigación</a>
+      <a href="#docencia">Docencia</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Información</h3>
+      <a href="#contacto">Admisión</a>
+      <a href="#contacto">Preguntas frecuentes</a>
+      <a href="#contacto">Políticas y privacidad</a>
+      <a href="#contacto">Términos y condiciones</a>
+    </div>
+
+    <div class="footer-column contact-column">
+      <h3>Contacto</h3>
+      <a href="https://wa.me/56959787604" target="_blank" rel="noopener">✆ +56 9 5978 7604</a>
+      <a href="mailto:contacto@grupodelta.cl">✉ contacto@grupodelta.cl</a>
+      <span>⌖ Chile</span>
+    </div>
+
+    <div class="footer-column">
+      <h3>Síguenos</h3>
+      <div class="social-row">
+        <a href="https://instagram.com/idelta.cl" target="_blank" rel="noopener"
+           aria-label="Instagram Instituto Delta">IG</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    © 2026 Instituto de Formación Clínica Delta. Todos los derechos reservados.
+  </div>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
