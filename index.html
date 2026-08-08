@@ -8,63 +8,83 @@
 </head>
 <body>
 
-<header class="navbar">
-<div class="logo">
+<header class="header">
+<div class="brand">
 <img src="img/logo-ifcd.png">
 <span>Instituto de Formación Clínica Delta</span>
 </div>
 
 <nav>
-<a>Instituto</a>
-<a>Programas</a>
-<a>Investigación</a>
-<a>Docencia</a>
-<a>Contacto</a>
+<a href="#instituto">Instituto</a>
+<a href="#programas">Programas</a>
+<a href="#investigacion">Investigación</a>
+<a href="#docencia">Docencia</a>
+<a href="#contacto">Contacto</a>
 
 <div class="dropdown">
-<a>Grupo Delta ▼</a>
-<div class="submenu">
+<a>Grupo Delta ▾</a>
+<div class="dropdown-menu">
 <a>DeltaF</a>
 <a>BioCien</a>
 <a>Natulife.cl</a>
 </div>
 </div>
 
-<button>Admisión</button>
+<a class="admission">Admisión</a>
 </nav>
 </header>
 
+
 <section class="hero">
 <div class="hero-text">
+<span>SCIENTIA · INTEGRITAS · HUMANITAS</span>
 <h1>Excelencia académica para profesionales de la salud</h1>
-<p>Formación avanzada · Ciencia · Ética · Impacto</p>
-<a class="btn">Conoce nuestros programas →</a>
+<p>
+Formación avanzada, diplomados y programas académicos con enfoque clínico,
+científico y humano.
+</p>
+<a class="button">Conoce nuestros programas →</a>
 </div>
+
+<div class="hero-image">
 <img src="img/slide-segunda-titulacion.PNG">
-</section>
-
-<section>
-<h2>Forma parte de Delta</h2>
-<div class="two-box">
-<div>
-<h3>Estudia en Delta</h3>
-<p>Accede a cursos y diplomados certificados para fortalecer tu desarrollo profesional.</p>
-</div>
-<div>
-<h3>Enseña en Delta</h3>
-<p>Si eres profesional de la salud y deseas impartir formación, únete a nuestra comunidad docente.</p>
-</div>
 </div>
 </section>
 
-<section>
-<h2>Nuestros Programas</h2>
+
+<section id="instituto" class="institution">
+<h2>Instituto de Formación Clínica Delta</h2>
+<p>
+Una propuesta académica orientada a la formación continua de profesionales
+de la salud, integrando ciencia, práctica clínica e innovación.
+</p>
+</section>
+
+
+<section id="programas">
+<h2>Áreas de Formación</h2>
 <div class="cards">
-<div><img src="img/slide-carrera.PNG"><h3>Carreras y Programas</h3></div>
-<div><img src="img/slide-ortomolecular.PNG"><h3>Medicina Ortomolecular</h3></div>
+<div><img src="img/slide-carrera.PNG"><h3>Programas Académicos</h3></div>
+<div><img src="img/slide-ortomolecular.PNG"><h3>Cursos y Diplomados</h3></div>
 <div><img src="img/slide-segunda-titulacion.PNG"><h3>Segunda Titulación</h3></div>
 </div>
 </section>
+
+
+<section id="docencia" class="participate">
+<h2>Forma parte de Delta</h2>
+<div class="two-columns">
+<div>
+<h3>Estudia en Delta</h3>
+<p>Accede a formación certificada para potenciar tu desarrollo profesional.</p>
+</div>
+<div>
+<h3>Enseña en Delta</h3>
+<p>Únete como docente, relator o colaborador académico.</p>
+</div>
+</div>
+</section>
+
 
 <section>
 <h2>Grupo Delta Science Chile</h2>
@@ -75,10 +95,12 @@
 </div>
 </section>
 
-<footer>
+
+<footer id="contacto">
 <h3>Instituto de Formación Clínica Delta</h3>
-<p>Scientia · Integritas · Humanitas</p>
+<p>Grupo Delta Science Chile</p>
 <p>Contacto: contacto@grupodelta.cl</p>
+<p>Scientia · Integritas · Humanitas</p>
 </footer>
 
 <script src="script.js"></script>
