@@ -1,15 +1,11 @@
-// script.js - Instituto Delta Premium
+document.querySelector('.dropdown').addEventListener('click', function(){
 
-document.addEventListener("DOMContentLoaded",()=>{
+    const menu = this.querySelector('.submenu');
 
-const dropdown=document.querySelector(".dropdown");
-
-if(dropdown){
-dropdown.addEventListener("click",()=>{
-const menu=dropdown.querySelector(".submenu");
-menu.style.display =
-menu.style.display==="block" ? "none" : "block";
-});
-}
+    if(menu.style.display === 'block'){
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
 
 });
