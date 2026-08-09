@@ -1,236 +1,1575 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Programas Académicos | Instituto de Formación Clínica Delta</title>
+  <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-.programas-hero{
-background:#faf9f4;
-padding:80px 8%;
-text-align:center;
-}
+  <meta
+    name="description"
+    content="Programas académicos, carreras, diplomados y cursos del Instituto de Formación Clínica Delta."
+  >
 
-.programas-hero h1{
-font-family:Georgia,serif;
-font-size:55px;
-color:#063b2d;
-}
+  <title>
+    Programas Académicos | Instituto de Formación Clínica Delta
+  </title>
 
-.eyebrow{
-color:#b37b00;
-letter-spacing:5px;
-font-weight:bold;
-}
 
-.titulo-area{
-text-align:center;
-font-family:Georgia,serif;
-font-size:40px;
-color:#063b2d;
-margin:70px 0 40px;
-}
+  <!-- CSS GENERAL DE TU SITIO -->
+  <link rel="stylesheet" href="style.css">
 
-.grid-programas{
-width:85%;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
-}
 
-.card-programa{
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
+  <!-- CSS EXCLUSIVO DE PROGRAMAS.HTML -->
+  <style>
 
-.imagen-programa{
-height:260px;
-background:#edf1eb;
-display:flex;
-align-items:center;
-justify-content:center;
-}
+    /* ==============================
+       ESTRUCTURA GENERAL
+    ============================== */
 
-.imagen-programa img{
-width:100%;
-height:100%;
-object-fit:contain;
-}
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-.contenido-programa{
-padding:30px;
-}
+    body {
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
 
-.contenido-programa h2{
-font-family:Georgia,serif;
-color:#063b2d;
-}
+    main {
+      flex: 1 0 auto;
+      width: 100%;
+    }
 
-.contenido-programa p{
-color:#555;
-line-height:1.6;
-}
-</style>
+    .site-footer {
+      flex-shrink: 0;
+    }
+
+
+    /* ==============================
+       HERO PROGRAMAS
+    ============================== */
+
+    .programas-hero {
+      background: #faf9f4;
+      padding: 85px 8% 75px;
+      text-align: center;
+    }
+
+    .programas-hero .eyebrow {
+      color: #b37b00;
+      letter-spacing: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .programas-hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 55px;
+      line-height: 1.1;
+      color: #063b2d;
+      margin: 0 0 24px;
+    }
+
+    .programas-hero p {
+      max-width: 820px;
+      margin: 0 auto;
+      color: #555555;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+
+    /* ==============================
+       CONTENEDOR DE SECCIONES
+    ============================== */
+
+    .programas-section {
+      padding: 0 0 15px;
+    }
+
+    .titulo-area {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 40px;
+      line-height: 1.2;
+      color: #063b2d;
+      margin: 70px 20px 42px;
+    }
+
+    .titulo-area::after {
+      content: "";
+      display: block;
+      width: 75px;
+      height: 3px;
+      background: #c5962f;
+      border-radius: 99px;
+      margin: 18px auto 0;
+    }
+
+    .subtitulo-area {
+      width: min(800px, 85%);
+      margin: -22px auto 38px;
+      text-align: center;
+      color: #6a6a6a;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+
+    /* ==============================
+       GRID CARRERAS Y CURSOS
+    ============================== */
+
+    .grid-programas {
+      width: min(1180px, 85%);
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px;
+    }
+
+
+    /* ==============================
+       TARJETAS
+    ============================== */
+
+    .card-programa {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+
+      border: 1px solid rgba(6, 59, 45, 0.07);
+
+      box-shadow:
+        0 12px 32px rgba(6, 59, 45, 0.08);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card-programa:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 18px 40px rgba(6, 59, 45, 0.13);
+    }
+
+
+    /* ==============================
+       IMÁGENES
+    ============================== */
+
+    .imagen-programa {
+      width: 100%;
+      height: 285px;
+
+      background: #f2f4ef;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+    }
+
+    .imagen-programa img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+      object-position: center;
+
+      display: block;
+    }
+
+
+    /* ==============================
+       CONTENIDO TARJETAS
+    ============================== */
+
+    .contenido-programa {
+      padding: 30px 30px 32px;
+    }
+
+    .tipo-programa {
+      display: inline-block;
+
+      color: #9b741e;
+      background: #faf6e9;
+
+      padding: 6px 11px;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      margin-bottom: 15px;
+    }
+
+    .contenido-programa h2 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      color: #063b2d;
+
+      font-size: 25px;
+      line-height: 1.25;
+
+      margin: 0 0 15px;
+    }
+
+    .contenido-programa p {
+      color: #5f5f5f;
+
+      line-height: 1.7;
+
+      margin: 0;
+
+      font-size: 15.5px;
+    }
+
+
+    /* ==============================
+       CARRUSEL DIPLOMADOS
+    ============================== */
+
+    .carrusel-wrapper {
+      position: relative;
+
+      width: min(1260px, 94%);
+
+      margin: 0 auto;
+    }
+
+    .carrusel-diplomados {
+      width: calc(100% - 105px);
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-auto-flow: column;
+
+      grid-auto-columns:
+        calc((100% - 70px) / 3);
+
+      gap: 35px;
+
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+
+      padding:
+        10px 3px
+        25px;
+
+      scrollbar-width: none;
+    }
+
+    .carrusel-diplomados::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carrusel-diplomados .card-programa {
+      scroll-snap-align: start;
+
+      min-width: 0;
+    }
+
+
+    /* FLECHAS */
+
+    .carrusel-flecha {
+      position: absolute;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      z-index: 10;
+
+      width: 48px;
+      height: 48px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: #063b2d;
+
+      color: #ffffff;
+
+      font-size: 31px;
+
+      line-height: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.18);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .carrusel-flecha:hover {
+      background: #0b4b3a;
+
+      transform:
+        translateY(-50%)
+        scale(1.06);
+    }
+
+    .carrusel-flecha.izquierda {
+      left: 0;
+    }
+
+    .carrusel-flecha.derecha {
+      right: 0;
+    }
+
+
+    /* INDICACIÓN DE DESLIZAMIENTO */
+
+    .indicador-carrusel {
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #8a8a8a;
+
+      margin: 4px 0 0;
+    }
+
+
+    /* ==============================
+       MENÚ ACTIVO
+    ============================== */
+
+    .main-nav a[aria-current="page"] {
+      color: #b88a25;
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    .site-footer {
+      margin-top: 85px;
+      width: 100%;
+    }
+
+
+    /* ==============================
+       TABLET
+    ============================== */
+
+    @media (max-width: 1050px) {
+
+      .carrusel-diplomados {
+        grid-auto-columns:
+          calc((100% - 35px) / 2);
+      }
+
+    }
+
+
+    /* ==============================
+       CELULAR
+    ============================== */
+
+    @media (max-width: 760px) {
+
+      .programas-hero {
+        padding: 60px 22px 55px;
+      }
+
+      .programas-hero h1 {
+        font-size: 38px;
+      }
+
+      .programas-hero .eyebrow {
+        letter-spacing: 3px;
+        font-size: 11px;
+      }
+
+      .programas-hero p {
+        font-size: 16px;
+      }
+
+
+      .titulo-area {
+        font-size: 31px;
+        margin-top: 55px;
+      }
+
+
+      .grid-programas {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+      }
+
+
+      .imagen-programa {
+        height: 250px;
+      }
+
+
+      .carrusel-wrapper {
+        width: 100%;
+      }
+
+      .carrusel-diplomados {
+        width: 88%;
+
+        grid-auto-columns: 88%;
+
+        gap: 20px;
+
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+
+
+      .carrusel-flecha {
+        width: 41px;
+        height: 41px;
+
+        font-size: 26px;
+      }
+
+      .carrusel-flecha.izquierda {
+        left: 4px;
+      }
+
+      .carrusel-flecha.derecha {
+        right: 4px;
+      }
+
+
+      .contenido-programa {
+        padding: 25px;
+      }
+
+      .contenido-programa h2 {
+        font-size: 22px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 
 <body>
 
+
+<!-- ==========================================
+     HEADER
+========================================== -->
+
 <header class="site-header">
-<div class="container header-inner">
 
-<a class="brand" href="index.html">
-<img src="img/logo-ifcd.png">
-<div class="brand-copy">
-<strong>Instituto de Formación</strong>
-<span>Clínica Delta</span>
-</div>
-</a>
+  <div class="container header-inner">
 
-<nav class="main-nav">
-<a href="index.html">Instituto</a>
-<a href="programas.html">Programas</a>
-<a href="#">Investigación</a>
-<a href="#">Docencia</a>
-<a href="#">Contacto</a>
-<a class="admission-btn">Admisión</a>
-</nav>
 
-</div>
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Instituto de Formación Clínica Delta"
+    >
+
+      <img
+        src="img/logo-ifcd.png"
+        alt="Logo Instituto de Formación Clínica Delta"
+      >
+
+      <div class="brand-copy">
+
+        <strong>
+          Instituto de Formación
+        </strong>
+
+        <span>
+          Clínica Delta
+        </span>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- MENÚ CELULAR -->
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav
+      class="main-nav"
+      id="mainNav"
+      aria-label="Navegación principal"
+    >
+
+      <a href="index.html#instituto">
+        Instituto
+      </a>
+
+      <a
+        href="programas.html"
+        aria-current="page"
+      >
+        Programas
+      </a>
+
+      <a href="index.html#investigacion">
+        Investigación
+      </a>
+
+      <a href="index.html#docencia">
+        Docencia
+      </a>
+
+      <a href="#contacto">
+        Contacto
+      </a>
+
+
+
+      <!-- GRUPO DELTA -->
+
+      <div
+        class="dropdown"
+        id="groupDropdown"
+      >
+
+        <button
+          class="dropdown-toggle"
+          type="button"
+          aria-expanded="false"
+        >
+
+          Grupo Delta
+
+          <span class="chevron">
+            ⌄
+          </span>
+
+        </button>
+
+
+
+        <div class="dropdown-menu">
+
+
+          <a
+            href="https://deltaf.site"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <img
+              src="img/logo-deltaf.PNG"
+              alt=""
+            >
+
+            <span>
+              DeltaF
+            </span>
+
+          </a>
+
+
+
+          <a href="biocien.html">
+
+            <img
+              src="img/logo-biocien.JPG"
+              alt=""
+            >
+
+            <span>
+              BioCien
+            </span>
+
+          </a>
+
+
+
+          <a
+            href="https://natulife.cl"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <img
+              src="img/logo-natulife.PNG"
+              alt=""
+            >
+
+            <span>
+              Natulife.cl
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+
+
+      <a
+        class="admission-btn"
+        href="#contacto"
+      >
+        Admisión
+      </a>
+
+
+    </nav>
+
+  </div>
+
 </header>
 
+
+
+
+
+<main>
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
 <section class="programas-hero">
-<div class="eyebrow">SCIENTIA · INTEGRITAS · HUMANITAS</div>
-<h1>Programas Académicos</h1>
-<p>Formación profesional, diplomados y cursos de especialización orientados al desarrollo clínico, científico y humanista.</p>
-</section>
+
+  <p class="eyebrow">
+
+    Scientia · Integritas · Humanitas
+
+  </p>
 
 
-<h2 class="titulo-area">Carreras y Continuidad de Estudios</h2>
+  <h1>
 
-<section class="grid-programas">
+    Programas Académicos
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/slide-segunda-titulacion.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Medicina Naturopática</h2>
-<p>Continuidad de estudios profesionales dirigida a profesionales de la salud.</p>
-</div>
-</article>
+  </h1>
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/slide-carrera.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Medicina Naturopática - Carrera Profesional</h2>
-<p>Formación completa en Medicina Naturopática.</p>
-</div>
-</article>
+
+  <p>
+
+    Formación profesional, diplomados y cursos de
+    especialización orientados al desarrollo clínico,
+    científico y humanista de profesionales y estudiantes
+    del área de la salud.
+
+  </p>
 
 </section>
 
 
-<h2 class="titulo-area">Diplomados</h2>
 
-<section class="grid-programas">
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/slide-ortomolecular.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Diplomado en Medicina Ortomolecular</h2>
-<p>Formación especializada en estrategias integrativas.</p>
-</div>
-</article>
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/Gestion-promocion.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Diplomado en Gestión y Promoción de Salud</h2>
-<p>Desarrollo de competencias para gestión sanitaria y promoción del bienestar.</p>
-</div>
-</article>
+<!-- ==========================================
+     CARRERAS
+========================================== -->
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/Docencia-universitaria.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Diplomado en Docencia Universitaria</h2>
-<p>Formación en competencias pedagógicas para educación superior.</p>
-</div>
-</article>
+<section class="programas-section">
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/Salud-mental.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Diplomado en Salud Mental Integrativa</h2>
-<p>Programa orientado a comprender la salud mental desde una perspectiva integral.</p>
-</div>
-</article>
+  <h2 class="titulo-area">
+
+    Carreras y Continuidad de Estudios
+
+  </h2>
+
+
+  <div class="grid-programas">
+
+
+
+    <!-- CONTINUIDAD -->
+
+    <article class="card-programa">
+
+
+      <div class="imagen-programa">
+
+        <img
+          src="img/slide-segunda-titulacion.PNG"
+          alt="Continuidad de estudios en Medicina Naturopática"
+        >
+
+      </div>
+
+
+      <div class="contenido-programa">
+
+
+        <span class="tipo-programa">
+
+          Continuidad de estudios
+
+        </span>
+
+
+        <h2>
+
+          Medicina Naturopática
+
+        </h2>
+
+
+        <p>
+
+          Programa de continuidad de estudios profesionales
+          dirigido a profesionales del área de la salud que
+          buscan ampliar sus competencias mediante una
+          formación clínica e integrativa.
+
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+
+
+
+    <!-- CARRERA COMPLETA -->
+
+    <article class="card-programa">
+
+
+      <div class="imagen-programa">
+
+        <img
+          src="img/slide-carrera.PNG"
+          alt="Carrera profesional de Medicina Naturopática"
+        >
+
+      </div>
+
+
+      <div class="contenido-programa">
+
+
+        <span class="tipo-programa">
+
+          Carrera profesional
+
+        </span>
+
+
+        <h2>
+
+          Medicina Naturopática
+
+        </h2>
+
+
+        <p>
+
+          Formación profesional completa orientada al
+          desarrollo de conocimientos clínicos, científicos
+          y terapéuticos desde una perspectiva integral de
+          la salud.
+
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+  </div>
 
 </section>
 
 
-<h2 class="titulo-area">Cursos de Formación Continua</h2>
 
-<section class="grid-programas">
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/Roles-habitos.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Roles, Hábitos y Rutinas en la Práctica Clínica</h2>
-<p>Herramientas prácticas para comprender hábitos y rutinas dentro del proceso terapéutico.</p>
-</div>
-</article>
 
-<article class="card-programa">
-<div class="imagen-programa">
-<img src="img/Oidos.PNG">
-</div>
-<div class="contenido-programa">
-<h2>Curso de Lavado de Oídos</h2>
-<p>Formación práctica e intensiva en procedimientos clínicos.</p>
-</div>
-</article>
+<!-- ==========================================
+     DIPLOMADOS - CARRUSEL
+========================================== -->
+
+<section class="programas-section">
+
+  <h2 class="titulo-area">
+
+    Diplomados
+
+  </h2>
+
+
+  <p class="subtitulo-area">
+
+    Programas de especialización diseñados para fortalecer
+    competencias profesionales y ampliar conocimientos en
+    distintas áreas de la salud y la educación superior.
+
+  </p>
+
+
+
+  <div class="carrusel-wrapper">
+
+
+    <!-- FLECHA IZQUIERDA -->
+
+    <button
+      class="carrusel-flecha izquierda"
+      id="diplomadosAnterior"
+      type="button"
+      aria-label="Ver diplomados anteriores"
+    >
+
+      ‹
+
+    </button>
+
+
+
+    <!-- CONTENEDOR CARRUSEL -->
+
+    <div
+      class="carrusel-diplomados"
+      id="carruselDiplomados"
+    >
+
+
+
+      <!-- ORTOMOLECULAR -->
+
+      <article class="card-programa">
+
+
+        <div class="imagen-programa">
+
+          <img
+            src="img/slide-ortomolecular.PNG"
+            alt="Diplomado en Medicina Ortomolecular"
+          >
+
+        </div>
+
+
+        <div class="contenido-programa">
+
+
+          <span class="tipo-programa">
+
+            Diplomado
+
+          </span>
+
+
+          <h2>
+
+            Medicina Ortomolecular
+
+          </h2>
+
+
+          <p>
+
+            Formación especializada orientada al estudio de
+            fundamentos bioquímicos, nutricionales y
+            estrategias integrativas aplicadas al bienestar
+            y la salud.
+
+          </p>
+
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!-- GESTIÓN Y PROMOCIÓN -->
+
+      <article class="card-programa">
+
+
+        <div class="imagen-programa">
+
+          <img
+            src="img/Gestion-promocion.PNG"
+            alt="Diplomado en Gestión y Promoción de Salud"
+          >
+
+        </div>
+
+
+        <div class="contenido-programa">
+
+
+          <span class="tipo-programa">
+
+            Diplomado
+
+          </span>
+
+
+          <h2>
+
+            Gestión y Promoción de Salud
+
+          </h2>
+
+
+          <p>
+
+            Formación orientada al desarrollo de competencias
+            para la gestión sanitaria, promoción del bienestar
+            y diseño de estrategias de intervención en salud.
+
+          </p>
+
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!-- DOCENCIA -->
+
+      <article class="card-programa">
+
+
+        <div class="imagen-programa">
+
+          <img
+            src="img/Docencia-universitaria.PNG"
+            alt="Diplomado en Docencia Universitaria"
+          >
+
+        </div>
+
+
+        <div class="contenido-programa">
+
+
+          <span class="tipo-programa">
+
+            Diplomado
+
+          </span>
+
+
+          <h2>
+
+            Docencia Universitaria
+
+          </h2>
+
+
+          <p>
+
+            Programa dirigido al fortalecimiento de
+            competencias pedagógicas, metodologías activas,
+            planificación académica y evaluación en educación
+            superior.
+
+          </p>
+
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!-- SALUD MENTAL -->
+
+      <article class="card-programa">
+
+
+        <div class="imagen-programa">
+
+          <img
+            src="img/Salud-mental.PNG"
+            alt="Diplomado en Salud Mental Integrativa"
+          >
+
+        </div>
+
+
+        <div class="contenido-programa">
+
+
+          <span class="tipo-programa">
+
+            Diplomado
+
+          </span>
+
+
+          <h2>
+
+            Salud Mental Integrativa
+
+          </h2>
+
+
+          <p>
+
+            Formación orientada a comprender la salud mental
+            desde una perspectiva integral, incorporando
+            dimensiones clínicas, emocionales, sociales y
+            de bienestar humano.
+
+          </p>
+
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+
+    <!-- FLECHA DERECHA -->
+
+    <button
+      class="carrusel-flecha derecha"
+      id="diplomadosSiguiente"
+      type="button"
+      aria-label="Ver más diplomados"
+    >
+
+      ›
+
+    </button>
+
+
+  </div>
+
+
+  <p class="indicador-carrusel">
+
+    Desliza o utiliza las flechas para conocer todos nuestros diplomados.
+
+  </p>
+
 
 </section>
 
 
-<footer class="site-footer">
-<div class="container footer-grid">
-<div class="footer-brand">
-<img src="img/logo-ifcd.png">
-<div>
-<strong>Instituto de Formación</strong>
-<span>Clínica Delta</span>
-</div>
-</div>
 
-<div class="footer-column">
-<h3>Contacto</h3>
-<a href="mailto:direccion@grupodelta.cl">direccion@grupodelta.cl</a>
-</div>
-</div>
+
+
+<!-- ==========================================
+     CURSOS
+========================================== -->
+
+<section class="programas-section">
+
+  <h2 class="titulo-area">
+
+    Cursos de Formación Continua
+
+  </h2>
+
+
+  <div class="grid-programas">
+
+
+
+    <!-- ROLES, HÁBITOS Y RUTINAS -->
+
+    <article class="card-programa">
+
+
+      <div class="imagen-programa">
+
+        <img
+          src="img/Roles-habitos.PNG"
+          alt="Curso Roles, Hábitos y Rutinas en la Práctica Clínica"
+        >
+
+      </div>
+
+
+      <div class="contenido-programa">
+
+
+        <span class="tipo-programa">
+
+          Curso
+
+        </span>
+
+
+        <h2>
+
+          Roles, Hábitos y Rutinas en la Práctica Clínica
+
+        </h2>
+
+
+        <p>
+
+          Curso orientado a comprender la influencia de los
+          roles, hábitos y rutinas dentro del proceso clínico
+          y terapéutico, fortaleciendo herramientas para la
+          práctica profesional.
+
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+
+
+
+    <!-- LAVADO DE OÍDOS -->
+
+    <article class="card-programa">
+
+
+      <div class="imagen-programa">
+
+        <img
+          src="img/Oidos.PNG"
+          alt="Curso de Lavado de Oídos"
+        >
+
+      </div>
+
+
+      <div class="contenido-programa">
+
+
+        <span class="tipo-programa">
+
+          Curso intensivo
+
+        </span>
+
+
+        <h2>
+
+          Lavado de Oídos
+
+        </h2>
+
+
+        <p>
+
+          Formación práctica intensiva orientada al conocimiento
+          del procedimiento, fundamentos clínicos, medidas de
+          seguridad y buenas prácticas asociadas al lavado de
+          oídos.
+
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+
+
+<!-- ==========================================
+     FOOTER COMPLETO
+========================================== -->
+
+<footer
+  class="site-footer"
+  id="contacto"
+>
+
+
+  <div class="container footer-grid">
+
+
+
+    <!-- MARCA -->
+
+    <div class="footer-brand">
+
+
+      <img
+        src="img/logo-ifcd.png"
+        alt="Instituto de Formación Clínica Delta"
+      >
+
+
+      <div>
+
+
+        <strong>
+
+          Instituto de Formación
+
+        </strong>
+
+
+        <span>
+
+          Clínica Delta
+
+        </span>
+
+
+        <p>
+
+          Scientia · Integritas · Humanitas
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- ENLACES -->
+
+    <div class="footer-column">
+
+
+      <h3>
+
+        Enlaces
+
+      </h3>
+
+
+      <a href="index.html#instituto">
+
+        Instituto
+
+      </a>
+
+
+      <a href="programas.html">
+
+        Programas
+
+      </a>
+
+
+      <a href="index.html#investigacion">
+
+        Investigación
+
+      </a>
+
+
+      <a href="index.html#docencia">
+
+        Docencia
+
+      </a>
+
+
+      <a href="#contacto">
+
+        Contacto
+
+      </a>
+
+
+    </div>
+
+
+
+
+
+    <!-- INFORMACIÓN -->
+
+    <div class="footer-column">
+
+
+      <h3>
+
+        Información
+
+      </h3>
+
+
+      <a href="#contacto">
+
+        Admisión
+
+      </a>
+
+
+      <a href="#contacto">
+
+        Preguntas frecuentes
+
+      </a>
+
+
+      <a href="#contacto">
+
+        Políticas y privacidad
+
+      </a>
+
+
+      <a href="#contacto">
+
+        Términos y condiciones
+
+      </a>
+
+
+    </div>
+
+
+
+
+
+    <!-- CONTACTO -->
+
+    <div class="footer-column contact-column">
+
+
+      <h3>
+
+        Contacto
+
+      </h3>
+
+
+      <a
+        href="https://wa.me/56959787604"
+        target="_blank"
+        rel="noopener"
+      >
+
+        ✆ +56 9 5978 7604
+
+      </a>
+
+
+      <a
+        href="mailto:direccion@grupodelta.cl"
+      >
+
+        ✉ direccion@grupodelta.cl
+
+      </a>
+
+
+      <span>
+
+        ⌖ Chile
+
+      </span>
+
+
+    </div>
+
+
+
+
+
+    <!-- REDES -->
+
+    <div class="footer-column">
+
+
+      <h3>
+
+        Síguenos
+
+      </h3>
+
+
+      <div class="social-row">
+
+
+        <a
+          href="https://instagram.com/idelta.cl"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram Instituto Delta"
+        >
+
+          IG
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+  <div class="container footer-bottom">
+
+    © 2026 Instituto de Formación Clínica Delta.
+    Todos los derechos reservados.
+
+  </div>
+
+
 </footer>
+
+
+
+
+
+<!-- ==========================================
+     SCRIPT GENERAL DEL SITIO
+========================================== -->
 
 <script src="script.js"></script>
 
+
+
+<!-- ==========================================
+     SCRIPT DEL CARRUSEL
+========================================== -->
+
+<script>
+
+  const carruselDiplomados =
+    document.getElementById("carruselDiplomados");
+
+  const botonAnterior =
+    document.getElementById("diplomadosAnterior");
+
+  const botonSiguiente =
+    document.getElementById("diplomadosSiguiente");
+
+
+  function distanciaCarrusel() {
+
+    const tarjeta =
+      carruselDiplomados.querySelector(".card-programa");
+
+    if (!tarjeta) {
+      return 350;
+    }
+
+    const estilos =
+      window.getComputedStyle(carruselDiplomados);
+
+    const gap =
+      parseFloat(estilos.columnGap) || 35;
+
+    return tarjeta.getBoundingClientRect().width + gap;
+
+  }
+
+
+  botonAnterior.addEventListener(
+    "click",
+    function () {
+
+      carruselDiplomados.scrollBy({
+        left: -distanciaCarrusel(),
+        behavior: "smooth"
+      });
+
+    }
+  );
+
+
+  botonSiguiente.addEventListener(
+    "click",
+    function () {
+
+      carruselDiplomados.scrollBy({
+        left: distanciaCarrusel(),
+        behavior: "smooth"
+      });
+
+    }
+  );
+
+</script>
+
+
 </body>
+
 </html>
