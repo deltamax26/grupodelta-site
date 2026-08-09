@@ -1,815 +1,1433 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Instituto | Instituto de Formación Clínica Delta</title>
-
-<link rel="stylesheet" href="style.css">
-
-
-<style>
-
-
-html,
-body{
-
-min-height:100%;
-margin:0;
-
-}
-
-
-body{
-
-display:flex;
-flex-direction:column;
-
-}
-
-
-main{
-
-flex:1;
-
-}
-
-
-/* HERO */
-
-.instituto-hero{
-
-background:#faf9f4;
-padding:90px 8%;
-text-align:center;
-
-}
-
-
-.eyebrow{
-
-color:#b37b00;
-letter-spacing:5px;
-font-size:13px;
-font-weight:bold;
-
-}
-
-
-.instituto-hero h1{
-
-font-family:Georgia,serif;
-font-size:55px;
-color:#063b2d;
-margin:25px 0;
-
-}
-
-
-.instituto-hero p{
-
-max-width:850px;
-margin:auto;
-color:#555;
-font-size:18px;
-line-height:1.7;
-
-}
-
-
-
-/* SECCIONES */
-
-
-.contenedor{
-
-width:85%;
-max-width:1200px;
-margin:auto;
-
-}
-
-
-.titulo{
-
-text-align:center;
-font-family:Georgia,serif;
-font-size:40px;
-color:#063b2d;
-margin:70px 0 40px;
-
-}
-
-
-.titulo:after{
-
-content:"";
-display:block;
-
-width:80px;
-height:3px;
-
-background:#c5962f;
-
-margin:20px auto;
-
-}
-
-
-
-/* PRESENTACION */
-
-
-.presentacion{
-
-text-align:center;
-max-width:900px;
-margin:auto;
-
-color:#555;
-line-height:1.8;
-font-size:17px;
-
-}
-
-
-
-
-/* MISION VISION */
-
-
-.grid-institucional{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:35px;
-
-margin-top:40px;
-
-}
-
-
-
-.card{
-
-background:white;
-
-border-radius:25px;
-
-padding:40px;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.08);
-
-}
-
-
-.card h2{
-
-font-family:Georgia,serif;
-
-color:#063b2d;
-
-font-size:30px;
-
-}
-
-
-.card p{
-
-color:#555;
-
-line-height:1.8;
-
-}
-
-
-
-/* LEMA */
-
-
-.lema{
-
-margin-top:70px;
-
-background:#063b2d;
-
-padding:70px 30px;
-
-text-align:center;
-
-color:white;
-
-}
-
-
-.lema h2{
-
-font-family:Georgia,serif;
-
-font-size:45px;
-
-margin-bottom:15px;
-
-}
-
-
-.lema p{
-
-font-size:20px;
-
-letter-spacing:3px;
-
-color:#d8b45a;
-
-}
-
-
-
-
-/* VALORES */
-
-
-.valores{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-margin-bottom:70px;
-
-}
-
-
-.valor{
-
-background:white;
-
-border-radius:20px;
-
-padding:30px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.07);
-
-}
-
-
-.valor h3{
-
-color:#063b2d;
-
-font-family:Georgia,serif;
-
-font-size:23px;
-
-}
-
-
-.valor p{
-
-color:#555;
-
-line-height:1.6;
-
-}
-
-
-
-
-@media(max-width:800px){
-
-
-.instituto-hero h1{
-
-font-size:38px;
-
-}
-
-
-.grid-institucional{
-
-grid-template-columns:1fr;
-
-}
-
-
-.valores{
-
-grid-template-columns:1fr;
-
-}
-
-
-.lema h2{
-
-font-size:32px;
-
-}
-
-
-}
-
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Instituto de Formación Clínica Delta | IFCD</title>
+
+  <meta name="description" content="Instituto de Formación Clínica Delta: formación clínica, carreras profesionales privadas, diplomados, cursos de actualización e investigación para profesionales de la salud." />
+  <meta name="keywords" content="Instituto de Formación Clínica Delta, IFCD, carreras profesionales privadas, diplomados salud, cursos actualización, investigación, naturopatía clínica, Chile" />
+  <meta name="author" content="Grupo Delta Science Chile" />
+
+  <meta property="og:title" content="Instituto de Formación Clínica Delta" />
+  <meta property="og:description" content="Formación clínica seria, aplicada e institucional para profesionales de la salud." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://grupodelta.cl" />
+
+  <style>
+    :root {
+      --green-950: #062018;
+      --green-900: #0b2a21;
+      --green-800: #123f31;
+      --green-700: #15563f;
+      --green-600: #19734f;
+      --green-100: #edf7f2;
+
+      --gold-700: #7e6437;
+      --gold-600: #9d7a3f;
+      --gold-500: #b99459;
+      --gold-100: #f5efe3;
+
+      --gray-900: #17191d;
+      --gray-700: #4f5963;
+      --gray-500: #747d87;
+      --gray-300: #dfe4e8;
+      --gray-200: #eef1f3;
+      --gray-100: #f8f9fa;
+      --white: #ffffff;
+
+      --shadow-soft: 0 22px 70px rgba(7, 25, 19, 0.11);
+      --shadow-card: 0 14px 42px rgba(7, 25, 19, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--gray-900);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(21, 86, 63, 0.07), transparent 28%),
+        radial-gradient(circle at 86% 14%, rgba(185, 148, 89, 0.10), transparent 24%),
+        linear-gradient(180deg, #ffffff 0%, #fbfcfb 52%, #f6f8f7 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(223, 228, 232, 0.76);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 auto;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      display: grid;
+      place-items: center;
+      padding: 5px;
+      box-shadow: 0 10px 26px rgba(7, 25, 19, 0.08);
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--green-950);
+      font-size: 18px;
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--gray-500);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--gray-700);
+      font-size: 14px;
+      font-we
+
+ight: 750;
+    }
+
+    .nav-links a {
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-700);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 12px 19px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 850;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.22s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--green-800);
+      box-shadow: 0 14px 32px rgba(18, 63, 49, 0.20);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-700);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--gray-300);
+      background: var(--white);
+      color: var(--green-950);
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 0 0 18px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      border-top: 1px solid var(--gray-200);
+      color: var(--gray-700);
+      font-weight: 760;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .hero {
+      position: relative;
+      padding: 76px 0 74px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.62fr 1.38fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-logo-panel {
+      position: relative;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.98), rgba(249,250,249,0.86));
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      box-shadow: var(--shadow-soft);
+      padding: 28px;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .hero-logo-panel::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 26px;
+      border: 1px solid rgba(185, 148, 89, 0.22);
+      pointer-events: none;
+    }
+
+    .hero-logo-panel::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -110px;
+      bottom: -120px;
+      border-radius: 50%;
+      background: rgba(21, 86, 63, 0.08);
+      pointer-events: none;
+    }
+
+    .hero-logo-panel img {
+      position: relative;
+      z-index: 2;
+      width: min(76%, 285px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 38px rgba(7, 25, 19, 0.12));
+    }
+
+    /* Carrusel principal: SOLO 3 IMÁGENES */
+    .hero-carousel {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      min-height: unset;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      background: #ffffff;
+      isolation: isolate;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.7s ease, visibility 0.7s ease;
+      background: #ffffff;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: #ffffff;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      left: 34px;
+      bottom: 26px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(6, 32, 24, 0.42);
+      backdrop-filter: blur(10px);
+    }
+
+    .dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.82);
+      background: rgba(255, 2
+
+55, 255, 0.24);
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .dot.active {
+      width: 34px;
+      background: var(--gold-500);
+      border-color: var(--gold-500);
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 999px;
+      background: rgba(6, 32, 24, 0.35);
+      color: #fff;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      transition: .22s ease;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(6, 32, 24, 0.55);
+    }
+
+    .carousel-arrow.prev { left: 18px; }
+    .carousel-arrow.next { right: 18px; }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section.white {
+      background: rgba(255, 255, 255, 0.82);
+      border-top: 1px solid rgba(238, 241, 243, 0.9);
+      border-bottom: 1px solid rgba(238, 241, 243, 0.9);
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 42px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-label {
+      color: var(--green-700);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      color: var(--green-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4.5vw, 54px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      color: #64707a;
+      font-size: 17px;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+      min-height: 100%;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--green-100);
+      color: var(--green-800);
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .info-card h3 {
+      color: var(--green-950);
+      font-size: 21px;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--gray-500);
+      font-size: 15px;
+    }
+
+    .program-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .program-panel {
+      position: sticky;
+      top: 110px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, var(--green-950), var(--green-800));
+      color: var(--white);
+      padding: 38px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .program-panel::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 1px solid rgba(185, 148, 89, 0.38);
+    }
+
+    .program-panel .section-label {
+      color: var(--gold-500);
+    }
+
+    .program-panel h2 {
+      position: relative;
+      z-index: 2;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 500;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .program-panel p {
+      position: relative;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 17px;
+    }
+
+    .program-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .program-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 20px;
+      background: var(--white);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      box-sha
+
+dow: 0 10px 30px rgba(7, 25, 19, 0.05);
+    }
+
+    .program-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--gold-100);
+      color: var(--gold-700);
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+    }
+
+    .program-item strong {
+      display: block;
+      color: var(--green-950);
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    .program-item span {
+      color: var(--gray-500);
+      font-size: 14px;
+    }
+
+    .note {
+      display: block;
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--green-100);
+      color: var(--green-900);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .wide-card {
+      border-radius: var(--radius-xl);
+      background: var(--white);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      box-shadow: var(--shadow-soft);
+      padding: 38px;
+    }
+
+    .audience-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .audience-grid span {
+      padding: 11px 15px;
+      border-radius: 999px;
+      background: var(--green-100);
+      color: var(--green-800);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .research {
+      background: var(--white);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(7, 25, 19, 0.05);
+    }
+
+    .research small {
+      display: block;
+      color: var(--gold-700);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .research strong {
+      display: block;
+      color: var(--green-950);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .research p {
+      color: var(--gray-500);
+      font-size: 14px;
+    }
+
+    .cta {
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 88% 12%, rgba(185, 148, 89, 0.26), transparent 28%),
+        linear-gradient(135deg, var(--green-950), var(--green-800));
+      color: var(--white);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .cta h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 500;
+      line-height: 1.08;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.76);
+      max-width: 720px;
+      font-size: 17px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-box,
+    .contact-form {
+      background: var(--white);
+      border: 1px solid rgba(223, 228, 232, 0.88);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-box h3,
+    .contact-form h3 {
+      color: var(--green-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--gray-500);
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--gray-700);
+      font-weight: 700;
+    }
+
+    .contact-item span {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--green-100);
+      color: var(--green-800);
+      flex: 0 0 auto;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px
+
+;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      color: var(--gray-700);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--gray-300);
+      border-radius: 14px;
+      padding: 14px 15px;
+      font: inherit;
+      outline: none;
+      background: var(--gray-100);
+      transition: 0.2s ease;
+    }
+
+    .field textarea {
+      min-height: 128px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--green-600);
+      box-shadow: 0 0 0 4px rgba(25, 115, 79, 0.11);
+      background: var(--white);
+    }
+
+    footer {
+      background: var(--green-950);
+      color: var(--white);
+      padding: 44px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 32px;
+      margin-bottom: 30px;
+    }
+
+    footer h4 {
+      color: var(--gold-500);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 14px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 8px;
+      transition: 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      color: rgba(255, 255, 255, 0.52);
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1020px) {
+      .nav-links,
+      .nav-actions .btn-primary {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .hero-grid,
+      .program-layout,
+      .contact-grid,
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-logo-panel {
+        min-height: 360px;
+      }
+
+      .hero-carousel {
+        aspect-ratio: 16 / 9;
+        min-height: unset;
+      }
+
+      .program-panel {
+        position: relative;
+        top: auto;
+      }
+
+      .cards-3,
+      .research-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta .btn {
+        width: fit-content;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        height: 72px;
+      }
+
+      .brand-logo {
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+      }
+
+      .brand-text strong {
+        font-size: 14px;
+        white-space: normal;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+      }
+
+      .hero {
+        padding: 46px 0 58px;
+      }
+
+      .hero-grid {
+        gap: 22px;
+      }
+
+      .hero-logo-panel {
+        min-height: 260px;
+        padding: 22px;
+      }
+
+      .hero-logo-panel img {
+        width: min(72%, 215px);
+      }
+
+      .hero-carousel {
+        aspect-ratio: 16 / 9;
+        min-height: unset;
+      }
+
+      .slide img {
+        object-fit: contain;
+        background: #ffffff;
+      }
+
+      .carousel-controls {
+        left: 24px;
+        bottom: 24px;
+      }
+
+      .carousel-arrow {
+        display: none;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .cards-3,
+      .research-grid,
+      .footer-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .program-panel,
+      .wide-card,
+      .cta,
+      .contact-box,
+      .contact-form {
+        padding: 26px;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div + div {
+        margin-top: 8px;
+      }
+   
+
+ }
+  </style>
 </head>
 
-
 <body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="brand" aria-label="Instituto de Formación Clínica Delta">
+          <div class="brand-logo">
+            <img src="img/logo-ifcd.png" alt="Logo Instituto de Formación Clínica Delta" onerror="this.style.display='none';" />
+          </div>
+          <div class="brand-text">
+            <strong>Instituto de Formación Clínica Delta</strong>
+            <span>IFCD · Grupo Delta Science Chile</span>
+          </div>
+        </a>
 
-
-
-<header class="site-header">
-
-
-<div class="container header-inner">
-
-
-<a class="brand" href="index.html">
-
-
-<img src="img/logo-ifcd.png">
-
-
-<div class="brand-copy">
-
-<strong>
-Instituto de Formación
-</strong>
-
-<span>
-Clínica Delta
-</span>
-
-
+        <div class="nav-links">
+          <a href="#instituto">Instituto</a>
+          <a href="#programas">Programas</a>
+          <a href="#investigacion">Investigación</a>
+          <a href="#contacto">Contacto</a>
+<div class="nav-dropdown">
+  <a href="#">Grupo Delta ▼</a>
+  <div class="dropdown-content">
+    <a href="https://deltaf.site" target="_blank">DeltaF</a>
+    <a href="biocien.html">BioCien</a>
+    <a href="https://natulife.cl" target="_blank">Natulife.cl</a>
+  </div>
 </div>
+        </div>
 
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="#contacto">Admisión</a>
+          <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+        </div>
+      </nav>
 
-</a>
-
-
-
-<nav class="main-nav">
-
-
-<a href="instituto.html">
-Instituto
-</a>
-
-
-<a href="programas.html">
-Programas
-</a>
-
-
-<a href="#">
-Investigación
-</a>
-
-
-<a href="#">
-Docencia
-</a>
-
-
-<a href="#contacto">
-Contacto
-</a>
-
-
-<a class="admission-btn">
-
-Admisión
-
-</a>
-
-
-</nav>
-
-
-
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#instituto">Instituto</a>
+        <a href="#programas">Programas</a>
+        <a href="#investigacion">Investigación</a>
+        <a href="#contacto">Contacto</a>
+<div class="nav-dropdown">
+  <a href="#">Grupo Delta ▼</a>
+  <div class="dropdown-content">
+    <a href="https://deltaf.site" target="_blank">DeltaF</a>
+    <a href="biocien.html">BioCien</a>
+    <a href="https://natulife.cl" target="_blank">Natulife.cl</a>
+  </div>
 </div>
+        <div class="grupo-delta-menu">Grupo Delta ▼<br>DeltaF<br>BioCien<br>Natulife.cl</div>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <aside class="hero-logo-panel reveal" aria-label="Logo institucional">
+          <img src="img/logo-ifcd.png" alt="Instituto de Formación Clínica Delta" />
+        </aside>
 
-</header>
+        <section class="hero-carousel reveal" aria-label="Programas destacados">
+          <article class="slide active">
+            <img src="img/slide-segunda-titulacion.PNG" alt="Segunda Titulación en 3 Semestres" loading="eager" />
+          </article>
 
+          <article class="slide">
+            <img src="img/slide-ortomolecular.PNG" alt="Diplomado de Medicina Ortomolecular" loading="lazy" />
+          </article>
 
+          <article class="slide">
+            <img src="img/slide-carrera.PNG" alt="Carrera Profesional de Naturopatía de 8 Semestres" loading="lazy" />
+          </article>
 
+          <button class="carousel-arrow prev" type="button" aria-label="Slide anterior">‹</button>
+          <button class="carousel-arrow next" type="button" aria-label="Slide siguiente">›</button>
 
+          <div class="carousel-controls" aria-label="Controles de carrusel">
+            <button class="dot active" type="button" aria-label="Ver slide 1"></button>
+            <button class="dot" type="button" aria-label="Ver slide 2"></button>
+            <button class="dot" type="button" aria-label="Ver slide 3"></button>
+          </div>
+        </section>
+      </div>
+    </section>
 
-<main>
+    <section class="section white" id="instituto">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-label">El instituto</div>
+          <h2 class="section-title">Una propuesta académica sobria, clínica e institucional.</h2>
+          <p class="section-subtitle">
+            El Instituto de Formación Clínica Delta desarrolla programas de formación orientados a profesionales vinculados al área de la salud, integrando fundamentos biomédicos, razonamiento clínico, análisis de casos, evidencia y responsabilidad profesion
 
+al.
+          </p>
+        </div>
 
+        <div class="cards-3">
+          <article class="info-card reveal">
+            <div class="icon">🎓</div>
+            <h3>Formación estructurada</h3>
+            <p>Programas organizados por módulos, objetivos de aprendizaje, evaluaciones y progresión académica clara.</p>
+          </article>
 
+          <article class="info-card reveal">
+            <div class="icon">⚕</div>
+            <h3>Criterio clínico</h3>
+            <p>Contenidos orientados a semiología, fisiopatología, terapéutica, razonamiento clínico y análisis aplicado.</p>
+          </article>
 
-<section class="instituto-hero">
+          <article class="info-card reveal">
+            <div class="icon">◇</div>
+            <h3>Ética profesional</h3>
+            <p>Formación prudente, responsable y respetuosa de los límites normativos y del rol de cada disciplina.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="programas">
+      <div class="container program-layout">
+        <div class="program-panel reveal">
+          <div class="section-label">Oferta formativa</div>
+          <h2>Programas para fortalecer la práctica profesional.</h2>
+          <p>
+            La estructura académica del instituto contempla carreras profesionales privadas, diplomados, cursos de actualización e investigación aplicada.
+          </p>
+        </div>
 
-<div class="eyebrow">
+        <div class="program-list">
+          <div class="program-item reveal">
+            <div class="program-number">01</div>
+            <div>
+              <strong>Carreras Profesionales</strong>
+              <span>Formación orientada a fundamentos, evidencia, aplicación responsable y análisis de herramientas complementarias.</span>
+              <span class="note">Son programas privados. Para el ejercicio profesional o reconocimiento sanitario, cuando corresponda, se requiere cumplir la normativa vigente y aprobar el examen ante MINSAL / autoridad sanitaria competente.</span>
+            </div>
+          </div>
 
-SCIENTIA · INTEGRITAS · HUMANITAS
+          <div class="program-item reveal">
+            <div class="program-number">02</div>
+            <div>
+              <strong>Diplomados</strong>
+              <span>Programas extensos con estructura académica, módulos progresivos y evaluación final.</span>
+            </div>
+          </div>
 
+          <div class="program-item reveal">
+            <div class="program-number">03</div>
+            <div>
+              <strong>Cursos de Actualización</strong>
+              <span>Instancias específicas para profundizar temas clínicos, fisiopatológicos, terapéuticos o regulatorios.</span>
+            </div>
+          </div>
+
+          <div class="program-item reveal">
+            <div class="program-number">04</div>
+            <div>
+              <strong>Investigación</strong>
+              <span>Contenidos para lectura crítica, búsqueda bibliográfica, documentación académica y comunicación científica.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white">
+      <div class="container">
+        <div class="wide-card reveal">
+          <div class="section-head center" style="margin-bottom: 0;">
+            <div class="section-label">Dirigido a</div>
+            <h2 class="section-title">Profesionales y estudiantes avanzados del área de la salud.</h2>
+            <p class="section-subtitle">
+              Programas pensados para quienes requieren lenguaje clínico, herramientas aplicadas y formación compatible con el ejercicio profesional responsable.
+            </p>
+
+            <div class="audience-grid">
+              <span>Enfermería</span>
+              <span>Nutrición</span>
+              <span>Kinesiología</span>
+              <span>Química y Farmacia</span>
+              <span>Tecnología Médica</span>
+              <span>Acupuntura</span>
+              <span>Naturopatía</span>
+              <span>Otras áreas de salud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+  </section>
+
+    <section class="section" id="investigacion">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-label">Investigación</div>
+          <h2 class="section-title">Lectura crítica, evidencia y documentación académica.</h2>
+          <p class="section-subtitle">
+            El eje de investigación busca fortalecer la capacidad de analizar información científica, fundamentar decisiones y comunicar contenidos clínicos con responsabilidad.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research reveal">
+            <small>01</small>
+            <strong>Lectura crítica</strong>
+            <p>Análisis de artículos, niveles de evidencia, sesgos, resultados y aplicabilidad clínica.</p>
+          </article>
+
+          <article class="research reveal">
+            <small>02</small>
+            <strong>Búsqueda bibliográfica</strong>
+            <p>Uso de fuentes académicas, bases de datos, palabras clave y criterios de selección documental.</p>
+          </article>
+
+          <article class="research reveal">
+            <small>03</small>
+            <strong>Documentación académica</strong>
+            <p>Organización de referencias, informes, fichas técnicas, revisión de literatura y síntesis clínica.</p>
+          </article>
+
+          <article class="research reveal">
+            <small>04</small>
+            <strong>Comunicación científica</strong>
+            <p>Elaboración de contenidos educativos, presentaciones, resúmenes y divulgación responsable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <h2>Solicita información académica o institucional.</h2>
+            <p>
+              Escríbenos para consultar por carreras, diplomados, cursos de actualización, investigación, próximas fechas, certificaciones o alianzas académicas.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#contacto">Ir a contacto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-label">Contacto</div>
+          <h2 class="section-title">Comunícate con el Instituto Delta</h2>
+          <p class="section-subtitle">Para admisión, programas, certificaciones, alianzas o consultas institucionales.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box reveal">
+            <h3>Información institucional</h3>
+            <p>
+              El formulario abrirá tu aplicación de correo. También puedes escribir directamente al correo institucional.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span>✉</span>
+                <div>
+                  <strong>Correo</strong><br />
+                  <a href="mailto:idealta@grupodelta.cl">idealta@grupodelta.cl</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span>⌖</span>
+                <div>
+                  <strong>Ubicación</strong><br />
+                  Chile
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span>Δ</span>
+                <div>
+                  <strong>Grupo institucional</strong><br />
+                  Grupo Delta Science Chile
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" action="mailto:idealta@grupodelta.cl" method="post" enctype="text/plain">
+            <h3>Enviar consulta</h3>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="Nombre" type="text" placeholder="Tu nomb
+
+re" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Correo</label>
+                <input id="email" name="Correo" type="email" placeholder="tu@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="Telefono" type="text" placeholder="+56 9 ..." />
+              </div>
+
+              <div class="field">
+                <label for="interes">Área de interés</label>
+                <select id="interes" name="Interes">
+                  <option value="Información general">Información general</option>
+                  <option value="Carreras Profesionales">Carreras Profesionales</option>
+                  <option value="Diplomados">Diplomados</option>
+                  <option value="Cursos de Actualización">Cursos de Actualización</option>
+                  <option value="Investigación">Investigación</option>
+                  <option value="Alianza institucional">Alianza institucional</option>
+                  <option value="Otra consulta">Otra consulta</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="Mensaje" placeholder="Escribe tu consulta aquí..." required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Instituto Delta</h4>
+          <p>Formación clínica, carreras profesionales privadas, diplomados, cursos de actualización e investigación para profesionales de la salud.</p>
+        </div>
+
+        <div>
+          <h4>Secciones</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#instituto">Instituto</a>
+          <a href="#programas">Programas</a>
+          <a href="#investigacion">Investigación</a>
+          <a href="#contacto">Contacto</a>
+<div class="nav-dropdown">
+  <a href="#">Grupo Delta ▼</a>
+  <div class="dropdown-content">
+    <a href="https://deltaf.site" target="_blank">DeltaF</a>
+    <a href="biocien.html">BioCien</a>
+    <a href="https://natulife.cl" target="_blank">Natulife.cl</a>
+  </div>
 </div>
-
-
-<h1>
-
-Instituto de Formación Clínica Delta
-
-</h1>
-
-
-<p>
-
-Una institución orientada a la formación profesional
-continua, integrando conocimiento científico,
-práctica clínica, innovación y una visión humanista
-de la salud.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-<section class="contenedor">
-
-
-<h2 class="titulo">
-
-Nuestra Institución
-
-</h2>
-
-
-<p class="presentacion">
-
-El Instituto de Formación Clínica Delta nace con el propósito
-de contribuir al desarrollo de profesionales capaces de
-enfrentar los desafíos actuales de la salud, mediante programas
-académicos de calidad que integran ciencia, experiencia clínica
-y compromiso humano.
-
-Nuestra propuesta formativa busca entregar herramientas
-actualizadas, aplicables y pertinentes para favorecer el
-crecimiento profesional y generar un impacto positivo en las
-personas y comunidades.
-
-</p>
-
-
-
-
-
-
-
-<div class="grid-institucional">
-
-
-<div class="card">
-
-
-<h2>
-Misión
-</h2>
-
-
-<p>
-
-Formar y perfeccionar profesionales comprometidos con la
-salud y el bienestar de las personas, mediante programas
-académicos de calidad que integren conocimiento científico,
-práctica clínica, innovación y una visión humanista.
-
-Promovemos una educación aplicable a los desafíos reales del
-ejercicio profesional, favoreciendo el pensamiento crítico,
-la actualización permanente y el desarrollo de competencias.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Visión
-</h2>
-
-
-<p>
-
-Ser una institución de formación reconocida en Chile y
-Latinoamérica por la calidad de sus programas, su enfoque
-innovador e integrativo y su capacidad para formar
-profesionales preparados para responder a los nuevos desafíos
-de la salud y la educación.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="lema">
-
-
-<h2>
-
-Scientia · Integritas · Humanitas
-
-</h2>
-
-
-<p>
-
-Ciencia · Integridad · Humanidad
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="contenedor">
-
-
-<h2 class="titulo">
-
-Nuestros Valores
-
-</h2>
-
-
-
-<div class="valores">
-
-
-<div class="valor">
-
-<h3>
-Excelencia académica
-</h3>
-
-<p>
-Buscamos altos estándares de calidad en nuestros programas,
-docentes y procesos formativos.
-</p>
-
-</div>
-
-
-
-
-<div class="valor">
-
-<h3>
-Rigor científico
-</h3>
-
-<p>
-Promovemos una formación basada en conocimiento,
-análisis crítico y actualización permanente.
-</p>
-
-</div>
-
-
-
-
-
-<div class="valor">
-
-<h3>
-Integridad
-</h3>
-
-<p>
-Actuamos con responsabilidad, ética, transparencia y
-coherencia profesional.
-</p>
-
-</div>
-
-
-
-
-
-<div class="valor">
-
-<h3>
-Humanismo
-</h3>
-
-<p>
-Reconocemos a la persona como centro del proceso de salud
-y aprendizaje.
-</p>
-
-</div>
-
-
-
-
-
-<div class="valor">
-
-<h3>
-Innovación
-</h3>
-
-<p>
-Impulsamos nuevas metodologías y herramientas para la
-formación profesional.
-</p>
-
-</div>
-
-
-
-
-
-<div class="valor">
-
-<h3>
-Compromiso con el bienestar
-</h3>
-
-<p>
-Orientamos nuestro trabajo hacia un impacto positivo en
-personas y comunidades.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-</main>
-
-
-
-
-
-
-
-<footer class="site-footer" id="contacto">
-
-
-<div class="container footer-grid">
-
-
-<div class="footer-brand">
-
-
-<img src="img/logo-ifcd.png">
-
-
-<div>
-
-<strong>
-Instituto de Formación
-</strong>
-
-
-<span>
-Clínica Delta
-</span>
-
-
-<p>
-Scientia · Integritas · Humanitas
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Enlaces
-</h3>
-
-
-<a href="instituto.html">
-Instituto
-</a>
-
-
-<a href="programas.html">
-Programas
-</a>
-
-
-<a>
-Investigación
-</a>
-
-
-<a>
-Docencia
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Contacto
-</h3>
-
-
-<a href="mailto:direccion@grupodelta.cl">
-
-direccion@grupodelta.cl
-
-</a>
-
-
-<a href="https://wa.me/56959787604">
-
-+56 9 5978 7604
-
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="container footer-bottom">
-
-© 2026 Instituto de Formación Clínica Delta. Todos los derechos reservados.
-
-</div>
-
-
-
-</footer>
-
-
-
-<script src="script.js"></script>
-
-
+        </div>
+
+        <div>
+          <h4>Grupo Delta</h4>
+          <a href="https://deltaf.site">DeltaF</a>
+<a href="biocien.html">BioCien</a>
+<a href="https://natulife.cl">Natulife.cl</a>
+          <a href="mailto:idealta@grupodelta.cl">idealta@grupodelta.cl</a>
+          <p>Chile</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Instituto de Formación Clínica Delta. Todos los derechos reservados.</div>
+        <div>Scientia • Integritas • Humanitas</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+        menuBtn.textContent = mobileMenu.classList.contains("open") ? "×" : "☰";
+      });
+
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          menuBtn.textContent = "☰";
+        });
+      });
+    }
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealElements.for
+
+Each((element) => revealObserver.observe(element));
+
+    const slides = Array.from(document.querySelectorAll(".hero-carousel .slide"));
+    const dots = Array.from(document.querySelectorAll(".hero-carousel .dot"));
+    const nextBtn = document.querySelector(".hero-carousel .carousel-arrow.next");
+    const prevBtn = document.querySelector(".hero-carousel .carousel-arrow.prev");
+    let currentSlide = 0;
+    let carouselTimer = null;
+
+    function showSlide(index) {
+      if (!slides.length) return;
+
+      currentSlide = ((index % slides.length) + slides.length) % slides.length;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === currentSlide);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function startCarousel() {
+      stopCarousel();
+      carouselTimer = window.setInterval(nextSlide, 5200);
+    }
+
+    function stopCarousel() {
+      if (carouselTimer) {
+        window.clearInterval(carouselTimer);
+        carouselTimer = null;
+      }
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        showSlide(i);
+        startCarousel();
+      });
+    });
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+        startCarousel();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevSlide();
+        startCarousel();
+      });
+    }
+
+    showSlide(0);
+    startCarousel();
+  </script>
 </body>
-
 </html>
