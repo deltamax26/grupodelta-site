@@ -13,55 +13,74 @@
 
 <style>
 
-.programas-banner{
+
+.programas-hero{
+
 background:#faf9f4;
 padding:80px 8%;
 text-align:center;
+
 }
 
-.eyebrow{
+
+.programas-hero .eyebrow{
+
+color:#b37b00;
 letter-spacing:5px;
 font-size:14px;
 font-weight:bold;
-color:#b37b00;
+
 }
 
-.programas-banner h1{
+
+.programas-hero h1{
+
 font-family:Georgia,serif;
 font-size:55px;
 color:#063b2d;
 margin:25px 0;
+
 }
 
-.programas-banner p{
+
+.programas-hero p{
+
 max-width:850px;
 margin:auto;
 font-size:18px;
-line-height:1.6;
 color:#555;
+line-height:1.6;
+
 }
 
 
-.titulo-programas{
+
+
+.titulo-area{
+
 text-align:center;
 font-family:Georgia,serif;
 font-size:40px;
 color:#063b2d;
 margin:70px 0 40px;
+
 }
 
 
-.titulo-programas:after{
+.titulo-area:after{
+
 content:"";
 display:block;
 width:80px;
 height:3px;
 background:#c99520;
 margin:20px auto;
+
 }
 
 
-.contenedor-programas{
+
+.grid-programas{
 
 width:85%;
 margin:auto;
@@ -74,22 +93,33 @@ gap:35px;
 }
 
 
+
 .card-programa{
 
-background:white;
+background:#fff;
 border-radius:25px;
 overflow:hidden;
 
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
+
 
 
 .imagen-programa{
 
-height:260px;
+height:250px;
+background:#e9eee8;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:#777;
+font-size:16px;
 
 }
+
 
 
 .imagen-programa img{
@@ -102,11 +132,13 @@ object-fit:cover;
 
 
 
+
 .contenido-programa{
 
 padding:30px;
 
 }
+
 
 
 .contenido-programa h2{
@@ -118,12 +150,14 @@ font-size:25px;
 }
 
 
+
 .contenido-programa p{
 
 color:#555;
-line-height:1.6;
+line-height:1.7;
 
 }
+
 
 
 .boton-programa{
@@ -133,6 +167,7 @@ margin-top:20px;
 
 color:#b37b00;
 font-weight:bold;
+text-decoration:none;
 
 }
 
@@ -140,8 +175,8 @@ font-weight:bold;
 
 </style>
 
-</head>
 
+</head>
 
 
 <body>
@@ -155,17 +190,26 @@ font-weight:bold;
 
 <a class="brand" href="index.html">
 
-<img src="img/logo-ifcd.png">
+<img src="img/logo-ifcd.png" 
+alt="Instituto de Formación Clínica Delta">
+
 
 <div class="brand-copy">
 
-<strong>Instituto de Formación</strong>
+<strong>
+Instituto de Formación
+</strong>
 
-<span>Clínica Delta</span>
+<span>
+Clínica Delta
+</span>
+
 
 </div>
 
+
 </a>
+
 
 
 
@@ -197,9 +241,11 @@ Contacto
 </a>
 
 
+
 <a class="admission-btn" href="#">
 Admisión
 </a>
+
 
 
 </nav>
@@ -213,7 +259,11 @@ Admisión
 
 
 
-<section class="programas-banner">
+<main>
+
+
+
+<section class="programas-hero">
 
 
 <div class="eyebrow">
@@ -233,6 +283,7 @@ de profesionales del área de la salud.
 </p>
 
 
+
 </section>
 
 
@@ -240,13 +291,16 @@ de profesionales del área de la salud.
 
 
 
-<h2 class="titulo-programas">
+<!-- CARRERAS -->
+
+
+<h2 class="titulo-area">
 Carreras y Continuidad de Estudios
 </h2>
 
 
 
-<section class="contenedor-programas">
+<section class="grid-programas">
 
 
 
@@ -256,10 +310,9 @@ Carreras y Continuidad de Estudios
 <div class="imagen-programa">
 
 <img src="img/slide-segunda-titulacion.PNG"
-alt="Medicina Naturopática continuidad">
+alt="Medicina Naturopática">
 
 </div>
-
 
 
 <div class="contenido-programa">
@@ -271,9 +324,9 @@ Medicina Naturopática
 
 
 <p>
-Programa de continuidad de estudios dirigido a profesionales
-del área de la salud que buscan ampliar sus competencias
-mediante una formación integrativa, clínica y científica.
+Programa de continuidad de estudios profesionales dirigido
+a profesionales del área de la salud que buscan ampliar sus
+competencias mediante una formación integrativa y clínica.
 </p>
 
 
@@ -286,6 +339,7 @@ Ver programa →
 
 
 </article>
+
 
 
 
@@ -303,19 +357,20 @@ alt="Carrera Medicina Naturopática">
 </div>
 
 
-
 <div class="contenido-programa">
 
 
 <h2>
-Medicina Naturopática - Carrera Profesional
+Medicina Naturopática
+<br>
+Carrera Profesional
 </h2>
 
 
 <p>
-Formación profesional completa en Medicina Naturopática,
-integrando conocimientos clínicos, científicos y una visión
-integral del bienestar humano.
+Carrera completa orientada a la formación integral en
+medicina naturopática, incorporando conocimientos clínicos,
+científicos y terapéuticos.
 </p>
 
 
@@ -332,3 +387,455 @@ Ver programa →
 
 
 </section>
+
+
+
+
+
+
+
+
+<!-- DIPLOMADOS -->
+
+
+<h2 class="titulo-area">
+Diplomados
+</h2>
+
+
+
+<section class="grid-programas">
+
+
+
+<article class="card-programa">
+
+
+<div class="imagen-programa">
+
+<img src="img/slide-ortomolecular.PNG"
+alt="Diplomado Medicina Ortomolecular">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Diplomado en Medicina Ortomolecular
+</h2>
+
+
+<p>
+Formación especializada enfocada en fundamentos
+bioquímicos, nutricionales y estrategias integrativas
+para la comprensión del organismo humano.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+<article class="card-programa">
+
+
+<div class="imagen-programa">
+
+<span>
+Imagen del programa
+</span>
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Diplomado en Gestión y Promoción de Salud
+</h2>
+
+
+<p>
+Programa orientado al desarrollo de competencias para
+la gestión sanitaria, promoción del bienestar y diseño
+de estrategias de intervención en salud.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+<article class="card-programa">
+
+
+<div class="imagen-programa">
+
+<span>
+Imagen del programa
+</span>
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Diplomado en Docencia Universitaria
+</h2>
+
+
+<p>
+Formación dirigida al fortalecimiento de competencias
+pedagógicas, planificación académica, evaluación y
+metodologías de enseñanza superior.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</article>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CURSOS -->
+
+
+<h2 class="titulo-area">
+Cursos de Formación Continua
+</h2>
+
+
+
+<section class="grid-programas">
+
+
+
+<article class="card-programa">
+
+<div class="imagen-programa">
+
+<span>
+Imagen del curso
+</span>
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Roles, Hábitos y Rutinas en la Práctica Clínica
+</h2>
+
+
+<p>
+Curso orientado al fortalecimiento de competencias
+clínicas, organización profesional y comprensión de
+hábitos y rutinas dentro del ejercicio terapéutico.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</article>
+
+
+
+
+
+
+
+<article class="card-programa">
+
+
+<div class="imagen-programa">
+
+<span>
+Imagen del curso
+</span>
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Curso de Lavado de Oídos
+</h2>
+
+
+<p>
+Formación práctica enfocada en procedimientos clínicos,
+manejo seguro y fundamentos relacionados con la atención
+integral del usuario.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+
+
+<article class="card-programa">
+
+
+<div class="imagen-programa">
+
+<span>
+Imagen del curso
+</span>
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Curso en Salud Mental Integrativa
+</h2>
+
+
+<p>
+Programa orientado a comprender la salud mental desde
+una perspectiva integral, considerando dimensiones
+clínicas, emocionales y sociales.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+
+
+<footer class="site-footer">
+
+
+<div class="container footer-grid">
+
+
+<div class="footer-brand">
+
+
+<img src="img/logo-ifcd.png">
+
+
+<div>
+
+<strong>
+Instituto de Formación
+</strong>
+
+
+<span>
+Clínica Delta
+</span>
+
+
+<p>
+Scientia · Integritas · Humanitas
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="footer-column">
+
+
+<h3>
+Enlaces
+</h3>
+
+
+<a href="index.html">
+Instituto
+</a>
+
+
+<a href="programas.html">
+Programas
+</a>
+
+
+<a href="#">
+Investigación
+</a>
+
+
+<a href="#">
+Docencia
+</a>
+
+
+<a href="#">
+Contacto
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="footer-column">
+
+
+<h3>
+Información
+</h3>
+
+
+<a>
+Admisión
+</a>
+
+
+<a>
+Preguntas frecuentes
+</a>
+
+
+<a>
+Políticas y privacidad
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="footer-column contact-column">
+
+
+<h3>
+Contacto
+</h3>
+
+
+<a href="https://wa.me/56959787604">
+✆ +56 9 5978 7604
+</a>
+
+
+<a href="mailto:direccion@grupodelta.cl">
+✉ direccion@grupodelta.cl
+</a>
+
+
+<span>
+⌖ Chile
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+<div class="container footer-bottom">
+
+© 2026 Instituto de Formación Clínica Delta. Todos los derechos reservados.
+
+</div>
+
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
