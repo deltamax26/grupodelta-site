@@ -1,1 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Programas | Instituto de Formación Clínica Delta</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* ENCABEZADO */
+
+.programas-banner{
+
+background:#faf9f4;
+padding:80px 8%;
+text-align:center;
+
+}
+
+
+.programas-banner h1{
+
+font-family:Georgia, serif;
+font-size:55px;
+color:#073b2d;
+margin:20px 0;
+
+}
+
+
+.programas-banner .frase{
+
+letter-spacing:5px;
+font-size:14px;
+color:#b37b00;
+font-weight:bold;
+
+}
+
+
+.programas-banner p{
+
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+color:#555;
+
+}
+
+
+
+/* TITULOS */
+
+
+.titulo-programas{
+
+text-align:center;
+font-family:Georgia,serif;
+font-size:40px;
+color:#073b2d;
+margin:70px 0 30px;
+
+}
+
+
+.titulo-programas:after{
+
+content:"";
+display:block;
+width:80px;
+height:3px;
+background:#c99520;
+margin:20px auto;
+
+}
+
+
+
+/* TARJETAS */
+
+
+.contenedor-programas{
+
+width:84%;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+
+
+.card-programa{
+
+background:white;
+border-radius:25px;
+overflow:hidden;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+.card-programa:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.imagen-programa{
+
+height:250px;
+background:#e8eee8;
+
+}
+
+
+
+.imagen-programa img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+
+
+
+.contenido-programa{
+
+padding:30px;
+
+}
+
+
+
+.contenido-programa h2{
+
+font-size:25px;
+font-family:Georgia,serif;
+color:#073b2d;
+
+}
+
+
+
+.contenido-programa p{
+
+color:#555;
+line-height:1.7;
+
+}
+
+
+
+.boton-programa{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:#b37b00;
+font-weight:bold;
+text-decoration:none;
+
+}
+
+
+
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+.programas-banner h1{
+
+font-size:38px;
+
+}
+
+
+.titulo-programas{
+
+font-size:32px;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!--
+AQUI VA TU HEADER ACTUAL
+(copia el mismo de index.html)
+-->
+
+
+
+<section class="programas-banner">
+
+
+<div class="frase">
+SCIENTIA · INTEGRITAS · HUMANITAS
+</div>
+
+
+<h1>
+Programas Académicos
+</h1>
+
+
+<p>
+Formación profesional, diplomados y cursos de especialización
+orientados al desarrollo clínico, científico y humanista
+de profesionales del área de la salud.
+</p>
+
+
+</section>
+
+
+
+
+
+<h2 class="titulo-programas">
+Carreras y Continuidad de Estudios
+</h2>
+
+
+<section class="contenedor-programas">
+
+
+
+<div class="card-programa">
+
+
+<div class="imagen-programa">
+
+<img src="img/medicina-continuidad.jpg"
+alt="Medicina Naturopática">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Medicina Naturopática
+</h2>
+
+
+<p>
+Programa de continuidad de estudios dirigido a profesionales
+del área de la salud que buscan ampliar sus competencias
+mediante una formación integrativa, clínica y científica.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="card-programa">
+
+
+<div class="imagen-programa">
+
+<img src="img/medicina-carrera.jpg"
+alt="Carrera Medicina Naturopática">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Medicina Naturopática - Carrera Profesional
+</h2>
+
+
+<p>
+Formación profesional completa que integra conocimientos
+clínicos, ciencias de la salud, terapias naturales y una
+visión integral del bienestar humano.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<h2 class="titulo-programas">
+Diplomados
+</h2>
+
+
+
+<section class="contenedor-programas">
+
+
+
+
+
+<div class="card-programa">
+
+<div class="imagen-programa">
+
+<img src="img/medicina-ortomolecular.jpg">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Diplomado en Medicina Ortomolecular
+</h2>
+
+
+<p>
+Programa enfocado en el estudio de estrategias nutricionales,
+bioquímicas y terapéuticas orientadas a la comprensión
+integral del organismo humano.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="card-programa">
+
+<div class="imagen-programa">
+
+<img src="img/gestion-salud.jpg">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Diplomado en Gestión y Promoción de Salud
+</h2>
+
+
+<p>
+Formación orientada al desarrollo de competencias para la
+gestión sanitaria, promoción del bienestar y creación de
+estrategias de intervención en salud.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="card-programa">
+
+<div class="imagen-programa">
+
+<img src="img/docencia-universitaria.jpg">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Diplomado en Docencia Universitaria
+</h2>
+
+
+<p>
+Programa destinado al fortalecimiento de competencias
+pedagógicas para profesionales que participan en procesos
+formativos universitarios, incorporando planificación,
+evaluación y metodologías de enseñanza.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<h2 class="titulo-programas">
+Cursos de Formación Continua
+</h2>
+
+
+
+<section class="contenedor-programas">
+
+
+
+
+
+
+<div class="card-programa">
+
+<div class="imagen-programa">
+
+<img src="img/roles-rutinas.jpg">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Roles, Hábitos y Rutinas en la Práctica Clínica
+</h2>
+
+
+<p>
+Curso orientado al fortalecimiento del razonamiento clínico,
+organización profesional y comprensión de los hábitos y
+rutinas como elementos fundamentales del desempeño
+terapéutico.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="card-programa">
+
+<div class="imagen-programa">
+
+<img src="img/lavado-oidos.jpg">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Curso de Lavado de Oídos
+</h2>
+
+
+<p>
+Formación práctica enfocada en procedimientos clínicos,
+manejo seguro y fundamentos asociados a la atención
+integral del usuario.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="card-programa">
+
+<div class="imagen-programa">
+
+<img src="img/salud-mental.jpg">
+
+</div>
+
+
+<div class="contenido-programa">
+
+
+<h2>
+Curso en Salud Mental Integrativa
+</h2>
+
+
+<p>
+Programa orientado a comprender la salud mental desde una
+perspectiva integral, considerando dimensiones clínicas,
+emocionales, sociales y de bienestar humano.
+</p>
+
+
+<a class="boton-programa">
+Ver programa →
+</a>
+
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!--
+AQUI VA TU FOOTER ACTUAL
+(copia el mismo de index.html)
+-->
+
+
+
+</body>
+
+</html>
