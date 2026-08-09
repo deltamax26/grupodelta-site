@@ -1,22 +1,656 @@
-<header class="site-header">
-<div class="container header-inner">
+/* =========================================
+   INSTITUTO DE FORMACIÓN CLÍNICA DELTA
+   STYLE.CSS PRINCIPAL
+========================================= */
 
-<a class="brand" href="index.html">
-<img src="img/logo-ifcd.png">
-<div class="brand-copy">
-<strong>Instituto de Formación</strong>
-<span>Clínica Delta</span>
-</div>
-</a>
+:root{
 
-<nav class="main-nav">
-<a href="index.html">Instituto</a>
-<a href="programas.html">Programas</a>
-<a href="#">Investigación</a>
-<a href="#">Docencia</a>
-<a href="#">Contacto</a>
-<a class="admission-btn">Admisión</a>
-</nav>
+--green-dark:#06271d;
+--green:#0a3326;
+--green-light:#146043;
 
-</div>
-</header>
+--gold:#b88618;
+--gold-light:#d9a927;
+
+--cream:#fbf7ef;
+--white:#ffffff;
+
+--text:#15231d;
+--muted:#65716b;
+
+--shadow:0 18px 55px rgba(9,42,31,.12);
+--shadow-soft:0 10px 30px rgba(9,42,31,.08);
+
+--radius-xl:28px;
+--radius-lg:20px;
+
+--max:1240px;
+
+}
+
+
+/* RESET */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+body{
+
+font-family:
+Inter,
+Arial,
+sans-serif;
+
+color:var(--text);
+background:white;
+
+line-height:1.6;
+
+}
+
+
+/* CONTENEDOR */
+
+.container{
+
+width:min(90%,var(--max));
+margin:auto;
+
+}
+
+
+
+/* =========================================
+HEADER
+========================================= */
+
+
+.site-header{
+
+position:sticky;
+top:0;
+
+z-index:1000;
+
+background:white;
+
+border-bottom:1px solid #eee;
+
+}
+
+
+.header-inner{
+
+height:90px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+
+/* LOGO */
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+text-decoration:none;
+
+color:var(--green-dark);
+
+}
+
+
+.brand img{
+
+width:65px;
+
+height:65px;
+
+object-fit:contain;
+
+}
+
+
+.brand-copy{
+
+display:flex;
+
+flex-direction:column;
+
+line-height:1.2;
+
+}
+
+
+.brand-copy strong{
+
+font-family:Georgia,serif;
+
+font-size:18px;
+
+}
+
+
+.brand-copy span{
+
+font-size:22px;
+
+font-family:Georgia,serif;
+
+}
+
+
+
+/* MENU */
+
+.main-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+}
+
+
+.main-nav a{
+
+text-decoration:none;
+
+color:var(--green-dark);
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+
+.main-nav a:hover{
+
+color:var(--gold);
+
+}
+
+
+/* BOTON */
+
+.admission-btn{
+
+background:var(--green-dark);
+
+color:white!important;
+
+padding:14px 28px;
+
+border-radius:30px;
+
+}
+
+
+
+/* =========================================
+HERO
+========================================= */
+
+
+.hero{
+
+background:var(--cream);
+
+padding:100px 0;
+
+text-align:center;
+
+}
+
+
+.hero h1{
+
+font-family:Georgia,serif;
+
+font-size:58px;
+
+color:var(--green-dark);
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+
+.hero p{
+
+font-size:22px;
+
+max-width:800px;
+
+margin:auto;
+
+color:#555;
+
+}
+
+
+.hero img{
+
+margin-top:40px;
+
+max-width:350px;
+
+height:auto;
+
+}
+
+
+
+/* =========================================
+SECCIONES
+========================================= */
+
+
+.section{
+
+padding:80px 0;
+
+}
+
+
+.section h2{
+
+font-family:Georgia,serif;
+
+font-size:42px;
+
+color:var(--green-dark);
+
+margin-bottom:25px;
+
+}
+
+
+.section p{
+
+font-size:18px;
+
+color:#555;
+
+}
+
+
+
+/* =========================================
+BOTONES
+========================================= */
+
+
+.btn{
+
+display:inline-block;
+
+padding:14px 30px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+margin:10px;
+
+font-weight:bold;
+
+}
+
+
+.btn-primary{
+
+background:var(--green-dark);
+
+color:white;
+
+}
+
+
+
+/* =========================================
+PROGRAMAS
+========================================= */
+
+
+.titulo-area{
+
+text-align:center;
+
+font-family:Georgia,serif;
+
+font-size:42px;
+
+color:var(--green-dark);
+
+margin:70px 0 40px;
+
+}
+
+
+
+.grid-programas{
+
+width:90%;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+}
+
+
+
+.card-programa{
+
+background:white;
+
+border-radius:var(--radius-xl);
+
+overflow:hidden;
+
+box-shadow:var(--shadow-soft);
+
+}
+
+
+.imagen-programa{
+
+height:260px;
+
+background:#eef2ed;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+.imagen-programa img{
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
+}
+
+
+.contenido-programa{
+
+padding:30px;
+
+}
+
+
+.contenido-programa h2{
+
+font-family:Georgia,serif;
+
+font-size:28px;
+
+color:var(--green-dark);
+
+}
+
+
+.contenido-programa p{
+
+color:#555;
+
+}
+
+
+
+/* =========================================
+CARRUSEL
+========================================= */
+
+
+.carousel{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:30px;
+
+padding:20px;
+
+scroll-behavior:smooth;
+
+}
+
+
+.carousel::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+
+.carousel .card-programa{
+
+min-width:330px;
+
+}
+
+
+
+
+/* =========================================
+FOOTER
+========================================= */
+
+
+.site-footer{
+
+background:var(--green-dark);
+
+color:white;
+
+padding:45px 0;
+
+margin-top:80px;
+
+}
+
+
+.footer-grid{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+.footer-brand{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+
+.footer-brand img{
+
+width:80px;
+
+height:80px;
+
+background:white;
+
+border-radius:15px;
+
+padding:8px;
+
+}
+
+
+.footer-brand strong{
+
+font-family:Georgia,serif;
+
+font-size:20px;
+
+}
+
+
+.footer-column h3{
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+
+.footer-column a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+
+@media(max-width:900px){
+
+
+.header-inner{
+
+height:auto;
+
+padding:15px 0;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+.main-nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+
+.section h2{
+
+font-size:34px;
+
+}
+
+
+.footer-grid{
+
+flex-direction:column;
+
+gap:30px;
+
+text-align:center;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.brand-copy strong{
+
+font-size:14px;
+
+}
+
+
+.brand-copy span{
+
+font-size:18px;
+
+}
+
+
+.hero{
+
+padding:60px 0;
+
+}
+
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+
+.imagen-programa{
+
+height:220px;
+
+}
+
+
+}
