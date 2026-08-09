@@ -1,60 +1,196 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
-  const dropdown = document.getElementById("groupDropdown");
-  const dropdownToggle = dropdown ? dropdown.querySelector(".dropdown-toggle") : null;
 
-  // Menú móvil
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-  }
+    // ==============================
+    // MENÚ MÓVIL
+    // ==============================
 
-  // Dropdown Grupo Delta: funciona con clic en iPad, celular y escritorio
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-      const isOpen = dropdown.classList.toggle("open");
-      dropdownToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-  }
+    if (menuToggle && mainNav) {
 
-  // Cerrar dropdown al hacer clic fuera
-  document.addEventListener("click", (event) => {
-    if (dropdown && !dropdown.contains(event.target)) {
-      dropdown.classList.remove("open");
+        menuToggle.addEventListener("click", () => {
 
-      if (dropdownToggle) {
-        dropdownToggle.setAttribute("aria-expanded", "false");
-      }
+            const abierto = mainNav.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                abierto ? "true" : "false"
+            );
+
+        });
+
     }
-  });
 
-  // Cerrar menú móvil al elegir un enlace
-  document.querySelectorAll("#mainNav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 1020 && mainNav) {
-        mainNav.classList.remove("open");
 
-        if (menuToggle) {
-          menuToggle.setAttribute("aria-expanded", "false");
+
+    // ==============================
+    // DROPDOWN GRUPO DELTA
+    // ==============================
+
+    const dropdown = document.getElementById("groupDropdown");
+
+    const dropdownToggle = dropdown
+        ? dropdown.querySelector(".dropdown-toggle")
+        : null;
+
+
+    if (dropdown && dropdownToggle) {
+
+
+        dropdownToggle.addEventListener("click", (e)=>{
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const abierto = dropdown.classList.toggle("open");
+
+            dropdownToggle.setAttribute(
+                "aria-expanded",
+                abierto ? "true" : "false"
+            );
+
+        });
+
+
+        document.addEventListener("click",(e)=>{
+
+            if(!dropdown.contains(e.target)){
+
+                dropdown.classList.remove("open");
+
+                dropdownToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        });
+
+    }
+
+
+
+    // ==============================
+    // CERRAR MENÚ AL NAVEGAR
+    // ==============================
+
+
+    document.querySelectorAll("#mainNav a")
+    .forEach(link=>{
+
+        link.addEventListener("click",()=>{
+
+            if(window.innerWidth <= 1020 && mainNav){
+
+                mainNav.classList.remove("open");
+
+                if(menuToggle){
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            }
+
+        });
+
+    });
+
+
+
+    // ==============================
+    // ANIMACIONES REVEAL
+    // ==============================
+
+
+    const elementosReveal =
+        document.querySelectorAll(".reveal");
+
+
+    if(elementosReveal.length){
+
+
+        const observer = new IntersectionObserver(
+            (entradas)=>{
+
+
+                entradas.forEach(entrada=>{
+
+
+                    if(entrada.isIntersecting){
+
+                        entrada.target.classList.add("visible");
+
+                    }
+
+
+                });
+
+
+            },
+            {
+                threshold:0.15
+            }
+
+        );
+
+
+        elementosReveal.forEach(elemento=>{
+
+            observer.observe(elemento);
+
+        });
+
+
+        // SEGURIDAD:
+        // si después de 1 segundo algo quedó oculto,
+        // lo mostramos igual
+
+        setTimeout(()=>{
+
+            elementosReveal.forEach(elemento=>{
+
+                elemento.classList.add("visible");
+
+            });
+
+        },1000);
+
+
+    }
+
+
+
+    // ==============================
+    // AJUSTE AL CAMBIAR TAMAÑO
+    // ==============================
+
+
+    window.addEventListener("resize",()=>{
+
+
+        if(window.innerWidth > 1020 && mainNav){
+
+            mainNav.classList.remove("open");
+
+            if(menuToggle){
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
         }
-      }
+
+
     });
-  });
 
-  // Si se cambia el tamaño de ventana, limpiar estados móviles
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1020 && mainNav) {
-      mainNav.classList.remove("open");
 
-      if (menuToggle) {
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    }
-  });
 });
