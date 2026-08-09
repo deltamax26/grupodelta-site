@@ -1,841 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Programas Académicos | Instituto de Formación Clínica Delta</title>
-
 <link rel="stylesheet" href="style.css">
 
-
 <style>
-
-
-.programas-hero{
-
-background:#faf9f4;
-padding:80px 8%;
-text-align:center;
-
-}
-
-
-.programas-hero .eyebrow{
-
-color:#b37b00;
-letter-spacing:5px;
-font-size:14px;
-font-weight:bold;
-
-}
-
-
-.programas-hero h1{
-
-font-family:Georgia,serif;
-font-size:55px;
-color:#063b2d;
-margin:25px 0;
-
-}
-
-
-.programas-hero p{
-
-max-width:850px;
-margin:auto;
-font-size:18px;
-color:#555;
-line-height:1.6;
-
-}
-
-
-
-
-.titulo-area{
-
-text-align:center;
-font-family:Georgia,serif;
-font-size:40px;
-color:#063b2d;
-margin:70px 0 40px;
-
-}
-
-
-.titulo-area:after{
-
-content:"";
-display:block;
-width:80px;
-height:3px;
-background:#c99520;
-margin:20px auto;
-
-}
-
-
-
-.grid-programas{
-
-width:85%;
-margin:auto;
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:35px;
-
-}
-
-
-
-.card-programa{
-
-background:#fff;
-border-radius:25px;
-overflow:hidden;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-}
-
-
-
-.imagen-programa{
-
-height:250px;
-background:#e9eee8;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-color:#777;
-font-size:16px;
-
-}
-
-
-
-.imagen-programa img{
-
-width:100%;
-height:100%;
-object-fit:cover;
-
-}
-
-
-
-
-.contenido-programa{
-
-padding:30px;
-
-}
-
-
-
-.contenido-programa h2{
-
-font-family:Georgia,serif;
-color:#063b2d;
-font-size:25px;
-
-}
-
-
-
-.contenido-programa p{
-
-color:#555;
-line-height:1.7;
-
-}
-
-
-
-.boton-programa{
-
-display:inline-block;
-margin-top:20px;
-
-color:#b37b00;
-font-weight:bold;
-text-decoration:none;
-
-}
-
-
-
+.programas-hero{background:#faf9f4;padding:80px 8%;text-align:center;}
+.programas-hero h1{font-family:Georgia,serif;color:#063b2d;font-size:55px;}
+.eyebrow{color:#b37b00;letter-spacing:5px;font-weight:bold;}
+.grid-programas{width:85%;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;}
+.card-programa{background:white;border-radius:25px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);}
+.imagen-programa{height:260px;background:#edf1eb;display:flex;align-items:center;justify-content:center;}
+.imagen-programa img{width:100%;height:100%;object-fit:contain;}
+.contenido-programa{padding:30px;}
+.contenido-programa h2{font-family:Georgia,serif;color:#063b2d;}
+.titulo-area{text-align:center;font-family:Georgia,serif;color:#063b2d;font-size:40px;margin:70px 0 40px;}
 </style>
-
-
 </head>
-
 
 <body>
 
-
-
 <header class="site-header">
-
 <div class="container header-inner">
-
-
 <a class="brand" href="index.html">
-
-<img src="img/logo-ifcd.png" 
-alt="Instituto de Formación Clínica Delta">
-
-
-<div class="brand-copy">
-
-<strong>
-Instituto de Formación
-</strong>
-
-<span>
-Clínica Delta
-</span>
-
-
-</div>
-
-
+<img src="img/logo-ifcd.png">
+<div class="brand-copy"><strong>Instituto de Formación</strong><span>Clínica Delta</span></div>
 </a>
-
-
-
-
 <nav class="main-nav">
-
-
-<a href="index.html">
-Instituto
-</a>
-
-
-<a href="programas.html">
-Programas
-</a>
-
-
-<a href="#">
-Investigación
-</a>
-
-
-<a href="#">
-Docencia
-</a>
-
-
-<a href="#">
-Contacto
-</a>
-
-
-
-<a class="admission-btn" href="#">
-Admisión
-</a>
-
-
-
+<a href="index.html">Instituto</a>
+<a href="programas.html">Programas</a>
+<a href="#">Investigación</a>
+<a href="#">Docencia</a>
+<a href="#">Contacto</a>
+<a class="admission-btn" href="#">Admisión</a>
 </nav>
-
-
 </div>
-
 </header>
 
-
-
-
-
-<main>
-
-
-
 <section class="programas-hero">
-
-
-<div class="eyebrow">
-SCIENTIA · INTEGRITAS · HUMANITAS
-</div>
-
-
-<h1>
-Programas Académicos
-</h1>
-
-
-<p>
-Formación profesional, diplomados y cursos de especialización
-orientados al desarrollo clínico, científico y humanista
-de profesionales del área de la salud.
-</p>
-
-
-
+<div class="eyebrow">SCIENTIA · INTEGRITAS · HUMANITAS</div>
+<h1>Programas Académicos</h1>
+<p>Formación profesional, diplomados y cursos de especialización orientados al desarrollo clínico, científico y humanista.</p>
 </section>
 
-
-
-
-
-
-<!-- CARRERAS -->
-
-
-<h2 class="titulo-area">
-Carreras y Continuidad de Estudios
-</h2>
-
-
-
+<h2 class="titulo-area">Carreras y Continuidad de Estudios</h2>
 <section class="grid-programas">
 
-
-
 <article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<img src="img/slide-segunda-titulacion.PNG"
-alt="Medicina Naturopática">
-
-</div>
-
-
+<div class="imagen-programa"><img src="img/slide-segunda-titulacion.PNG"></div>
 <div class="contenido-programa">
-
-
-<h2>
-Medicina Naturopática
-</h2>
-
-
-<p>
-Programa de continuidad de estudios profesionales dirigido
-a profesionales del área de la salud que buscan ampliar sus
-competencias mediante una formación integrativa y clínica.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
+<h2>Medicina Naturopática</h2>
+<p>Continuidad de estudios para profesionales de la salud con enfoque clínico e integrativo.</p>
 </div>
-
-
 </article>
 
-
-
-
-
-
-
 <article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<img src="img/slide-carrera.PNG"
-alt="Carrera Medicina Naturopática">
-
-</div>
-
-
+<div class="imagen-programa"><img src="img/slide-carrera.PNG"></div>
 <div class="contenido-programa">
-
-
-<h2>
-Medicina Naturopática
-<br>
-Carrera Profesional
-</h2>
-
-
-<p>
-Carrera completa orientada a la formación integral en
-medicina naturopática, incorporando conocimientos clínicos,
-científicos y terapéuticos.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
+<h2>Medicina Naturopática - Carrera Profesional</h2>
+<p>Formación completa en Medicina Naturopática.</p>
 </div>
-
-
 </article>
-
-
 
 </section>
 
-
-
-
-
-
-
-
-<!-- DIPLOMADOS -->
-
-
-<h2 class="titulo-area">
-Diplomados
-</h2>
-
-
-
+<h2 class="titulo-area">Diplomados</h2>
 <section class="grid-programas">
 
+<article class="card-programa"><div class="imagen-programa"><img src="img/slide-ortomolecular.PNG"></div><div class="contenido-programa"><h2>Diplomado en Medicina Ortomolecular</h2><p>Formación especializada en estrategias integrativas.</p></div></article>
 
+<article class="card-programa"><div class="imagen-programa"><img src="img/Gestion-promocion.PNG"></div><div class="contenido-programa"><h2>Diplomado en Gestión y Promoción de Salud</h2><p>Desarrollo de competencias para gestión sanitaria y promoción del bienestar.</p></div></article>
 
-<article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<img src="img/slide-ortomolecular.PNG"
-alt="Diplomado Medicina Ortomolecular">
-
-</div>
-
-
-<div class="contenido-programa">
-
-
-<h2>
-Diplomado en Medicina Ortomolecular
-</h2>
-
-
-<p>
-Formación especializada enfocada en fundamentos
-bioquímicos, nutricionales y estrategias integrativas
-para la comprensión del organismo humano.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-<article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<span>
-Imagen del programa
-</span>
-
-</div>
-
-
-<div class="contenido-programa">
-
-
-<h2>
-Diplomado en Gestión y Promoción de Salud
-</h2>
-
-
-<p>
-Programa orientado al desarrollo de competencias para
-la gestión sanitaria, promoción del bienestar y diseño
-de estrategias de intervención en salud.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-
-<article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<span>
-Imagen del programa
-</span>
-
-</div>
-
-
-<div class="contenido-programa">
-
-
-<h2>
-Diplomado en Docencia Universitaria
-</h2>
-
-
-<p>
-Formación dirigida al fortalecimiento de competencias
-pedagógicas, planificación académica, evaluación y
-metodologías de enseñanza superior.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
-</div>
-
-
-</article>
-
+<article class="card-programa"><div class="imagen-programa"><img src="img/Docencia-universitaria.PNG"></div><div class="contenido-programa"><h2>Diplomado en Docencia Universitaria</h2><p>Competencias pedagógicas para educación superior.</p></div></article>
 
 </section>
 
-
-
-
-
-
-
-
-<!-- CURSOS -->
-
-
-<h2 class="titulo-area">
-Cursos de Formación Continua
-</h2>
-
-
-
+<h2 class="titulo-area">Cursos de Formación Continua</h2>
 <section class="grid-programas">
 
+<article class="card-programa"><div class="imagen-programa"><img src="img/Roles-habitos.PNG"></div><div class="contenido-programa"><h2>Roles, Hábitos y Rutinas en la Práctica Clínica</h2><p>Herramientas para comprender hábitos y rutinas en el proceso terapéutico.</p></div></article>
 
+<article class="card-programa"><div class="imagen-programa"><img src="img/Oidos.PNG"></div><div class="contenido-programa"><h2>Curso de Lavado de Oídos</h2><p>Formación práctica y segura en técnicas clínicas.</p></div></article>
 
-<article class="card-programa">
-
-<div class="imagen-programa">
-
-<span>
-Imagen del curso
-</span>
-
-</div>
-
-
-<div class="contenido-programa">
-
-
-<h2>
-Roles, Hábitos y Rutinas en la Práctica Clínica
-</h2>
-
-
-<p>
-Curso orientado al fortalecimiento de competencias
-clínicas, organización profesional y comprensión de
-hábitos y rutinas dentro del ejercicio terapéutico.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
-</div>
-
-</article>
-
-
-
-
-
-
-
-<article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<span>
-Imagen del curso
-</span>
-
-</div>
-
-
-<div class="contenido-programa">
-
-
-<h2>
-Curso de Lavado de Oídos
-</h2>
-
-
-<p>
-Formación práctica enfocada en procedimientos clínicos,
-manejo seguro y fundamentos relacionados con la atención
-integral del usuario.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-
-
-
-<article class="card-programa">
-
-
-<div class="imagen-programa">
-
-<span>
-Imagen del curso
-</span>
-
-</div>
-
-
-<div class="contenido-programa">
-
-
-<h2>
-Curso en Salud Mental Integrativa
-</h2>
-
-
-<p>
-Programa orientado a comprender la salud mental desde
-una perspectiva integral, considerando dimensiones
-clínicas, emocionales y sociales.
-</p>
-
-
-<a class="boton-programa">
-Ver programa →
-</a>
-
-
-</div>
-
-
-</article>
-
-
+<article class="card-programa"><div class="imagen-programa"><span>Imagen del curso</span></div><div class="contenido-programa"><h2>Curso en Salud Mental Integrativa</h2><p>Perspectiva integral de la salud mental.</p></div></article>
 
 </section>
-
-
-
-</main>
-
-
-
-
-
-
 
 <footer class="site-footer">
-
-
 <div class="container footer-grid">
-
-
 <div class="footer-brand">
-
-
 <img src="img/logo-ifcd.png">
-
-
-<div>
-
-<strong>
-Instituto de Formación
-</strong>
-
-
-<span>
-Clínica Delta
-</span>
-
-
-<p>
-Scientia · Integritas · Humanitas
-</p>
-
-
+<div><strong>Instituto de Formación</strong><span>Clínica Delta</span></div>
 </div>
-
-
+<div class="footer-column"><h3>Contacto</h3><a href="mailto:direccion@grupodelta.cl">direccion@grupodelta.cl</a></div>
 </div>
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Enlaces
-</h3>
-
-
-<a href="index.html">
-Instituto
-</a>
-
-
-<a href="programas.html">
-Programas
-</a>
-
-
-<a href="#">
-Investigación
-</a>
-
-
-<a href="#">
-Docencia
-</a>
-
-
-<a href="#">
-Contacto
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Información
-</h3>
-
-
-<a>
-Admisión
-</a>
-
-
-<a>
-Preguntas frecuentes
-</a>
-
-
-<a>
-Políticas y privacidad
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="footer-column contact-column">
-
-
-<h3>
-Contacto
-</h3>
-
-
-<a href="https://wa.me/56959787604">
-✆ +56 9 5978 7604
-</a>
-
-
-<a href="mailto:direccion@grupodelta.cl">
-✉ direccion@grupodelta.cl
-</a>
-
-
-<span>
-⌖ Chile
-</span>
-
-
-</div>
-
-
-
-</div>
-
-
-<div class="container footer-bottom">
-
-© 2026 Instituto de Formación Clínica Delta. Todos los derechos reservados.
-
-</div>
-
-
 </footer>
 
-
-
-
 <script src="script.js"></script>
-
-
 </body>
-
 </html>
