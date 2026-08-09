@@ -3,61 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Programas Académicos | Instituto de Formación Clínica Delta</title>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
-.programas-hero{background:#faf9f4;padding:80px 8%;text-align:center;}
-.programas-hero h1{font-family:Georgia,serif;color:#063b2d;font-size:55px;}
-.eyebrow{color:#b37b00;letter-spacing:5px;font-weight:bold;}
-.grid-programas{width:85%;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;}
-.card-programa{background:white;border-radius:25px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);}
-.imagen-programa{height:260px;background:#edf1eb;display:flex;align-items:center;justify-content:center;}
-.imagen-programa img{width:100%;height:100%;object-fit:contain;}
-.contenido-programa{padding:30px;}
-.contenido-programa h2{font-family:Georgia,serif;color:#063b2d;}
-.titulo-area{text-align:center;font-family:Georgia,serif;color:#063b2d;font-size:40px;margin:70px 0 40px;}
+.programas-hero{
+background:#faf9f4;
+padding:80px 8%;
+text-align:center;
+}
+
+.programas-hero h1{
+font-family:Georgia,serif;
+font-size:55px;
+color:#063b2d;
+}
+
+.eyebrow{
+color:#b37b00;
+letter-spacing:5px;
+font-weight:bold;
+}
+
+.titulo-area{
+text-align:center;
+font-family:Georgia,serif;
+font-size:40px;
+color:#063b2d;
+margin:70px 0 40px;
+}
+
+.grid-programas{
+width:85%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.card-programa{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.imagen-programa{
+height:260px;
+background:#edf1eb;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.imagen-programa img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+.contenido-programa{
+padding:30px;
+}
+
+.contenido-programa h2{
+font-family:Georgia,serif;
+color:#063b2d;
+}
+
+.contenido-programa p{
+color:#555;
+line-height:1.6;
+}
 </style>
+
 </head>
 
 <body>
 
+<!-- HEADER DEL SITIO -->
+
 <header class="site-header">
 <div class="container header-inner">
+
 <a class="brand" href="index.html">
 <img src="img/logo-ifcd.png">
-<div class="brand-copy"><strong>Instituto de Formación</strong><span>Clínica Delta</span></div>
+<div class="brand-copy">
+<strong>Instituto de Formación</strong>
+<span>Clínica Delta</span>
+</div>
 </a>
+
 <nav class="main-nav">
 <a href="index.html">Instituto</a>
 <a href="programas.html">Programas</a>
 <a href="#">Investigación</a>
 <a href="#">Docencia</a>
 <a href="#">Contacto</a>
-<a class="admission-btn" href="#">Admisión</a>
+<a class="admission-btn">Admisión</a>
 </nav>
+
 </div>
 </header>
 
+
 <section class="programas-hero">
-<div class="eyebrow">SCIENTIA · INTEGRITAS · HUMANITAS</div>
+
+<div class="eyebrow">
+SCIENTIA · INTEGRITAS · HUMANITAS
+</div>
+
 <h1>Programas Académicos</h1>
-<p>Formación profesional, diplomados y cursos de especialización orientados al desarrollo clínico, científico y humanista.</p>
+
+<p>
+Formación profesional, diplomados y cursos de especialización
+orientados al desarrollo clínico, científico y humanista.
+</p>
+
 </section>
 
+
+
 <h2 class="titulo-area">Carreras y Continuidad de Estudios</h2>
+
 <section class="grid-programas">
 
 <article class="card-programa">
-<div class="imagen-programa"><img src="img/slide-segunda-titulacion.PNG"></div>
+<div class="imagen-programa">
+<img src="img/slide-segunda-titulacion.PNG">
+</div>
 <div class="contenido-programa">
 <h2>Medicina Naturopática</h2>
-<p>Continuidad de estudios para profesionales de la salud con enfoque clínico e integrativo.</p>
+<p>Continuidad de estudios profesionales dirigida a profesionales de la salud.</p>
 </div>
 </article>
 
+
 <article class="card-programa">
-<div class="imagen-programa"><img src="img/slide-carrera.PNG"></div>
+<div class="imagen-programa">
+<img src="img/slide-carrera.PNG">
+</div>
 <div class="contenido-programa">
 <h2>Medicina Naturopática - Carrera Profesional</h2>
 <p>Formación completa en Medicina Naturopática.</p>
@@ -66,38 +153,114 @@
 
 </section>
 
+
+
 <h2 class="titulo-area">Diplomados</h2>
+
 <section class="grid-programas">
 
-<article class="card-programa"><div class="imagen-programa"><img src="img/slide-ortomolecular.PNG"></div><div class="contenido-programa"><h2>Diplomado en Medicina Ortomolecular</h2><p>Formación especializada en estrategias integrativas.</p></div></article>
+<article class="card-programa">
+<div class="imagen-programa">
+<img src="img/slide-ortomolecular.PNG">
+</div>
+<div class="contenido-programa">
+<h2>Diplomado en Medicina Ortomolecular</h2>
+<p>Formación especializada en estrategias integrativas.</p>
+</div>
+</article>
 
-<article class="card-programa"><div class="imagen-programa"><img src="img/Gestion-promocion.PNG"></div><div class="contenido-programa"><h2>Diplomado en Gestión y Promoción de Salud</h2><p>Desarrollo de competencias para gestión sanitaria y promoción del bienestar.</p></div></article>
 
-<article class="card-programa"><div class="imagen-programa"><img src="img/Docencia-universitaria.PNG"></div><div class="contenido-programa"><h2>Diplomado en Docencia Universitaria</h2><p>Competencias pedagógicas para educación superior.</p></div></article>
+<article class="card-programa">
+<div class="imagen-programa">
+<img src="img/Gestion-promocion.PNG">
+</div>
+<div class="contenido-programa">
+<h2>Diplomado en Gestión y Promoción de Salud</h2>
+<p>Desarrollo de competencias para gestión sanitaria y promoción del bienestar.</p>
+</div>
+</article>
+
+
+<article class="card-programa">
+<div class="imagen-programa">
+<img src="img/Docencia-universitaria.PNG">
+</div>
+<div class="contenido-programa">
+<h2>Diplomado en Docencia Universitaria</h2>
+<p>Formación en competencias pedagógicas para educación superior.</p>
+</div>
+</article>
 
 </section>
+
+
+
 
 <h2 class="titulo-area">Cursos de Formación Continua</h2>
+
 <section class="grid-programas">
 
-<article class="card-programa"><div class="imagen-programa"><img src="img/Roles-habitos.PNG"></div><div class="contenido-programa"><h2>Roles, Hábitos y Rutinas en la Práctica Clínica</h2><p>Herramientas para comprender hábitos y rutinas en el proceso terapéutico.</p></div></article>
 
-<article class="card-programa"><div class="imagen-programa"><img src="img/Oidos.PNG"></div><div class="contenido-programa"><h2>Curso de Lavado de Oídos</h2><p>Formación práctica y segura en técnicas clínicas.</p></div></article>
+<article class="card-programa">
+<div class="imagen-programa">
+<img src="img/Roles-habitos.PNG">
+</div>
+<div class="contenido-programa">
+<h2>Roles, Hábitos y Rutinas en la Práctica Clínica</h2>
+<p>Herramientas prácticas para comprender hábitos y rutinas dentro del proceso terapéutico.</p>
+</div>
+</article>
 
-<article class="card-programa"><div class="imagen-programa"><span>Imagen del curso</span></div><div class="contenido-programa"><h2>Curso en Salud Mental Integrativa</h2><p>Perspectiva integral de la salud mental.</p></div></article>
+
+<article class="card-programa">
+<div class="imagen-programa">
+<img src="img/Oidos.PNG">
+</div>
+<div class="contenido-programa">
+<h2>Curso de Lavado de Oídos</h2>
+<p>Formación práctica e intensiva en procedimientos clínicos.</p>
+</div>
+</article>
+
+
+<article class="card-programa">
+<div class="imagen-programa">
+<img src="img/Salud-mental-integrativa.PNG">
+</div>
+<div class="contenido-programa">
+<h2>Curso en Salud Mental Integrativa</h2>
+<p>Programa orientado a comprender la salud mental desde una perspectiva integral.</p>
+</div>
+</article>
+
 
 </section>
+
+
+
+<!-- FOOTER DEL SITIO -->
 
 <footer class="site-footer">
 <div class="container footer-grid">
+
 <div class="footer-brand">
 <img src="img/logo-ifcd.png">
-<div><strong>Instituto de Formación</strong><span>Clínica Delta</span></div>
+<div>
+<strong>Instituto de Formación</strong>
+<span>Clínica Delta</span>
 </div>
-<div class="footer-column"><h3>Contacto</h3><a href="mailto:direccion@grupodelta.cl">direccion@grupodelta.cl</a></div>
+</div>
+
+<div class="footer-column">
+<h3>Contacto</h3>
+<a href="mailto:direccion@grupodelta.cl">direccion@grupodelta.cl</a>
+</div>
+
 </div>
 </footer>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
