@@ -4,11 +4,1735 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Instituto de Formación Clínica Delta</title>
 
-<link rel="stylesheet" href="style.css">
+<meta
+name="description"
+content="Instituto de Formación Clínica Delta. Formación profesional, clínica, científica y humanista para profesionales de la salud.">
+
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --verde:#063b2d;
+    --verde-oscuro:#042a20;
+    --verde-medio:#0c5642;
+
+    --dorado:#b88a2e;
+    --dorado-claro:#d7b15e;
+
+    --crema:#faf8f2;
+    --crema-claro:#f7f5ef;
+
+    --blanco:#ffffff;
+
+    --texto:#24312c;
+    --gris:#626c67;
+
+    --borde:#e8ebe7;
+
+    --sombra:
+    0 15px 40px rgba(6,59,45,.10);
+
+    --sombra-suave:
+    0 8px 25px rgba(6,59,45,.07);
+
+    --max:1240px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:var(--texto);
+
+    background:white;
+
+    line-height:1.6;
+
+}
+
+
+img{
+
+    display:block;
+    max-width:100%;
+
+}
+
+
+a{
+
+    color:inherit;
+
+}
+
+
+button{
+
+    font:inherit;
+
+}
+
+
+.container{
+
+    width:min(90%, var(--max));
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.98);
+
+    border-bottom:1px solid #eeeeea;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
+
+}
+
+
+.header-inner{
+
+    min-height:94px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:26px;
+
+}
+
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+    min-width:340px;
+
+}
+
+
+.brand-logo{
+
+    width:62px;
+
+    height:62px;
+
+    flex-shrink:0;
+
+}
+
+
+.brand-logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.brand-copy{
+
+    line-height:1.25;
+
+}
+
+
+.brand-copy strong{
+
+    display:block;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:19px;
+
+}
+
+
+.brand-copy span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#727975;
+
+    margin-top:3px;
+
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+.main-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:27px;
+
+    flex:1;
+
+}
+
+
+.main-nav > a,
+.dropdown-toggle{
+
+    color:var(--verde);
+
+    text-decoration:none;
+
+    font-weight:750;
+
+    font-size:15px;
+
+    background:none;
+
+    border:0;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    padding:35px 0 31px;
+
+    border-bottom:3px solid transparent;
+
+    transition:.2s ease;
+
+}
+
+
+.main-nav > a:hover,
+.dropdown-toggle:hover{
+
+    color:var(--dorado);
+
+}
+
+
+/* =========================================================
+   GRUPO DELTA CHILE
+========================================================= */
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+.dropdown-toggle{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+
+.dropdown-arrow{
+
+    font-size:11px;
+
+    transition:.2s ease;
+
+}
+
+
+.dropdown.open .dropdown-arrow{
+
+    transform:rotate(180deg);
+
+}
+
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:78px;
+
+    right:0;
+
+    min-width:250px;
+
+    background:white;
+
+    border:1px solid var(--borde);
+
+    border-radius:18px;
+
+    box-shadow:var(--sombra);
+
+    padding:10px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-8px);
+
+    transition:.2s ease;
+
+}
+
+
+.dropdown.open .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+
+.dropdown-menu a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    padding:12px 14px;
+
+    transition:.2s;
+
+}
+
+
+.dropdown-menu a:hover{
+
+    background:var(--crema-claro);
+
+}
+
+
+.dropdown-menu strong{
+
+    color:var(--verde);
+
+    font-size:14px;
+
+}
+
+
+.dropdown-menu span{
+
+    color:#7a817d;
+
+    font-size:12px;
+
+    margin-top:2px;
+
+}
+
+
+/* =========================================================
+   ADMISIÓN
+========================================================= */
+
+.admission-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px 27px;
+
+    min-width:137px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    background:var(--verde);
+
+    color:white;
+
+    font-weight:800;
+
+    box-shadow:
+    0 8px 20px rgba(6,59,45,.14);
+
+    transition:.2s ease;
+
+}
+
+
+.admission-btn:hover{
+
+    background:var(--verde-medio);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+.menu-toggle{
+
+    display:none;
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    border:1px solid var(--borde);
+
+    background:white;
+
+    color:var(--verde);
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        115deg,
+        #f8f5ed 0%,
+        #ffffff 47%,
+        #f2f6f2 100%
+    );
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    right:-230px;
+
+    top:-220px;
+
+    background:
+    rgba(184,138,46,.08);
+
+}
+
+
+.hero-inner{
+
+    position:relative;
+
+    min-height:650px;
+
+    display:grid;
+
+    grid-template-columns:
+    1.05fr .95fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    padding:70px 0;
+
+}
+
+
+.hero-eyebrow{
+
+    color:var(--dorado);
+
+    font-size:12px;
+
+    letter-spacing:3.7px;
+
+    text-transform:uppercase;
+
+    font-weight:850;
+
+    margin-bottom:18px;
+
+}
+
+
+.hero h1{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:57px;
+
+    line-height:1.08;
+
+    margin-bottom:24px;
+
+}
+
+
+.hero-lead{
+
+    color:#58615d;
+
+    font-size:19px;
+
+    line-height:1.75;
+
+    max-width:650px;
+
+    margin-bottom:30px;
+
+}
+
+
+.hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+.primary-button,
+.secondary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    padding:14px 23px;
+
+    border-radius:999px;
+
+    font-weight:800;
+
+    transition:.2s ease;
+
+}
+
+
+.primary-button{
+
+    background:var(--verde);
+
+    color:white;
+
+}
+
+
+.primary-button:hover{
+
+    background:var(--verde-medio);
+
+    transform:translateY(-2px);
+
+}
+
+
+.secondary-button{
+
+    border:1.5px solid var(--verde);
+
+    color:var(--verde);
+
+    background:white;
+
+}
+
+
+.secondary-button:hover{
+
+    color:white;
+
+    background:var(--verde);
+
+}
+
+
+/* =========================================================
+   IMAGEN HERO
+========================================================= */
+
+.hero-visual{
+
+    position:relative;
+
+}
+
+
+.hero-image-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:white;
+
+    box-shadow:
+    0 24px 60px rgba(6,59,45,.15);
+
+}
+
+
+.hero-image-card img{
+
+    width:100%;
+
+    aspect-ratio:16 / 11;
+
+    object-fit:cover;
+
+}
+
+
+.hero-image-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(4,42,32,.28)
+    );
+
+    pointer-events:none;
+
+}
+
+
+.hero-logo-badge{
+
+    position:absolute;
+
+    left:-32px;
+
+    bottom:28px;
+
+    width:150px;
+
+    padding:15px;
+
+    background:rgba(255,255,255,.97);
+
+    border-radius:22px;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+.hero-logo-badge img{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+
+/* =========================================================
+   PRINCIPIOS
+========================================================= */
+
+.principles{
+
+    border-top:1px solid #eeeeea;
+
+    border-bottom:1px solid #eeeeea;
+
+    background:white;
+
+}
+
+
+.principles-grid{
+
+    min-height:115px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    align-items:center;
+
+}
+
+
+.principle{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+.principle + .principle{
+
+    border-left:1px solid #e7e9e6;
+
+}
+
+
+.principle strong{
+
+    display:block;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:22px;
+
+}
+
+
+.principle span{
+
+    color:#747c78;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.section{
+
+    padding:85px 0;
+
+}
+
+
+.section-soft{
+
+    background:var(--crema-claro);
+
+}
+
+
+.section-eyebrow{
+
+    color:var(--dorado);
+
+    letter-spacing:2.8px;
+
+    font-size:11px;
+
+    font-weight:850;
+
+    text-transform:uppercase;
+
+    margin-bottom:11px;
+
+}
+
+
+.section-heading{
+
+    max-width:780px;
+
+    margin-bottom:38px;
+
+}
+
+
+.section-heading h2{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:43px;
+
+    line-height:1.15;
+
+    margin-bottom:15px;
+
+}
+
+
+.section-heading p{
+
+    color:#626b67;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   TARJETAS COMUNIDAD ACADÉMICA
+========================================================= */
+
+.academic-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.academic-card{
+
+    border:1px solid var(--borde);
+
+    border-radius:23px;
+
+    background:white;
+
+    padding:31px;
+
+    box-shadow:var(--sombra-suave);
+
+    transition:.2s ease;
+
+}
+
+
+.academic-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--sombra);
+
+}
+
+
+.academic-icon{
+
+    width:47px;
+
+    height:47px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--dorado),
+        var(--dorado-claro)
+    );
+
+    color:white;
+
+    margin-bottom:22px;
+
+    font-size:20px;
+
+}
+
+
+.academic-card h3{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:23px;
+
+    margin-bottom:10px;
+
+}
+
+
+.academic-card p{
+
+    color:#646d69;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+.text-link{
+
+    color:var(--verde);
+
+    font-weight:800;
+
+    text-decoration:none;
+
+}
+
+
+.text-link:hover{
+
+    color:var(--dorado);
+
+}
+
+
+/* =========================================================
+   DESTACADO PROGRAMAS
+========================================================= */
+
+.program-highlight{
+
+    display:grid;
+
+    grid-template-columns:
+    .85fr 1.15fr;
+
+    gap:55px;
+
+    align-items:center;
+
+}
+
+
+.program-highlight-image{
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    box-shadow:var(--sombra);
+
+    background:white;
+
+}
+
+
+.program-highlight-image img{
+
+    width:100%;
+
+    aspect-ratio:16 / 10;
+
+    object-fit:contain;
+
+    background:#f5f5f0;
+
+}
+
+
+.program-highlight-content h2{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    color:var(--verde);
+
+    margin-bottom:18px;
+
+}
+
+
+.program-highlight-content p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#616a66;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =========================================================
+   CTA ADMISIÓN
+========================================================= */
+
+.admission-section{
+
+    padding:75px 0;
+
+    background:
+    linear-gradient(
+        120deg,
+        #043024,
+        #07513e
+    );
+
+    color:white;
+
+}
+
+
+.admission-box{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:45px;
+
+}
+
+
+.admission-copy{
+
+    max-width:760px;
+
+}
+
+
+.admission-copy .section-eyebrow{
+
+    color:#e5c879;
+
+}
+
+
+.admission-copy h2{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    margin-bottom:15px;
+
+}
+
+
+.admission-copy p{
+
+    color:#dfe9e5;
+
+    line-height:1.75;
+
+    font-size:16px;
+
+}
+
+
+.admission-white-button{
+
+    flex-shrink:0;
+
+    background:white;
+
+    color:var(--verde);
+
+    padding:16px 25px;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:850;
+
+    transition:.2s ease;
+
+}
+
+
+.admission-white-button:hover{
+
+    transform:translateY(-2px);
+
+    background:#f6f2e8;
+
+}
+
+
+/* =========================================================
+   FOOTER COMPLETO
+========================================================= */
+
+.site-footer{
+
+    background:
+    linear-gradient(
+        115deg,
+        #03281e,
+        #064735
+    );
+
+    color:white;
+
+}
+
+
+.footer-main{
+
+    display:grid;
+
+    grid-template-columns:
+    1.45fr
+    .85fr
+    .85fr
+    1fr;
+
+    gap:40px;
+
+    padding:48px 0 39px;
+
+}
+
+
+.footer-brand{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+}
+
+
+.footer-brand-logo{
+
+    width:72px;
+
+    height:72px;
+
+    padding:7px;
+
+    background:white;
+
+    border-radius:14px;
+
+    flex-shrink:0;
+
+}
+
+
+.footer-brand-logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.footer-brand-copy strong{
+
+    display:block;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    font-size:19px;
+
+    margin-bottom:5px;
+
+}
+
+
+.footer-brand-copy span{
+
+    display:block;
+
+    color:#d3ded9;
+
+    font-size:12.5px;
+
+    margin-top:3px;
+
+}
+
+
+.footer-column h4{
+
+    color:#e2c36f;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+}
+
+
+.footer-column a{
+
+    display:block;
+
+    color:#eef5f2;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    margin-bottom:9px;
+
+}
+
+
+.footer-column a:hover{
+
+    color:#e2c36f;
+
+}
+
+
+.footer-column p{
+
+    color:#eef5f2;
+
+    font-size:14px;
+
+    margin-bottom:9px;
+
+}
+
+
+.footer-bottom{
+
+    border-top:
+    1px solid rgba(255,255,255,.15);
+
+    padding:18px 0 22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+    color:#cbd8d3;
+
+    font-size:12.5px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1120px){
+
+    .brand{
+
+        min-width:auto;
+
+    }
+
+
+    .main-nav{
+
+        gap:19px;
+
+    }
+
+
+    .main-nav > a,
+    .dropdown-toggle{
+
+        font-size:13.5px;
+
+    }
+
+
+    .hero-inner{
+
+        gap:40px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:49px;
+
+    }
+
+}
+
+
+@media(max-width:920px){
+
+    .header-inner{
+
+        flex-wrap:wrap;
+
+        padding:14px 0;
+
+    }
+
+
+    .brand{
+
+        width:calc(100% - 115px);
+
+    }
+
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+    }
+
+
+    .main-nav{
+
+        display:none;
+
+        order:4;
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        padding-top:10px;
+
+    }
+
+
+    .main-nav.open{
+
+        display:flex;
+
+    }
+
+
+    .main-nav > a,
+    .dropdown-toggle{
+
+        width:100%;
+
+        text-align:left;
+
+        padding:12px 5px;
+
+        border-bottom:1px solid #eceeea;
+
+    }
+
+
+    .dropdown{
+
+        width:100%;
+
+    }
+
+
+    .dropdown-menu{
+
+        position:static;
+
+        box-shadow:none;
+
+        border:0;
+
+        border-radius:0;
+
+        display:none;
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:none;
+
+        padding-left:15px;
+
+    }
+
+
+    .dropdown.open .dropdown-menu{
+
+        display:block;
+
+    }
+
+
+    .admission-btn{
+
+        margin-left:auto;
+
+        min-width:auto;
+
+        padding:12px 19px;
+
+    }
+
+
+    .hero-inner{
+
+        grid-template-columns:1fr;
+
+        padding:60px 0;
+
+    }
+
+
+    .hero h1{
+
+        font-size:47px;
+
+    }
+
+
+    .hero-visual{
+
+        max-width:650px;
+
+        margin:auto;
+
+    }
+
+
+    .academic-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .program-highlight{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .footer-main{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width:640px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+
+    .brand-logo{
+
+        width:53px;
+
+        height:53px;
+
+    }
+
+
+    .brand-copy strong{
+
+        font-size:15px;
+
+    }
+
+
+    .brand-copy span{
+
+        font-size:11px;
+
+    }
+
+
+    .admission-btn{
+
+        display:none;
+
+    }
+
+
+    .hero-inner{
+
+        min-height:auto;
+
+        padding:45px 0 60px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:37px;
+
+    }
+
+
+    .hero-lead{
+
+        font-size:16px;
+
+    }
+
+
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+
+    .hero-logo-badge{
+
+        width:115px;
+
+        left:12px;
+
+        bottom:12px;
+
+    }
+
+
+    .principles-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .principle + .principle{
+
+        border-left:0;
+
+        border-top:1px solid #e7e9e6;
+
+    }
+
+
+    .section{
+
+        padding:65px 0;
+
+    }
+
+
+    .section-heading h2{
+
+        font-size:34px;
+
+    }
+
+
+    .academic-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .program-highlight-content h2{
+
+        font-size:34px;
+
+    }
+
+
+    .admission-box{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .admission-copy h2{
+
+        font-size:34px;
+
+    }
+
+
+    .footer-main{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        gap:7px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -16,21 +1740,30 @@
 <body>
 
 
-<!-- HEADER -->
+<!-- ======================================================
+     HEADER
+====================================================== -->
 
-<header class="topbar">
+<header class="site-header">
 
-<div class="container">
-
-<nav class="nav">
-
-
-<a href="index.html" class="brand">
-
-<img src="img/logo-ifcd.png" alt="Instituto Delta">
+<div class="container header-inner">
 
 
-<div class="brand-text">
+<a
+href="index.html"
+class="brand">
+
+
+<div class="brand-logo">
+
+<img
+src="img/logo-ifcd.png"
+alt="Instituto de Formación Clínica Delta">
+
+</div>
+
+
+<div class="brand-copy">
 
 <strong>
 Instituto de Formación Clínica Delta
@@ -47,7 +1780,23 @@ IFCD · Grupo Delta Science Chile
 
 
 
-<div class="nav-links">
+<button
+class="menu-toggle"
+id="menuToggle"
+type="button"
+aria-label="Abrir menú"
+aria-expanded="false">
+
+☰
+
+</button>
+
+
+
+<nav
+class="main-nav"
+id="mainNav">
+
 
 <a href="instituto.html">
 Instituto
@@ -64,8 +1813,8 @@ Investigación
 </a>
 
 
-<a href="#">
-Docencia
+<a href="#equipo">
+Docentes
 </a>
 
 
@@ -74,17 +1823,102 @@ Contacto
 </a>
 
 
-</div>
+
+<!-- GRUPO DELTA CHILE -->
+
+<div
+class="dropdown"
+id="grupoDeltaDropdown">
+
+
+<button
+class="dropdown-toggle"
+id="grupoDeltaToggle"
+type="button"
+aria-expanded="false">
+
+
+Grupo Delta Chile
+
+<span class="dropdown-arrow">
+▼
+</span>
+
+
+</button>
 
 
 
-<a href="#contacto" class="btn btn-primary">
-Admisión
+<div class="dropdown-menu">
+
+
+<a
+href="https://natulife.cl"
+target="_blank"
+rel="noopener">
+
+<strong>
+Natulife
+</strong>
+
+<span>
+Bienestar y productos naturales
+</span>
+
 </a>
 
 
 
+<a
+href="https://deltaf.site"
+target="_blank"
+rel="noopener">
+
+<strong>
+DeltaF
+</strong>
+
+<span>
+Gestión clínica y soluciones digitales
+</span>
+
+</a>
+
+
+
+<a
+href="https://www.instagram.com/biocien.cl/"
+target="_blank"
+rel="noopener">
+
+<strong>
+BioCien
+</strong>
+
+<span>
+Ciencia, educación y divulgación
+</span>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
 </nav>
+
+
+
+<a
+class="admission-btn"
+href="mailto:Direccion@grupodelta.cl?subject=Solicitud%20de%20informaci%C3%B3n%20acad%C3%A9mica&body=Estimado%20Instituto%20de%20Formaci%C3%B3n%20Cl%C3%ADnica%20Delta%3A%0D%0A%0D%0ADeseo%20solicitar%20informaci%C3%B3n%20sobre%20sus%20programas%20acad%C3%A9micos.%0D%0A%0D%0ANombre%20completo%3A%0D%0ACorreo%20electr%C3%B3nico%3A%0D%0ATel%C3%A9fono%3A%0D%0ACiudad%20o%20comuna%3A%0D%0APrograma%20de%20inter%C3%A9s%3A%0D%0AConsulta%3A%0D%0A%0D%0AMuchas%20gracias.">
+
+Admisión
+
+</a>
 
 
 </div>
@@ -94,8 +1928,9 @@ Admisión
 
 
 
-<!-- HERO PRINCIPAL -->
-
+<!-- ======================================================
+     HERO
+====================================================== -->
 
 <main>
 
@@ -103,22 +1938,98 @@ Admisión
 <section class="hero">
 
 
-<div class="container">
+<div class="container hero-inner">
+
+
+
+<div class="hero-copy">
+
+
+<div class="hero-eyebrow">
+
+SCIENTIA · INTEGRITAS · HUMANITAS
+
+</div>
 
 
 <h1>
-Instituto de Formación Clínica Delta
+
+Ciencia, integridad y humanidad al servicio de la formación clínica.
+
 </h1>
 
 
-<p>
-Formación clínica, científica y humanista para profesionales comprometidos con la salud y el bienestar.
+<p class="hero-lead">
+
+Formamos profesionales capaces de integrar conocimiento científico,
+pensamiento crítico y práctica clínica humanizada, promoviendo una
+educación de excelencia orientada a los desafíos actuales de la salud.
+
 </p>
 
 
 
-<img src="img/logo-ifcd.png" alt="Logo Instituto Delta">
+<div class="hero-actions">
 
+
+<a
+href="instituto.html"
+class="primary-button">
+
+Conoce nuestro Instituto
+
+</a>
+
+
+<a
+href="#equipo"
+class="secondary-button">
+
+Conoce nuestro equipo
+
+</a>
+
+
+<a
+href="programas.html"
+class="secondary-button">
+
+Programas Académicos
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="hero-visual">
+
+
+<div class="hero-image-card">
+
+<img
+src="img/slide-segunda-titulacion.PNG"
+alt="Formación profesional Instituto Delta">
+
+</div>
+
+
+<div class="hero-logo-badge">
+
+<img
+src="img/logo-ifcd.png"
+alt="Logo Instituto Delta">
+
+</div>
+
+
+</div>
 
 
 </div>
@@ -129,37 +2040,214 @@ Formación clínica, científica y humanista para profesionales comprometidos co
 
 
 
+<!-- ======================================================
+     PRINCIPIOS
+====================================================== -->
 
-<section class="section">
+<section class="principles">
+
+
+<div class="container principles-grid">
+
+
+<div class="principle">
+
+<strong>
+Scientia
+</strong>
+
+<span>
+Conocimiento y rigor científico
+</span>
+
+</div>
+
+
+<div class="principle">
+
+<strong>
+Integritas
+</strong>
+
+<span>
+Ética e integridad profesional
+</span>
+
+</div>
+
+
+<div class="principle">
+
+<strong>
+Humanitas
+</strong>
+
+<span>
+Una educación centrada en las personas
+</span>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- ======================================================
+     COMUNIDAD ACADÉMICA
+====================================================== -->
+
+<section
+class="section"
+id="equipo">
 
 
 <div class="container">
 
 
+<div class="section-heading">
+
+
+<div class="section-eyebrow">
+
+Comunidad académica
+
+</div>
+
+
 <h2>
-Formación profesional integral
+Una institución construida en torno al conocimiento.
 </h2>
 
 
 <p>
-Conoce nuestra institución y nuestros programas académicos orientados al desarrollo profesional, la actualización permanente y la integración del conocimiento científico con la práctica clínica.
+
+Nuestra propuesta académica articula formación profesional,
+experiencia clínica, docencia e investigación para favorecer
+el desarrollo integral de quienes forman parte de Delta.
+
 </p>
 
 
+</div>
 
-<br>
 
 
-<a href="instituto.html" class="btn btn-primary">
-Conocer el Instituto
+
+<div class="academic-grid">
+
+
+
+<article class="academic-card">
+
+
+<div class="academic-icon">
+✦
+</div>
+
+
+<h3>
+Equipo Académico
+</h3>
+
+
+<p>
+
+Conoce a los docentes y profesionales responsables de acompañar
+los procesos de aprendizaje y formación clínica.
+
+</p>
+
+
+<a
+href="#"
+class="text-link">
+
+Conoce nuestros docentes →
+
 </a>
 
 
+</article>
 
-<a href="programas.html" class="btn btn-primary">
-Ver Programas Académicos
+
+
+
+
+<article class="academic-card">
+
+
+<div class="academic-icon">
+⌕
+</div>
+
+
+<h3>
+Investigación
+</h3>
+
+
+<p>
+
+Promovemos el pensamiento crítico, la actualización permanente
+y la generación y difusión de conocimiento aplicado.
+
+</p>
+
+
+<a
+href="#"
+class="text-link">
+
+Explorar investigación →
+
 </a>
 
+
+</article>
+
+
+
+
+
+<article class="academic-card">
+
+
+<div class="academic-icon">
+◆
+</div>
+
+
+<h3>
+Programas Académicos
+</h3>
+
+
+<p>
+
+Carreras, continuidad de estudios, diplomados y cursos
+orientados al desarrollo profesional y clínico.
+
+</p>
+
+
+<a
+href="programas.html"
+class="text-link">
+
+Ver programas →
+
+</a>
+
+
+</article>
+
+
+</div>
 
 
 </div>
@@ -167,6 +2255,125 @@ Ver Programas Académicos
 
 </section>
 
+
+
+
+<!-- ======================================================
+     DESTACADO PROGRAMAS
+====================================================== -->
+
+<section class="section section-soft">
+
+
+<div class="container program-highlight">
+
+
+
+<div class="program-highlight-image">
+
+<img
+src="img/slide-carrera.PNG"
+alt="Carrera de Medicina Naturopática">
+
+</div>
+
+
+
+<div class="program-highlight-content">
+
+
+<div class="section-eyebrow">
+
+Formación profesional
+
+</div>
+
+
+<h2>
+Programas diseñados para avanzar en tu desarrollo profesional.
+</h2>
+
+
+<p>
+
+Nuestra oferta académica integra formación profesional,
+continuidad de estudios, diplomados y cursos de formación continua,
+con un enfoque científico, clínico, integrativo y humanista.
+
+</p>
+
+
+<a
+href="programas.html"
+class="primary-button">
+
+Explorar Programas Académicos
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- ======================================================
+     ADMISIÓN
+====================================================== -->
+
+<section class="admission-section">
+
+
+<div class="container admission-box">
+
+
+<div class="admission-copy">
+
+
+<div class="section-eyebrow">
+
+Admisión y orientación académica
+
+</div>
+
+
+<h2>
+¿Quieres conocer cuál programa se adapta mejor a tu perfil?
+</h2>
+
+
+<p>
+
+Escríbenos directamente. Al abrir el correo encontrarás un formulario
+breve preparado para que indiques tus datos, el programa que te interesa
+y tu consulta.
+
+</p>
+
+
+</div>
+
+
+
+<a
+class="admission-white-button"
+href="mailto:Direccion@grupodelta.cl?subject=Solicitud%20de%20informaci%C3%B3n%20acad%C3%A9mica&body=Estimado%20Instituto%20de%20Formaci%C3%B3n%20Cl%C3%ADnica%20Delta%3A%0D%0A%0D%0ADeseo%20solicitar%20informaci%C3%B3n%20sobre%20sus%20programas%20acad%C3%A9micos.%0D%0A%0D%0ANombre%20completo%3A%0D%0ACorreo%20electr%C3%B3nico%3A%0D%0ATel%C3%A9fono%3A%0D%0ACiudad%20o%20comuna%3A%0D%0APrograma%20de%20inter%C3%A9s%3A%0D%0AConsulta%3A%0D%0A%0D%0AMuchas%20gracias.">
+
+Contactar Admisión
+
+</a>
+
+
+</div>
+
+
+</section>
 
 
 </main>
@@ -174,30 +2381,190 @@ Ver Programas Académicos
 
 
 
+<!-- ======================================================
+     FOOTER COMPLETO
+====================================================== -->
 
-<!-- FOOTER -->
-
-
-<footer id="contacto">
-
-
-<div class="container">
-
-
-<p>
-© 2026 Instituto de Formación Clínica Delta
-</p>
+<footer
+class="site-footer"
+id="contacto">
 
 
-<p>
-direccion@grupodelta.cl
-</p>
+<div class="container footer-main">
 
 
-<p>
+
+<div class="footer-brand">
+
+
+<div class="footer-brand-logo">
+
+<img
+src="img/logo-ifcd.png"
+alt="Instituto Delta">
+
+</div>
+
+
+<div class="footer-brand-copy">
+
+<strong>
+Instituto de Formación Clínica Delta
+</strong>
+
+<span>
+Scientia · Integritas · Humanitas
+</span>
+
+<span>
+Grupo Delta Science Chile
+</span>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="footer-column">
+
+
+<h4>
+Instituto
+</h4>
+
+
+<a href="instituto.html">
+Nuestra Institución
+</a>
+
+
+<a href="#equipo">
+Docentes
+</a>
+
+
+<a href="#">
+Investigación
+</a>
+
+
+<a href="programas.html">
+Programas Académicos
+</a>
+
+
+</div>
+
+
+
+
+<div class="footer-column">
+
+
+<h4>
+Grupo Delta Chile
+</h4>
+
+
+<a
+href="https://natulife.cl"
+target="_blank"
+rel="noopener">
+
+Natulife
+
+</a>
+
+
+<a
+href="https://deltaf.site"
+target="_blank"
+rel="noopener">
+
+DeltaF
+
+</a>
+
+
+<a
+href="https://www.instagram.com/biocien.cl/"
+target="_blank"
+rel="noopener">
+
+BioCien
+
+</a>
+
+
+</div>
+
+
+
+
+<div class="footer-column">
+
+
+<h4>
+Contacto
+</h4>
+
+
+<a href="mailto:Direccion@grupodelta.cl">
+
+Direccion@grupodelta.cl
+
+</a>
+
+
+<a href="tel:+56959787604">
+
 +56 9 5978 7604
+
+</a>
+
+
+<p>
+Chile
 </p>
 
+
+<a
+href="https://wa.me/56959787604"
+target="_blank"
+rel="noopener">
+
+WhatsApp
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="container footer-bottom">
+
+
+<span>
+
+© 2026 Instituto de Formación Clínica Delta.
+Todos los derechos reservados.
+
+</span>
+
+
+<span>
+
+Scientia · Integritas · Humanitas
+
+</span>
 
 
 </div>
@@ -208,7 +2575,142 @@ direccion@grupodelta.cl
 
 
 
-</body>
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
 
+<script>
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+    const dropdown =
+    document.getElementById(
+        "grupoDeltaDropdown"
+    );
+
+
+    const dropdownToggle =
+    document.getElementById(
+        "grupoDeltaToggle"
+    );
+
+
+    const menuToggle =
+    document.getElementById(
+        "menuToggle"
+    );
+
+
+    const mainNav =
+    document.getElementById(
+        "mainNav"
+    );
+
+
+
+    /* GRUPO DELTA CHILE */
+
+    if(
+        dropdown &&
+        dropdownToggle
+    ){
+
+        dropdownToggle.addEventListener(
+        "click",
+        (event)=>{
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+
+            const isOpen =
+            dropdown.classList.toggle(
+                "open"
+            );
+
+
+            dropdownToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        });
+
+    }
+
+
+
+    document.addEventListener(
+    "click",
+    (event)=>{
+
+        if(
+            dropdown &&
+            !dropdown.contains(
+                event.target
+            )
+        ){
+
+            dropdown.classList.remove(
+                "open"
+            );
+
+
+            if(dropdownToggle){
+
+                dropdownToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+    });
+
+
+
+    /* MENÚ MÓVIL */
+
+    if(
+        menuToggle &&
+        mainNav
+    ){
+
+        menuToggle.addEventListener(
+        "click",
+        ()=>{
+
+
+            const isOpen =
+            mainNav.classList.toggle(
+                "open"
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        });
+
+    }
+
+
+
+});
+
+
+</script>
+
+
+</body>
 
 </html>
