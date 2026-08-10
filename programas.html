@@ -4,11 +4,1449 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Programas Académicos | Instituto Delta</title>
+<title>
+Programas Académicos | Instituto de Formación Clínica Delta
+</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root{
+
+    --verde:#063b2d;
+    --verde-oscuro:#042a20;
+    --verde-medio:#0c5642;
+
+    --dorado:#b88a2e;
+    --dorado-claro:#d4aa58;
+
+    --crema:#faf8f2;
+    --crema-2:#f5f4ee;
+
+    --blanco:#ffffff;
+
+    --texto:#24312c;
+    --gris:#66706b;
+
+    --borde:#e9ece8;
+
+    --sombra:
+    0 12px 35px rgba(6,59,45,.10);
+
+    --sombra-suave:
+    0 8px 24px rgba(6,59,45,.07);
+
+    --radio:24px;
+
+    --max:1240px;
+
+}
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:var(--texto);
+
+    background:#ffffff;
+
+    line-height:1.55;
+
+}
+
+
+img{
+
+    display:block;
+    max-width:100%;
+
+}
+
+
+a{
+
+    color:inherit;
+
+}
+
+
+button{
+
+    font:inherit;
+
+}
+
+
+.container{
+
+    width:min(90%, var(--max));
+    margin:auto;
+
+}
+
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.topbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.97);
+
+    border-bottom:1px solid #eeeeea;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,.05);
+
+}
+
+
+.nav{
+
+    min-height:94px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+}
+
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+    min-width:330px;
+
+}
+
+
+.brand-logo{
+
+    width:62px;
+
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+}
+
+
+.brand-logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.brand-copy{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1.25;
+
+}
+
+
+.brand-copy strong{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:19px;
+
+}
+
+
+.brand-copy span{
+
+    color:#747b77;
+
+    font-size:13px;
+
+    margin-top:3px;
+
+}
+
+
+.main-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex:1;
+
+}
+
+
+.main-nav a{
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--verde);
+
+    padding:35px 0 31px;
+
+    border-bottom:3px solid transparent;
+
+    transition:.2s ease;
+
+    white-space:nowrap;
+
+}
+
+
+.main-nav a:hover{
+
+    color:var(--dorado);
+
+}
+
+
+.main-nav a.active{
+
+    border-bottom-color:var(--verde);
+
+}
+
+
+.admission-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:137px;
+
+    padding:15px 26px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    background:var(--verde);
+
+    color:white;
+
+    font-weight:800;
+
+    box-shadow:
+    0 8px 20px rgba(6,59,45,.14);
+
+    transition:.2s ease;
+
+}
+
+
+.admission-btn:hover{
+
+    background:var(--verde-medio);
+
+    transform:translateY(-1px);
+
+}
+
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.programas-hero{
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(250,248,242,.98),
+        rgba(255,255,255,.96),
+        rgba(250,248,242,.98)
+    );
+
+    padding:62px 0 58px;
+
+    border-bottom:1px solid #efeee9;
+
+    text-align:center;
+
+}
+
+
+.eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    font-weight:800;
+
+    color:var(--dorado);
+
+}
+
+
+.programas-hero h1{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:52px;
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+}
+
+
+.programas-hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    color:#555e59;
+
+}
+
+
+
+/* ==========================================================
+   ESTRUCTURA GENERAL
+========================================================== */
+
+.programas-main{
+
+    padding:
+    55px 0 80px;
+
+}
+
+
+.program-section{
+
+    margin-bottom:70px;
+
+}
+
+
+.section-title-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:28px;
+
+}
+
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+}
+
+
+.section-icon{
+
+    width:39px;
+
+    height:39px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--dorado),
+        var(--dorado-claro)
+    );
+
+    color:white;
+
+    font-weight:900;
+
+    font-size:18px;
+
+}
+
+
+.section-title h2{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:34px;
+
+    line-height:1.15;
+
+}
+
+
+
+/* ==========================================================
+   CARRERAS
+========================================================== */
+
+.careers-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2, minmax(0,1fr));
+
+    gap:30px;
+
+}
+
+
+.career-card{
+
+    background:white;
+
+    border:1px solid var(--borde);
+
+    border-radius:var(--radio);
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra-suave);
+
+    transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+}
+
+
+.career-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--sombra);
+
+}
+
+
+/* IMPORTANTE:
+   contain evita cortar la gráfica */
+
+.career-image{
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    background:var(--crema-2);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+.career-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center;
+
+}
+
+
+.career-content{
+
+    padding:24px 26px 27px;
+
+}
+
+
+.career-content h3{
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    color:var(--verde);
+
+    font-size:23px;
+
+    line-height:1.25;
+
+    margin-bottom:10px;
+
+}
+
+
+.career-content p{
+
+    color:#59625e;
+
+    font-size:15.5px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* ==========================================================
+   CARRUSELES
+========================================================== */
+
+.carousel-shell{
+
+    position:relative;
+
+}
+
+
+.carousel-viewport{
+
+    overflow:hidden;
+
+    width:100%;
+
+}
+
+
+.carousel-track{
+
+    display:flex;
+
+    gap:22px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+
+    padding:
+    3px 3px 18px;
+
+}
+
+
+.carousel-track::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+.carousel-card{
+
+    flex:
+    0 0
+    calc((100% - 66px) / 4);
+
+    min-width:0;
+
+    scroll-snap-align:start;
+
+    background:white;
+
+    border:1px solid var(--borde);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra-suave);
+
+}
+
+
+/* ==========================================================
+   IMÁGENES DIPLOMADOS/CURSOS
+   NUNCA SE CORTAN
+========================================================== */
+
+.carousel-image{
+
+    width:100%;
+
+    height:260px;
+
+    padding:8px;
+
+    background:#f7f7f2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+.carousel-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center;
+
+}
+
+
+.carousel-content{
+
+    padding:
+    20px 21px 24px;
+
+}
+
+
+.carousel-content h3{
+
+    color:var(--verde);
+
+    font-size:18px;
+
+    line-height:1.3;
+
+    margin-bottom:9px;
+
+}
+
+
+.carousel-content p{
+
+    color:#626a66;
+
+    font-size:14.5px;
+
+    line-height:1.65;
+
+}
+
+
+
+/* ==========================================================
+   CURSOS
+========================================================== */
+
+.courses-track .carousel-card{
+
+    flex:
+    0 0
+    calc((100% - 22px) / 2);
+
+}
+
+
+.courses-track .carousel-image{
+
+    height:330px;
+
+}
+
+
+
+/* ==========================================================
+   BOTONES CARRUSEL
+========================================================== */
+
+.carousel-controls{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+}
+
+
+.carousel-button{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:1.5px solid #7ba294;
+
+    background:white;
+
+    color:var(--verde);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.carousel-button:hover{
+
+    background:var(--verde);
+
+    color:white;
+
+    border-color:var(--verde);
+
+}
+
+
+
+/* ==========================================================
+   INDICADORES
+========================================================== */
+
+.carousel-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:7px;
+
+    margin-top:7px;
+
+}
+
+
+.carousel-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#d9ddda;
+
+}
+
+
+.carousel-dot.active{
+
+    background:var(--verde);
+
+}
+
+
+
+/* ==========================================================
+   FOOTER COMPLETO
+========================================================== */
+
+.site-footer{
+
+    margin-top:10px;
+
+    background:
+    linear-gradient(
+        115deg,
+        #042f24,
+        #064b39
+    );
+
+    color:white;
+
+}
+
+
+.footer-main{
+
+    padding:
+    46px 0 38px;
+
+    display:grid;
+
+    grid-template-columns:
+    1.45fr
+    .8fr
+    .9fr
+    1fr;
+
+    gap:42px;
+
+}
+
+
+.footer-brand{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+}
+
+
+.footer-brand-logo{
+
+    width:72px;
+
+    height:72px;
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:7px;
+
+    flex-shrink:0;
+
+}
+
+
+.footer-brand-logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.footer-brand-copy strong{
+
+    display:block;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    font-size:20px;
+
+    margin-bottom:4px;
+
+}
+
+
+.footer-brand-copy span{
+
+    display:block;
+
+    color:#d4ddd9;
+
+    font-size:13px;
+
+}
+
+
+.footer-column h4{
+
+    font-size:14px;
+
+    margin-bottom:14px;
+
+    color:#e8c778;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+
+}
+
+
+.footer-column a{
+
+    display:block;
+
+    color:#edf4f1;
+
+    text-decoration:none;
+
+    margin-bottom:9px;
+
+    font-size:14px;
+
+}
+
+
+.footer-column a:hover{
+
+    color:#e8c778;
+
+}
+
+
+.footer-contact p{
+
+    color:#edf4f1;
+
+    margin-bottom:10px;
+
+    font-size:14px;
+
+}
+
+
+.footer-contact a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+.footer-bottom{
+
+    border-top:
+    1px solid rgba(255,255,255,.16);
+
+    padding:
+    18px 0 22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+    color:#cbd8d3;
+
+    font-size:12.5px;
+
+}
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:1050px){
+
+    .brand{
+
+        min-width:auto;
+
+    }
+
+
+    .brand-copy strong{
+
+        font-size:17px;
+
+    }
+
+
+    .main-nav{
+
+        gap:20px;
+
+    }
+
+
+    .main-nav a{
+
+        font-size:14px;
+
+    }
+
+
+    .carousel-card{
+
+        flex:
+        0 0
+        calc((100% - 44px) / 3);
+
+    }
+
+
+    .footer-main{
+
+        grid-template-columns:
+        1.3fr
+        1fr;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   IPAD / TABLET VERTICAL
+========================================================== */
+
+@media(max-width:850px){
+
+    .nav{
+
+        min-height:auto;
+
+        padding:
+        14px 0;
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .brand{
+
+        width:100%;
+
+    }
+
+
+    .main-nav{
+
+        order:3;
+
+        width:100%;
+
+        justify-content:center;
+
+        gap:26px;
+
+    }
+
+
+    .main-nav a{
+
+        padding:
+        10px 0 6px;
+
+    }
+
+
+    .admission-btn{
+
+        position:absolute;
+
+        right:5%;
+
+        top:23px;
+
+    }
+
+
+    .programas-hero{
+
+        padding:
+        50px 0 45px;
+
+    }
+
+
+    .programas-hero h1{
+
+        font-size:43px;
+
+    }
+
+
+    .careers-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+    }
+
+
+    .career-content{
+
+        padding:19px;
+
+    }
+
+
+    .career-content h3{
+
+        font-size:20px;
+
+    }
+
+
+    .carousel-card{
+
+        flex:
+        0 0
+        calc((100% - 22px) / 2);
+
+    }
+
+
+    .courses-track .carousel-card{
+
+        flex:
+        0 0
+        calc((100% - 22px) / 2);
+
+    }
+
+
+    .footer-main{
+
+        grid-template-columns:
+        1fr 1fr;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media(max-width:620px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+
+    .brand-logo{
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+
+    .brand-copy{
+
+        padding-right:130px;
+
+    }
+
+
+    .brand-copy strong{
+
+        font-size:15px;
+
+    }
+
+
+    .brand-copy span{
+
+        font-size:11px;
+
+    }
+
+
+    .admission-btn{
+
+        min-width:auto;
+
+        padding:
+        11px 17px;
+
+        font-size:13px;
+
+        right:4%;
+
+        top:18px;
+
+    }
+
+
+    .main-nav{
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        gap:22px;
+
+        padding-bottom:2px;
+
+        scrollbar-width:none;
+
+    }
+
+
+    .main-nav::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+
+    .programas-hero{
+
+        padding:
+        42px 0;
+
+    }
+
+
+    .eyebrow{
+
+        font-size:10px;
+
+        letter-spacing:2.6px;
+
+    }
+
+
+    .programas-hero h1{
+
+        font-size:34px;
+
+    }
+
+
+    .programas-hero p{
+
+        font-size:15px;
+
+    }
+
+
+    .programas-main{
+
+        padding-top:40px;
+
+    }
+
+
+    .program-section{
+
+        margin-bottom:55px;
+
+    }
+
+
+    .section-title-row{
+
+        align-items:flex-end;
+
+    }
+
+
+    .section-icon{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:27px;
+
+    }
+
+
+    .careers-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .career-image{
+
+        aspect-ratio:16 / 9;
+
+    }
+
+
+    .carousel-controls{
+
+        display:none;
+
+    }
+
+
+    .carousel-card{
+
+        flex:
+        0 0
+        82%;
+
+    }
+
+
+    .courses-track .carousel-card{
+
+        flex:
+        0 0
+        87%;
+
+    }
+
+
+    .carousel-image{
+
+        height:260px;
+
+    }
+
+
+    .courses-track .carousel-image{
+
+        height:290px;
+
+    }
+
+
+    .footer-main{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        gap:6px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -16,18 +1454,28 @@
 <body>
 
 
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
 <header class="topbar">
 
-<div class="container">
-
-<nav class="nav">
+<div class="container nav">
 
 
 <a href="index.html" class="brand">
 
-<img src="img/logo-ifcd.png">
 
-<div>
+<div class="brand-logo">
+
+<img
+src="img/logo-ifcd.png"
+alt="Instituto de Formación Clínica Delta">
+
+</div>
+
+
+<div class="brand-copy">
 
 <strong>
 Instituto de Formación Clínica Delta
@@ -39,34 +1487,47 @@ IFCD · Grupo Delta Science Chile
 
 </div>
 
+
 </a>
 
 
 
-<div class="nav-links">
+<nav class="main-nav">
 
 <a href="instituto.html">
 Instituto
 </a>
 
-<a href="programas.html">
+<a
+href="programas.html"
+class="active">
 Programas
+</a>
+
+<a href="#">
+Investigación
+</a>
+
+<a href="#">
+Docencia
 </a>
 
 <a href="#contacto">
 Contacto
 </a>
 
-</div>
+</nav>
 
 
 
-<a class="btn btn-primary">
+<a
+href="#contacto"
+class="admission-btn">
+
 Admisión
+
 </a>
 
-
-</nav>
 
 </div>
 
@@ -76,12 +1537,21 @@ Admisión
 
 
 
-<main>
+<!-- ======================================================
+     HERO
+====================================================== -->
 
-
-<section class="page-title">
+<section class="programas-hero">
 
 <div class="container">
+
+
+<div class="eyebrow">
+
+SCIENTIA · INTEGRITAS · HUMANITAS
+
+</div>
+
 
 <h1>
 Programas Académicos
@@ -89,7 +1559,10 @@ Programas Académicos
 
 
 <p>
-Formación profesional, diplomados y cursos de especialización orientados al desarrollo clínico, científico y humanista.
+
+Formación profesional, diplomados y cursos de especialización
+orientados al desarrollo clínico, científico y humanista.
+
 </p>
 
 
@@ -101,7 +1574,11 @@ Formación profesional, diplomados y cursos de especialización orientados al de
 
 
 
-<section class="section">
+<!-- ======================================================
+     PROGRAMAS
+====================================================== -->
+
+<main class="programas-main">
 
 
 <div class="container">
@@ -110,24 +1587,53 @@ Formación profesional, diplomados y cursos de especialización orientados al de
 
 
 
+<!-- ==================================================
+     CARRERAS
+================================================== -->
+
+<section class="program-section">
+
+
+<div class="section-title-row">
+
+
+<div class="section-title">
+
+<div class="section-icon">
+◆
+</div>
+
 <h2>
-🎓 Carreras y Continuidad de Estudios
+Carreras y Continuidad de Estudios
 </h2>
 
+</div>
 
 
-<div class="career-grid">
-
-
-
-<div class="career-card">
-
-
-<img src="img/slide-carrera.PNG">
+</div>
 
 
 
-<div class="card-content">
+
+<div class="careers-grid">
+
+
+
+<!-- CARRERA COMPLETA -->
+
+<article class="career-card">
+
+
+<div class="career-image">
+
+<img
+src="img/slide-carrera.PNG"
+alt="Carrera profesional de Medicina Naturopática">
+
+</div>
+
+
+<div class="career-content">
 
 <h3>
 Medicina Naturopática - Carrera Profesional
@@ -135,27 +1641,37 @@ Medicina Naturopática - Carrera Profesional
 
 
 <p>
-Programa completo de formación profesional en Medicina Naturopática, integrando conocimientos científicos, clínicos e integrativos.
+
+Programa completo de formación profesional en Medicina
+Naturopática, integrando conocimientos científicos,
+clínicos e integrativos.
+
 </p>
 
+</div>
+
+
+</article>
+
+
+
+
+
+<!-- CONTINUIDAD -->
+
+<article class="career-card">
+
+
+<div class="career-image">
+
+<img
+src="img/slide-segunda-titulacion.PNG"
+alt="Continuidad de estudios de Medicina Naturopática">
 
 </div>
 
 
-</div>
-
-
-
-
-
-
-<div class="career-card">
-
-
-<img src="img/slide-segunda-titulacion.PNG">
-
-
-<div class="card-content">
+<div class="career-content">
 
 <h3>
 Medicina Naturopática - Continuidad de Estudios Profesionales
@@ -163,220 +1679,16 @@ Medicina Naturopática - Continuidad de Estudios Profesionales
 
 
 <p>
-Programa dirigido a profesionales del área de la salud que buscan ampliar sus competencias clínicas.
-</p>
 
+Programa dirigido a profesionales del área de la salud
+que buscan ampliar sus competencias clínicas.
 
-</div>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<h2>
-🎓 Diplomados
-</h2>
-
-
-
-
-<div class="carousel-container">
-
-
-<button class="arrow">
-‹
-</button>
-
-
-
-<div class="carousel-track">
-
-
-
-<div class="small-card">
-
-<img src="img/slide-ortomolecular.PNG">
-
-<h3>
-Diplomado en Medicina Ortomolecular
-</h3>
-
-
-<p>
-Formación especializada en estrategias integrativas orientadas al apoyo del bienestar y la salud.
 </p>
 
 </div>
 
 
-
-
-
-<div class="small-card">
-
-<img src="img/Gestion-promocion.PNG">
-
-<h3>
-Diplomado en Gestión y Promoción de Salud
-</h3>
-
-
-<p>
-Desarrollo de competencias para gestión sanitaria, promoción de salud y bienestar comunitario.
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="small-card">
-
-<img src="img/Docencia-universitaria.PNG">
-
-<h3>
-Diplomado en Docencia Universitaria
-</h3>
-
-
-<p>
-Formación en herramientas pedagógicas para la educación superior.
-</p>
-
-</div>
-
-
-
-
-
-
-
-<div class="small-card">
-
-<img src="img/Salud-mental.PNG">
-
-
-<h3>
-Diplomado en Salud Mental Integrativa
-</h3>
-
-
-<p>
-Programa orientado al abordaje integral de la salud mental desde una perspectiva clínica y humanista.
-</p>
-
-</div>
-
-
-
-
-</div>
-
-
-
-<button class="arrow">
-›
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<h2>
-📘 Cursos de Formación Continua
-</h2>
-
-
-
-
-<div class="carousel-container">
-
-
-<button class="arrow">
-‹
-</button>
-
-
-<div class="carousel-track">
-
-
-
-
-
-<div class="small-card">
-
-
-<img src="img/Roles-habitos.PNG">
-
-
-<h3>
-Roles, Hábitos y Rutinas en la Práctica Clínica
-</h3>
-
-
-<p>
-Herramientas prácticas para comprender hábitos y rutinas dentro del proceso terapéutico.
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="small-card">
-
-
-<img src="img/Oidos.PNG">
-
-
-<h3>
-Curso de Lavado de Oídos
-</h3>
-
-
-<p>
-Formación práctica y segura en técnicas clínicas de lavado de oídos.
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-<button class="arrow">
-›
-</button>
-
-
-</div>
+</article>
 
 
 
@@ -384,6 +1696,435 @@ Formación práctica y segura en técnicas clínicas de lavado de oídos.
 
 
 </section>
+
+
+
+
+
+<!-- ==================================================
+     DIPLOMADOS
+================================================== -->
+
+<section class="program-section">
+
+
+<div class="section-title-row">
+
+
+<div class="section-title">
+
+<div class="section-icon">
+◆
+</div>
+
+<h2>
+Diplomados
+</h2>
+
+</div>
+
+
+
+<div class="carousel-controls">
+
+
+<button
+class="carousel-button"
+type="button"
+onclick="scrollCarousel('diplomadosCarousel', -1)"
+aria-label="Diplomado anterior">
+
+‹
+
+</button>
+
+
+<button
+class="carousel-button"
+type="button"
+onclick="scrollCarousel('diplomadosCarousel', 1)"
+aria-label="Diplomado siguiente">
+
+›
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="carousel-shell">
+
+
+<div
+class="carousel-viewport">
+
+
+<div
+class="carousel-track"
+id="diplomadosCarousel">
+
+
+
+
+
+<!-- ORTOMOLECULAR -->
+
+<article class="carousel-card">
+
+
+<div class="carousel-image">
+
+<img
+src="img/slide-ortomolecular.PNG"
+alt="Diplomado en Medicina Ortomolecular">
+
+</div>
+
+
+<div class="carousel-content">
+
+<h3>
+Diplomado en Medicina Ortomolecular
+</h3>
+
+
+<p>
+
+Formación especializada en estrategias integrativas
+orientadas al apoyo del bienestar y la salud.
+
+</p>
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+<!-- GESTIÓN -->
+
+<article class="carousel-card">
+
+
+<div class="carousel-image">
+
+<img
+src="img/Gestion-promocion.PNG"
+alt="Diplomado en Gestión y Promoción de Salud">
+
+</div>
+
+
+<div class="carousel-content">
+
+<h3>
+Diplomado en Gestión y Promoción de Salud
+</h3>
+
+
+<p>
+
+Desarrollo de competencias para gestión sanitaria,
+promoción de salud y bienestar comunitario.
+
+</p>
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+<!-- DOCENCIA -->
+
+<article class="carousel-card">
+
+
+<div class="carousel-image">
+
+<img
+src="img/Docencia-universitaria.PNG"
+alt="Diplomado en Docencia Universitaria">
+
+</div>
+
+
+<div class="carousel-content">
+
+<h3>
+Diplomado en Docencia Universitaria
+</h3>
+
+
+<p>
+
+Formación en herramientas y competencias pedagógicas
+orientadas a la educación superior.
+
+</p>
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+<!-- SALUD MENTAL -->
+
+<article class="carousel-card">
+
+
+<div class="carousel-image">
+
+<img
+src="img/Salud-mental.PNG"
+alt="Diplomado en Salud Mental Integrativa">
+
+</div>
+
+
+<div class="carousel-content">
+
+<h3>
+Diplomado en Salud Mental Integrativa
+</h3>
+
+
+<p>
+
+Programa orientado al abordaje integral de la salud mental
+desde una perspectiva clínica, integrativa y humanista.
+
+</p>
+
+</div>
+
+
+</article>
+
+
+
+
+</div>
+
+</div>
+
+
+<div class="carousel-dots">
+
+<span class="carousel-dot active"></span>
+
+<span class="carousel-dot"></span>
+
+<span class="carousel-dot"></span>
+
+<span class="carousel-dot"></span>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ==================================================
+     CURSOS
+================================================== -->
+
+<section class="program-section">
+
+
+<div class="section-title-row">
+
+
+<div class="section-title">
+
+
+<div class="section-icon">
+◆
+</div>
+
+
+<h2>
+Cursos de Formación Continua
+</h2>
+
+
+</div>
+
+
+
+<div class="carousel-controls">
+
+
+<button
+class="carousel-button"
+type="button"
+onclick="scrollCarousel('cursosCarousel', -1)"
+aria-label="Curso anterior">
+
+‹
+
+</button>
+
+
+<button
+class="carousel-button"
+type="button"
+onclick="scrollCarousel('cursosCarousel', 1)"
+aria-label="Curso siguiente">
+
+›
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="carousel-shell">
+
+
+<div class="carousel-viewport">
+
+
+<div
+class="carousel-track courses-track"
+id="cursosCarousel">
+
+
+
+
+
+<!-- ROLES -->
+
+<article class="carousel-card">
+
+
+<div class="carousel-image">
+
+<img
+src="img/Roles-habitos.PNG"
+alt="Curso de Roles, Hábitos y Rutinas">
+
+</div>
+
+
+<div class="carousel-content">
+
+<h3>
+Roles, Hábitos y Rutinas en la Práctica Clínica
+</h3>
+
+
+<p>
+
+Herramientas prácticas para comprender cómo los roles,
+hábitos y rutinas influyen dentro del proceso terapéutico.
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+<!-- OÍDOS -->
+
+<article class="carousel-card">
+
+
+<div class="carousel-image">
+
+<img
+src="img/Oidos.PNG"
+alt="Curso de Lavado de Oídos">
+
+</div>
+
+
+<div class="carousel-content">
+
+<h3>
+Curso de Lavado de Oídos
+</h3>
+
+
+<p>
+
+Formación práctica e intensiva orientada a técnicas clínicas
+de lavado de oídos, con enfoque anatómico y de bioseguridad.
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="carousel-dots">
+
+<span class="carousel-dot active"></span>
+
+<span class="carousel-dot"></span>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+</div>
 
 
 </main>
@@ -392,12 +2133,199 @@ Formación práctica y segura en técnicas clínicas de lavado de oídos.
 
 
 
-<footer>
+<!-- ======================================================
+     FOOTER COMPLETO
+====================================================== -->
+
+<footer
+class="site-footer"
+id="contacto">
 
 
-<div class="container">
+<div class="container footer-main">
 
-© 2026 Instituto de Formación Clínica Delta
+
+
+
+
+<!-- MARCA -->
+
+<div class="footer-brand">
+
+
+<div class="footer-brand-logo">
+
+<img
+src="img/logo-ifcd.png"
+alt="Instituto Delta">
+
+</div>
+
+
+<div class="footer-brand-copy">
+
+<strong>
+Instituto de Formación Clínica Delta
+</strong>
+
+<span>
+Scientia · Integritas · Humanitas
+</span>
+
+<span>
+Grupo Delta Science Chile
+</span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- NAVEGACIÓN -->
+
+<div class="footer-column">
+
+<h4>
+Instituto
+</h4>
+
+
+<a href="index.html">
+Inicio
+</a>
+
+<a href="instituto.html">
+Nuestra Institución
+</a>
+
+<a href="programas.html">
+Programas Académicos
+</a>
+
+<a href="#">
+Investigación
+</a>
+
+<a href="#">
+Docencia
+</a>
+
+</div>
+
+
+
+
+
+<!-- PROGRAMAS -->
+
+<div class="footer-column">
+
+<h4>
+Formación
+</h4>
+
+
+<a href="#carreras">
+Carreras
+</a>
+
+<a href="#diplomados">
+Diplomados
+</a>
+
+<a href="#cursos">
+Cursos
+</a>
+
+<a href="#contacto">
+Admisión
+</a>
+
+</div>
+
+
+
+
+
+<!-- CONTACTO -->
+
+<div class="footer-column footer-contact">
+
+
+<h4>
+Contacto
+</h4>
+
+
+<p>
+
+<a href="mailto:direccion@grupodelta.cl">
+
+direccion@grupodelta.cl
+
+</a>
+
+</p>
+
+
+<p>
+
+<a href="tel:+56959787604">
+
++56 9 5978 7604
+
+</a>
+
+</p>
+
+
+<p>
+
+Chile
+
+</p>
+
+
+<a
+href="https://wa.me/56959787604"
+target="_blank"
+rel="noopener">
+
+WhatsApp
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="container footer-bottom">
+
+
+<span>
+
+© 2026 Instituto de Formación Clínica Delta.
+Todos los derechos reservados.
+
+</span>
+
+
+<span>
+
+Scientia · Integritas · Humanitas
+
+</span>
+
 
 </div>
 
@@ -406,7 +2334,126 @@ Formación práctica y segura en técnicas clínicas de lavado de oídos.
 
 
 
-</body>
 
+
+<!-- ======================================================
+     JAVASCRIPT CARRUSELES
+====================================================== -->
+
+<script>
+
+
+function scrollCarousel(id, direction){
+
+    const carousel =
+        document.getElementById(id);
+
+    if(!carousel){
+        return;
+    }
+
+
+    const card =
+        carousel.querySelector(
+            ".carousel-card"
+        );
+
+
+    if(!card){
+        return;
+    }
+
+
+    const gap = 22;
+
+
+    const amount =
+        card.getBoundingClientRect().width
+        + gap;
+
+
+    carousel.scrollBy({
+
+        left:
+        direction * amount,
+
+        behavior:
+        "smooth"
+
+    });
+
+}
+
+
+
+/* Permite deslizar cómodamente en iPad/iPhone */
+
+document
+.querySelectorAll(".carousel-track")
+.forEach((carousel)=>{
+
+
+    let isDown = false;
+
+    let startX = 0;
+
+    let startScroll = 0;
+
+
+    carousel.addEventListener(
+        "pointerdown",
+        (event)=>{
+
+            isDown = true;
+
+            startX =
+            event.clientX;
+
+            startScroll =
+            carousel.scrollLeft;
+
+        }
+    );
+
+
+    carousel.addEventListener(
+        "pointermove",
+        (event)=>{
+
+            if(!isDown){
+                return;
+            }
+
+
+            const distance =
+            event.clientX
+            - startX;
+
+
+            carousel.scrollLeft =
+            startScroll
+            - distance;
+
+        }
+    );
+
+
+    window.addEventListener(
+        "pointerup",
+        ()=>{
+
+            isDown = false;
+
+        }
+    );
+
+
+});
+
+
+</script>
+
+
+</body>
 
 </html>
