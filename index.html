@@ -13,6 +13,7 @@
 name="description"
 content="Instituto de Formación Clínica Delta. Formación profesional, clínica, científica y humanista para profesionales de la salud.">
 
+
 <style>
 
 /* =========================================================
@@ -38,11 +39,8 @@ content="Instituto de Formación Clínica Delta. Formación profesional, clínic
 
     --borde:#e8ebe7;
 
-    --sombra:
-    0 15px 40px rgba(6,59,45,.10);
-
-    --sombra-suave:
-    0 8px 25px rgba(6,59,45,.07);
+    --sombra:0 15px 40px rgba(6,59,45,.10);
+    --sombra-suave:0 8px 25px rgba(6,59,45,.07);
 
     --max:1240px;
 
@@ -54,18 +52,14 @@ content="Instituto de Formación Clínica Delta. Formación profesional, clínic
 ========================================================= */
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
 
 
 html{
-
     scroll-behavior:smooth;
-
 }
 
 
@@ -80,40 +74,31 @@ body{
 
     color:var(--texto);
 
-    background:white;
+    background:#ffffff;
 
     line-height:1.6;
-
 }
 
 
 img{
-
     display:block;
     max-width:100%;
-
 }
 
 
 a{
-
     color:inherit;
-
 }
 
 
 button{
-
     font:inherit;
-
 }
 
 
 .container{
-
-    width:min(90%, var(--max));
+    width:min(90%,var(--max));
     margin:auto;
-
 }
 
 
@@ -133,9 +118,7 @@ button{
 
     border-bottom:1px solid #eeeeea;
 
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.05);
-
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 
@@ -149,10 +132,13 @@ button{
 
     justify-content:space-between;
 
-    gap:26px;
-
+    gap:24px;
 }
 
+
+/* =========================================================
+   MARCA
+========================================================= */
 
 .brand{
 
@@ -165,36 +151,29 @@ button{
     text-decoration:none;
 
     min-width:340px;
-
 }
 
 
 .brand-logo{
 
     width:62px;
-
     height:62px;
 
     flex-shrink:0;
-
 }
 
 
 .brand-logo img{
 
     width:100%;
-
     height:100%;
 
     object-fit:contain;
-
 }
 
 
 .brand-copy{
-
     line-height:1.25;
-
 }
 
 
@@ -210,7 +189,6 @@ button{
     color:var(--verde);
 
     font-size:19px;
-
 }
 
 
@@ -223,7 +201,6 @@ button{
     color:#727975;
 
     margin-top:3px;
-
 }
 
 
@@ -239,10 +216,9 @@ button{
 
     justify-content:center;
 
-    gap:27px;
+    gap:26px;
 
     flex:1;
-
 }
 
 
@@ -270,7 +246,6 @@ button{
     border-bottom:3px solid transparent;
 
     transition:.2s ease;
-
 }
 
 
@@ -278,7 +253,6 @@ button{
 .dropdown-toggle:hover{
 
     color:var(--dorado);
-
 }
 
 
@@ -287,9 +261,7 @@ button{
 ========================================================= */
 
 .dropdown{
-
     position:relative;
-
 }
 
 
@@ -300,23 +272,19 @@ button{
     align-items:center;
 
     gap:6px;
-
 }
 
 
 .dropdown-arrow{
 
-    font-size:11px;
+    font-size:10px;
 
     transition:.2s ease;
-
 }
 
 
 .dropdown.open .dropdown-arrow{
-
     transform:rotate(180deg);
-
 }
 
 
@@ -328,7 +296,7 @@ button{
 
     right:0;
 
-    min-width:250px;
+    min-width:255px;
 
     background:white;
 
@@ -347,7 +315,6 @@ button{
     transform:translateY(-8px);
 
     transition:.2s ease;
-
 }
 
 
@@ -358,7 +325,6 @@ button{
     visibility:visible;
 
     transform:translateY(0);
-
 }
 
 
@@ -374,15 +340,12 @@ button{
 
     padding:12px 14px;
 
-    transition:.2s;
-
+    transition:.2s ease;
 }
 
 
 .dropdown-menu a:hover{
-
     background:var(--crema-claro);
-
 }
 
 
@@ -391,7 +354,6 @@ button{
     color:var(--verde);
 
     font-size:14px;
-
 }
 
 
@@ -402,7 +364,6 @@ button{
     font-size:12px;
 
     margin-top:2px;
-
 }
 
 
@@ -414,13 +375,13 @@ button{
 
     display:inline-flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    padding:15px 27px;
+    justify-content:center;
 
     min-width:137px;
+
+    padding:15px 27px;
 
     border-radius:999px;
 
@@ -432,11 +393,9 @@ button{
 
     font-weight:800;
 
-    box-shadow:
-    0 8px 20px rgba(6,59,45,.14);
+    box-shadow:0 8px 20px rgba(6,59,45,.14);
 
     transition:.2s ease;
-
 }
 
 
@@ -445,7 +404,6 @@ button{
     background:var(--verde-medio);
 
     transform:translateY(-2px);
-
 }
 
 
@@ -458,7 +416,6 @@ button{
     display:none;
 
     width:44px;
-
     height:44px;
 
     border-radius:50%;
@@ -472,12 +429,11 @@ button{
     font-size:22px;
 
     cursor:pointer;
-
 }
 
 
 /* =========================================================
-   HERO
+   HERO NUEVO
 ========================================================= */
 
 .hero{
@@ -486,77 +442,115 @@ button{
 
     overflow:hidden;
 
-    background:
-    linear-gradient(
-        115deg,
-        #f8f5ed 0%,
-        #ffffff 47%,
-        #f2f6f2 100%
-    );
+    background:#faf9f4;
 
-}
-
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:520px;
-
-    height:520px;
-
-    border-radius:50%;
-
-    right:-230px;
-
-    top:-220px;
-
-    background:
-    rgba(184,138,46,.08);
-
+    border-bottom:1px solid #eeece5;
 }
 
 
 .hero-inner{
 
-    position:relative;
+    width:100%;
 
     min-height:650px;
 
     display:grid;
 
     grid-template-columns:
-    1.05fr .95fr;
+    minmax(0,48%)
+    minmax(0,52%);
+}
 
-    gap:70px;
 
-    align-items:center;
+/* =========================================================
+   TEXTO HERO
+========================================================= */
 
-    padding:70px 0;
+.hero-copy{
 
+    position:relative;
+
+    z-index:5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:
+
+    72px
+    55px
+    72px
+    max(
+        5vw,
+        calc((100vw - 1240px) / 2)
+    );
+
+    background:
+
+    linear-gradient(
+        115deg,
+        #faf9f4 0%,
+        #ffffff 72%,
+        rgba(255,255,255,.86) 100%
+    );
+}
+
+
+.hero-copy::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    right:-100px;
+
+    width:170px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.98) 0%,
+        rgba(255,255,255,.70) 42%,
+        rgba(255,255,255,0) 100%
+    );
+
+    pointer-events:none;
 }
 
 
 .hero-eyebrow{
 
+    position:relative;
+
+    z-index:2;
+
     color:var(--dorado);
 
     font-size:12px;
 
-    letter-spacing:3.7px;
-
-    text-transform:uppercase;
+    letter-spacing:3.8px;
 
     font-weight:850;
 
     margin-bottom:18px;
-
 }
 
 
 .hero h1{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
 
     font-family:
     Georgia,
@@ -565,40 +559,51 @@ button{
 
     color:var(--verde);
 
-    font-size:57px;
+    font-size:58px;
 
     line-height:1.08;
 
-    margin-bottom:24px;
+    letter-spacing:-1px;
 
+    margin-bottom:25px;
 }
 
 
 .hero-lead{
 
+    position:relative;
+
+    z-index:2;
+
+    max-width:620px;
+
     color:#58615d;
 
-    font-size:19px;
+    font-size:18px;
 
-    line-height:1.75;
+    line-height:1.8;
 
-    max-width:650px;
-
-    margin-bottom:30px;
-
+    margin-bottom:31px;
 }
 
 
 .hero-actions{
+
+    position:relative;
+
+    z-index:2;
 
     display:flex;
 
     flex-wrap:wrap;
 
     gap:12px;
-
 }
 
+
+/* =========================================================
+   BOTONES
+========================================================= */
 
 .primary-button,
 .secondary-button{
@@ -611,14 +616,13 @@ button{
 
     text-decoration:none;
 
-    padding:14px 23px;
+    padding:14px 22px;
 
     border-radius:999px;
 
     font-weight:800;
 
     transition:.2s ease;
-
 }
 
 
@@ -627,7 +631,6 @@ button{
     background:var(--verde);
 
     color:white;
-
 }
 
 
@@ -636,7 +639,6 @@ button{
     background:var(--verde-medio);
 
     transform:translateY(-2px);
-
 }
 
 
@@ -646,8 +648,7 @@ button{
 
     color:var(--verde);
 
-    background:white;
-
+    background:rgba(255,255,255,.88);
 }
 
 
@@ -656,49 +657,33 @@ button{
     color:white;
 
     background:var(--verde);
-
 }
 
 
 /* =========================================================
-   IMAGEN HERO
+   PORTADA INTEGRADA
 ========================================================= */
 
-.hero-visual{
+.hero-media{
 
     position:relative;
 
+    min-height:650px;
+
+    background-image:
+    url("img/portada.PNG");
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-position:center center;
 }
 
 
-.hero-image-card{
+/* Fusión con el lado izquierdo */
 
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:30px;
-
-    background:white;
-
-    box-shadow:
-    0 24px 60px rgba(6,59,45,.15);
-
-}
-
-
-.hero-image-card img{
-
-    width:100%;
-
-    aspect-ratio:16 / 11;
-
-    object-fit:cover;
-
-}
-
-
-.hero-image-card::after{
+.hero-media::before{
 
     content:"";
 
@@ -707,46 +692,37 @@ button{
     inset:0;
 
     background:
+
     linear-gradient(
-        180deg,
-        transparent 55%,
-        rgba(4,42,32,.28)
+        90deg,
+        rgba(255,255,255,.58) 0%,
+        rgba(255,255,255,.12) 19%,
+        rgba(255,255,255,0) 38%
     );
 
     pointer-events:none;
-
 }
 
 
-.hero-logo-badge{
+/* leve sombreado inferior */
+
+.hero-media::after{
+
+    content:"";
 
     position:absolute;
 
-    left:-32px;
+    inset:0;
 
-    bottom:28px;
+    background:
 
-    width:150px;
+    linear-gradient(
+        180deg,
+        rgba(0,0,0,0) 65%,
+        rgba(3,40,30,.09) 100%
+    );
 
-    padding:15px;
-
-    background:rgba(255,255,255,.97);
-
-    border-radius:22px;
-
-    box-shadow:var(--sombra);
-
-}
-
-
-.hero-logo-badge img{
-
-    width:100%;
-
-    height:auto;
-
-    object-fit:contain;
-
+    pointer-events:none;
 }
 
 
@@ -756,12 +732,11 @@ button{
 
 .principles{
 
+    background:white;
+
     border-top:1px solid #eeeeea;
 
     border-bottom:1px solid #eeeeea;
-
-    background:white;
-
 }
 
 
@@ -775,7 +750,6 @@ button{
     repeat(3,1fr);
 
     align-items:center;
-
 }
 
 
@@ -784,14 +758,12 @@ button{
     padding:25px;
 
     text-align:center;
-
 }
 
 
 .principle + .principle{
 
     border-left:1px solid #e7e9e6;
-
 }
 
 
@@ -807,7 +779,6 @@ button{
     color:var(--verde);
 
     font-size:22px;
-
 }
 
 
@@ -816,7 +787,6 @@ button{
     color:#747c78;
 
     font-size:13px;
-
 }
 
 
@@ -827,14 +797,12 @@ button{
 .section{
 
     padding:85px 0;
-
 }
 
 
 .section-soft{
 
     background:var(--crema-claro);
-
 }
 
 
@@ -851,7 +819,6 @@ button{
     text-transform:uppercase;
 
     margin-bottom:11px;
-
 }
 
 
@@ -860,7 +827,6 @@ button{
     max-width:780px;
 
     margin-bottom:38px;
-
 }
 
 
@@ -878,7 +844,6 @@ button{
     line-height:1.15;
 
     margin-bottom:15px;
-
 }
 
 
@@ -889,12 +854,11 @@ button{
     font-size:17px;
 
     line-height:1.7;
-
 }
 
 
 /* =========================================================
-   TARJETAS COMUNIDAD ACADÉMICA
+   COMUNIDAD ACADÉMICA
 ========================================================= */
 
 .academic-grid{
@@ -905,7 +869,6 @@ button{
     repeat(3,1fr);
 
     gap:25px;
-
 }
 
 
@@ -922,7 +885,6 @@ button{
     box-shadow:var(--sombra-suave);
 
     transition:.2s ease;
-
 }
 
 
@@ -931,14 +893,12 @@ button{
     transform:translateY(-5px);
 
     box-shadow:var(--sombra);
-
 }
 
 
 .academic-icon{
 
     width:47px;
-
     height:47px;
 
     border-radius:50%;
@@ -950,6 +910,7 @@ button{
     justify-content:center;
 
     background:
+
     linear-gradient(
         135deg,
         var(--dorado),
@@ -961,7 +922,6 @@ button{
     margin-bottom:22px;
 
     font-size:20px;
-
 }
 
 
@@ -977,7 +937,6 @@ button{
     font-size:23px;
 
     margin-bottom:10px;
-
 }
 
 
@@ -990,7 +949,6 @@ button{
     line-height:1.7;
 
     margin-bottom:20px;
-
 }
 
 
@@ -1001,19 +959,16 @@ button{
     font-weight:800;
 
     text-decoration:none;
-
 }
 
 
 .text-link:hover{
-
     color:var(--dorado);
-
 }
 
 
 /* =========================================================
-   DESTACADO PROGRAMAS
+   PROGRAMAS DESTACADOS
 ========================================================= */
 
 .program-highlight{
@@ -1021,12 +976,12 @@ button{
     display:grid;
 
     grid-template-columns:
-    .85fr 1.15fr;
+    .88fr
+    1.12fr;
 
     gap:55px;
 
     align-items:center;
-
 }
 
 
@@ -1039,7 +994,6 @@ button{
     box-shadow:var(--sombra);
 
     background:white;
-
 }
 
 
@@ -1052,7 +1006,6 @@ button{
     object-fit:contain;
 
     background:#f5f5f0;
-
 }
 
 
@@ -1070,7 +1023,6 @@ button{
     color:var(--verde);
 
     margin-bottom:18px;
-
 }
 
 
@@ -1083,12 +1035,11 @@ button{
     color:#616a66;
 
     margin-bottom:25px;
-
 }
 
 
 /* =========================================================
-   CTA ADMISIÓN
+   ADMISIÓN
 ========================================================= */
 
 .admission-section{
@@ -1096,6 +1047,7 @@ button{
     padding:75px 0;
 
     background:
+
     linear-gradient(
         120deg,
         #043024,
@@ -1103,7 +1055,6 @@ button{
     );
 
     color:white;
-
 }
 
 
@@ -1116,21 +1067,18 @@ button{
     align-items:center;
 
     gap:45px;
-
 }
 
 
 .admission-copy{
 
     max-width:760px;
-
 }
 
 
 .admission-copy .section-eyebrow{
 
     color:#e5c879;
-
 }
 
 
@@ -1146,7 +1094,6 @@ button{
     line-height:1.15;
 
     margin-bottom:15px;
-
 }
 
 
@@ -1157,7 +1104,6 @@ button{
     line-height:1.75;
 
     font-size:16px;
-
 }
 
 
@@ -1178,7 +1124,6 @@ button{
     font-weight:850;
 
     transition:.2s ease;
-
 }
 
 
@@ -1187,17 +1132,17 @@ button{
     transform:translateY(-2px);
 
     background:#f6f2e8;
-
 }
 
 
 /* =========================================================
-   FOOTER COMPLETO
+   FOOTER
 ========================================================= */
 
 .site-footer{
 
     background:
+
     linear-gradient(
         115deg,
         #03281e,
@@ -1205,7 +1150,6 @@ button{
     );
 
     color:white;
-
 }
 
 
@@ -1222,7 +1166,6 @@ button{
     gap:40px;
 
     padding:48px 0 39px;
-
 }
 
 
@@ -1233,14 +1176,12 @@ button{
     align-items:flex-start;
 
     gap:16px;
-
 }
 
 
 .footer-brand-logo{
 
     width:72px;
-
     height:72px;
 
     padding:7px;
@@ -1250,18 +1191,15 @@ button{
     border-radius:14px;
 
     flex-shrink:0;
-
 }
 
 
 .footer-brand-logo img{
 
     width:100%;
-
     height:100%;
 
     object-fit:contain;
-
 }
 
 
@@ -1277,7 +1215,6 @@ button{
     font-size:19px;
 
     margin-bottom:5px;
-
 }
 
 
@@ -1290,7 +1227,6 @@ button{
     font-size:12.5px;
 
     margin-top:3px;
-
 }
 
 
@@ -1305,7 +1241,6 @@ button{
     letter-spacing:1px;
 
     margin-bottom:15px;
-
 }
 
 
@@ -1320,14 +1255,12 @@ button{
     font-size:14px;
 
     margin-bottom:9px;
-
 }
 
 
 .footer-column a:hover{
 
     color:#e2c36f;
-
 }
 
 
@@ -1338,7 +1271,6 @@ button{
     font-size:14px;
 
     margin-bottom:9px;
-
 }
 
 
@@ -1358,27 +1290,22 @@ button{
     color:#cbd8d3;
 
     font-size:12.5px;
-
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE 1120
 ========================================================= */
 
 @media(max-width:1120px){
 
     .brand{
-
         min-width:auto;
-
     }
 
 
     .main-nav{
-
-        gap:19px;
-
+        gap:18px;
     }
 
 
@@ -1386,25 +1313,19 @@ button{
     .dropdown-toggle{
 
         font-size:13.5px;
-
-    }
-
-
-    .hero-inner{
-
-        gap:40px;
-
     }
 
 
     .hero h1{
-
         font-size:49px;
-
     }
 
 }
 
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:920px){
 
@@ -1413,14 +1334,12 @@ button{
         flex-wrap:wrap;
 
         padding:14px 0;
-
     }
 
 
     .brand{
 
         width:calc(100% - 115px);
-
     }
 
 
@@ -1431,7 +1350,6 @@ button{
         align-items:center;
 
         justify-content:center;
-
     }
 
 
@@ -1450,14 +1368,11 @@ button{
         gap:0;
 
         padding-top:10px;
-
     }
 
 
     .main-nav.open{
-
         display:flex;
-
     }
 
 
@@ -1471,14 +1386,11 @@ button{
         padding:12px 5px;
 
         border-bottom:1px solid #eceeea;
-
     }
 
 
     .dropdown{
-
         width:100%;
-
     }
 
 
@@ -1501,14 +1413,11 @@ button{
         transform:none;
 
         padding-left:15px;
-
     }
 
 
     .dropdown.open .dropdown-menu{
-
         display:block;
-
     }
 
 
@@ -1519,16 +1428,31 @@ button{
         min-width:auto;
 
         padding:12px 19px;
-
     }
 
+
+    /* HERO TABLET */
 
     .hero-inner{
 
         grid-template-columns:1fr;
 
-        padding:60px 0;
+        min-height:auto;
+    }
 
+
+    .hero-copy{
+
+        padding:
+
+        60px
+        6%
+        45px;
+    }
+
+
+    .hero-copy::after{
+        display:none;
     }
 
 
@@ -1536,86 +1460,105 @@ button{
 
         font-size:47px;
 
+        max-width:800px;
     }
 
 
-    .hero-visual{
+    .hero-media{
 
-        max-width:650px;
+        min-height:440px;
 
-        margin:auto;
+        background-position:center center;
+    }
 
+
+    .hero-media::before{
+
+        background:
+
+        linear-gradient(
+            180deg,
+            #faf9f4 0%,
+            rgba(250,249,244,.12) 19%,
+            rgba(250,249,244,0) 42%
+        );
     }
 
 
     .academic-grid{
 
-        grid-template-columns:1fr 1fr;
-
+        grid-template-columns:
+        1fr
+        1fr;
     }
 
 
     .program-highlight{
 
         grid-template-columns:1fr;
-
     }
 
 
     .footer-main{
 
-        grid-template-columns:1fr 1fr;
-
+        grid-template-columns:
+        1fr
+        1fr;
     }
 
 }
 
 
+/* =========================================================
+   CELULAR
+========================================================= */
+
 @media(max-width:640px){
 
     .container{
-
         width:92%;
-
     }
 
 
     .brand-logo{
 
         width:53px;
-
         height:53px;
-
     }
 
 
     .brand-copy strong{
 
         font-size:15px;
-
     }
 
 
     .brand-copy span{
 
         font-size:11px;
-
     }
 
 
     .admission-btn{
-
         display:none;
-
     }
 
 
-    .hero-inner{
+    .hero-copy{
 
-        min-height:auto;
+        padding:
 
-        padding:45px 0 60px;
+        42px
+        5%
+        38px;
+    }
 
+
+    .hero-eyebrow{
+
+        font-size:10px;
+
+        letter-spacing:2.5px;
     }
 
 
@@ -1623,13 +1566,13 @@ button{
 
         font-size:37px;
 
+        letter-spacing:-.5px;
     }
 
 
     .hero-lead{
 
         font-size:16px;
-
     }
 
 
@@ -1638,25 +1581,20 @@ button{
         flex-direction:column;
 
         align-items:stretch;
-
     }
 
 
-    .hero-logo-badge{
+    .hero-media{
 
-        width:115px;
+        min-height:330px;
 
-        left:12px;
-
-        bottom:12px;
-
+        background-position:center center;
     }
 
 
     .principles-grid{
 
         grid-template-columns:1fr;
-
     }
 
 
@@ -1665,35 +1603,30 @@ button{
         border-left:0;
 
         border-top:1px solid #e7e9e6;
-
     }
 
 
     .section{
 
         padding:65px 0;
-
     }
 
 
     .section-heading h2{
 
         font-size:34px;
-
     }
 
 
     .academic-grid{
 
         grid-template-columns:1fr;
-
     }
 
 
     .program-highlight-content h2{
 
         font-size:34px;
-
     }
 
 
@@ -1702,14 +1635,12 @@ button{
         flex-direction:column;
 
         align-items:flex-start;
-
     }
 
 
     .admission-copy h2{
 
         font-size:34px;
-
     }
 
 
@@ -1718,7 +1649,6 @@ button{
         grid-template-columns:1fr;
 
         gap:30px;
-
     }
 
 
@@ -1727,7 +1657,6 @@ button{
         flex-direction:column;
 
         gap:7px;
-
     }
 
 }
@@ -1740,9 +1669,9 @@ button{
 <body>
 
 
-<!-- ======================================================
+<!-- =====================================================
      HEADER
-====================================================== -->
+===================================================== -->
 
 <header class="site-header">
 
@@ -1824,8 +1753,6 @@ Contacto
 
 
 
-<!-- GRUPO DELTA CHILE -->
-
 <div
 class="dropdown"
 id="grupoDeltaDropdown">
@@ -1837,13 +1764,11 @@ id="grupoDeltaToggle"
 type="button"
 aria-expanded="false">
 
-
 Grupo Delta Chile
 
 <span class="dropdown-arrow">
 ▼
 </span>
-
 
 </button>
 
@@ -1904,7 +1829,6 @@ Ciencia, educación y divulgación
 
 </div>
 
-
 </div>
 
 
@@ -1927,10 +1851,9 @@ Admisión
 
 
 
-
-<!-- ======================================================
+<!-- =====================================================
      HERO
-====================================================== -->
+===================================================== -->
 
 <main>
 
@@ -1938,8 +1861,7 @@ Admisión
 <section class="hero">
 
 
-<div class="container hero-inner">
-
+<div class="hero-inner">
 
 
 <div class="hero-copy">
@@ -1966,7 +1888,6 @@ pensamiento crítico y práctica clínica humanizada, promoviendo una
 educación de excelencia orientada a los desafíos actuales de la salud.
 
 </p>
-
 
 
 <div class="hero-actions">
@@ -2006,28 +1927,12 @@ Programas Académicos
 
 
 
+<!-- PORTADA.PNG INTEGRADA SIN LOGO FLOTANTE -->
 
-
-<div class="hero-visual">
-
-
-<div class="hero-image-card">
-
-<img
-src="img/portada.PNG"
-alt="Formación profesional Instituto Delta">
-
-</div>
-
-
-<div class="hero-logo-badge">
-
-<img
-src="img/logo-ifcd.png"
-alt="Logo Instituto Delta">
-
-</div>
-
+<div
+class="hero-media"
+role="img"
+aria-label="Estudiantes del Instituto de Formación Clínica Delta">
 
 </div>
 
@@ -2039,10 +1944,9 @@ alt="Logo Instituto Delta">
 
 
 
-
-<!-- ======================================================
+<!-- =====================================================
      PRINCIPIOS
-====================================================== -->
+===================================================== -->
 
 <section class="principles">
 
@@ -2096,10 +2000,9 @@ Una educación centrada en las personas
 
 
 
-
-<!-- ======================================================
+<!-- =====================================================
      COMUNIDAD ACADÉMICA
-====================================================== -->
+===================================================== -->
 
 <section
 class="section"
@@ -2113,9 +2016,7 @@ id="equipo">
 
 
 <div class="section-eyebrow">
-
 Comunidad académica
-
 </div>
 
 
@@ -2134,7 +2035,6 @@ el desarrollo integral de quienes forman parte de Delta.
 
 
 </div>
-
 
 
 
@@ -2176,8 +2076,6 @@ Conoce nuestros docentes →
 
 
 
-
-
 <article class="academic-card">
 
 
@@ -2209,8 +2107,6 @@ Explorar investigación →
 
 
 </article>
-
-
 
 
 
@@ -2257,16 +2153,14 @@ Ver programas →
 
 
 
-
-<!-- ======================================================
-     DESTACADO PROGRAMAS
-====================================================== -->
+<!-- =====================================================
+     PROGRAMAS
+===================================================== -->
 
 <section class="section section-soft">
 
 
 <div class="container program-highlight">
-
 
 
 <div class="program-highlight-image">
@@ -2278,14 +2172,11 @@ alt="Carrera de Medicina Naturopática">
 </div>
 
 
-
 <div class="program-highlight-content">
 
 
 <div class="section-eyebrow">
-
 Formación profesional
-
 </div>
 
 
@@ -2322,10 +2213,9 @@ Explorar Programas Académicos
 
 
 
-
-<!-- ======================================================
+<!-- =====================================================
      ADMISIÓN
-====================================================== -->
+===================================================== -->
 
 <section class="admission-section">
 
@@ -2337,9 +2227,7 @@ Explorar Programas Académicos
 
 
 <div class="section-eyebrow">
-
 Admisión y orientación académica
-
 </div>
 
 
@@ -2358,7 +2246,6 @@ y tu consulta.
 
 
 </div>
-
 
 
 <a
@@ -2380,10 +2267,9 @@ Contactar Admisión
 
 
 
-
-<!-- ======================================================
-     FOOTER COMPLETO
-====================================================== -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer
 class="site-footer"
@@ -2427,7 +2313,6 @@ Grupo Delta Science Chile
 
 
 
-
 <div class="footer-column">
 
 
@@ -2457,7 +2342,6 @@ Programas Académicos
 
 
 </div>
-
 
 
 
@@ -2503,7 +2387,6 @@ BioCien
 
 
 
-
 <div class="footer-column">
 
 
@@ -2513,16 +2396,12 @@ Contacto
 
 
 <a href="mailto:Direccion@grupodelta.cl">
-
 Direccion@grupodelta.cl
-
 </a>
 
 
 <a href="tel:+56959787604">
-
 +56 9 5978 7604
-
 </a>
 
 
@@ -2545,7 +2424,6 @@ WhatsApp
 
 
 </div>
-
 
 
 
@@ -2574,10 +2452,9 @@ Scientia · Integritas · Humanitas
 
 
 
-
-<!-- ======================================================
+<!-- =====================================================
      JAVASCRIPT
-====================================================== -->
+===================================================== -->
 
 <script>
 
@@ -2623,6 +2500,7 @@ document.addEventListener(
         "click",
         (event)=>{
 
+
             event.preventDefault();
 
             event.stopPropagation();
@@ -2648,6 +2526,7 @@ document.addEventListener(
     document.addEventListener(
     "click",
     (event)=>{
+
 
         if(
             dropdown &&
@@ -2702,7 +2581,6 @@ document.addEventListener(
         });
 
     }
-
 
 
 });
